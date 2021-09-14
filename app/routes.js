@@ -27,7 +27,11 @@ router.use('/current_v2/apply', require('./views/current_v2/apply/_routes'));
 // router.use('/current/prereg', require('./views/current/prereg/_routes'));
 // router.use('/current/postjan', require('./views/current/postjan/_routes'));
 
+
 // Start folder specific routes
+// ----------------------------
+
+// Basic journeys
 router.use('/sprint1', require('./views/sprint1/_routes'));
 router.use('/sprint2', require('./views/sprint2/_routes'));
 router.use('/sprint3', require('./views/sprint3/_routes'));
@@ -36,6 +40,7 @@ router.use('/sprint5', require('./views/sprint5/_routes'));
 router.use('/sprint6', require('./views/sprint6/_routes'));
 router.use('/sprint7', require('./views/sprint7/_routes'));
 
+// Pre-registration and post-january application journeys
 router.use('/sprint8/prereg', require('./views/sprint8/prereg/_routes'));
 router.use('/sprint8/postjan', require('./views/sprint8/postjan/_routes'));
 
@@ -60,6 +65,7 @@ router.use('/sprint14/postjan', require('./views/sprint14/postjan/_routes'));
 router.use('/sprint15/prereg', require('./views/sprint15/prereg/_routes'));
 router.use('/sprint15/postjan', require('./views/sprint15/postjan/_routes'));
 
+// One application journeys
 router.use('/sprint19-20/apply', require('./views/sprint19-20/apply/_routes'));
 router.use('/sprint21/apply', require('./views/sprint21/apply/_routes'));
 router.use('/sprint22/apply', require('./views/sprint22/apply/_routes'));
@@ -68,10 +74,18 @@ router.use('/sprint26/apply', require('./views/sprint26/apply/_routes'));
 router.use('/sprint27/apply', require('./views/sprint27/apply/_routes'));
 router.use('/sprint28/apply', require('./views/sprint28/apply/_routes'));
 
+// Separated application and 'get replacement' jourenys
+router.use('/sprint33', require('./views/sprint33/_routes'));
+router.use('/sprint33/apply', require('./views/sprint33/apply/_routes'));
+router.use('/sprint33/replacement', require('./views/sprint33/replacement/_routes'));
+
+
 //pulling data through
 
 
 // Experimental //
+// ----------------------------
+
 // tasklist format //
 router.use('/tasklist/prereg', require('./views/tasklist/prereg/_routes'));
 router.use('/tasklist/postjan', require('./views/tasklist/postjan/_routes'));
