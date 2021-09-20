@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  What is your GHIC reference number?
+  What is your application reference number?
 {% endblock %}
 
 {% block beforeContent %}
@@ -32,13 +32,13 @@
 
         {% call fieldset({
           legend: {
-            text: "What is your GHIC reference number?",
+            text: "What is your application reference number?",
             classes: "nhsuk-fieldset__legend--l",
             isPageHeading: true
           }
         }) %}
 
-        <p>Your GHIC reference number is an 8 digit number. It will be on the email we sent to you when you applied for your GHIC.</p>
+        <p>Your application reference number is an 8 digit number. It will be on the email we sent to you when you applied for your card.</p>
 
         {{ input({
           "label": {
