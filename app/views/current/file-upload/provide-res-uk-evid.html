@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  What document is this?
+  Do you need to provide evidence of your UK residency?
 {% endblock %}
 
 {% block beforeContent %}
@@ -26,51 +26,29 @@
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-three-quarters">
-      <!-- <span class="nhsuk-caption-l nhsuk-caption--bottom">Step 1</span> -->
-      <form action="upload-reside-another2" method="post">
+      <!-- <span class="nhsuk-caption-l nhsuk-caption--bottom">Check your eligibility</span> -->
+      <form action="provideUkRes" method="post">
 
         {% call fieldset({
           legend: {
-            text: "What document is this?",
+            text: "Do you need to provide evidence of your UK residency?",
             classes: "nhsuk-fieldset__legend--l",
             isPageHeading: true
           }
         }) %}
 
-        <p>example_file_name_02.jpg, 2MB</p>
-
 
         {{ radios({
-          "idPrefix": "file-type-2",
-          "name": "file-type-2",
+          "idPrefix": "provide-uk-res",
+          "name": "provide-uk-res",
           "items": [
             {
-              "value": "Passport",
-              "text": "Passport"
+              "value": "yes",
+              "text": "Yes"
             },
             {
-              "value": "Residence certificate",
-              "text": "Residence certificate"
-            },
-            {
-              "value": "Biometric residence permit",
-              "text": "Biometric residence permit"
-            },
-            {
-              "value": "Certificate of Naturalization",
-              "text": "Certificate of Naturalization"
-            },
-            {
-              "value": "Birth Certificate",
-              "text": "Birth Certificate"
-            },
-            {
-              "value": "National ID card",
-              "text": "National ID card"
-            },
-            {
-              "value": "Other",
-              "text": "Other"
+              "value": "no",
+              "text": "No"
             }
           ]
         }) }}
@@ -84,7 +62,7 @@
       </form>
 
      {{ backLink({
-        "href": "upload-reside2",
+        "href": "upload-reside-another2",
         "text": "Change my previous answer"
       }) }}
       

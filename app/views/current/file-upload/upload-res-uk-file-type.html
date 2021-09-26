@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  What is the file type?
+  What document is this?
 {% endblock %}
 
 {% block beforeContent %}
@@ -26,12 +26,12 @@
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-three-quarters">
-      <span class="nhsuk-caption-l nhsuk-caption--bottom">Step 2</span>
+      <!-- <span class="nhsuk-caption-l nhsuk-caption--bottom">Step 2</span> -->
       <form action="upload-res-uk-another" method="post">
 
         {% call fieldset({
           legend: {
-            text: "What is the file type?",
+            text: "What document is this?",
             classes: "nhsuk-fieldset__legend--l",
             isPageHeading: true
           }
@@ -74,6 +74,10 @@
              {
               "value": "Mortgage letter",
               "text": "Mortgage letter"
+            },
+            {
+              "value": "Other",
+              "text": "Other"
             }
           ]
         }) }}
