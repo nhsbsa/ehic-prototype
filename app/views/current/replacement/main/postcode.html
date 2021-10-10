@@ -30,6 +30,9 @@
 
         <h2>What is {{ data['replace-firstname'] }}'s postcode?</h2>
 
+        <p>We’ll check the postcode you give us matches the one we hold. We’ll send any replacement cards
+to the address we have for you on our records.</p>
+
         {% call fieldset({
           legend: {
             text: "",
@@ -41,6 +44,9 @@
         {{ input({
           "label": {
             "text": "Postcode"
+          },
+          "hint": {
+            "text": "For example, NE1 1AA."
           },
           "id": "input-width-10",
           "name": "replace-postcode",

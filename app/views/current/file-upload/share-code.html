@@ -29,16 +29,17 @@
       <!-- <form action="add-another-yn" method="post"> -->
        <form action="provide-res-uk-evid" method="post">
 
+        <h2>What is {{ data['upload-firstname'] }}'s EU settled status share code?</h2>
 
         {% call fieldset({
           legend: {
-            text: "What is your EU Settled Status share code?",
+            text: "",
             classes: "nhsuk-fieldset__legend--l",
             isPageHeading: true
           }
         }) %}
 
-        <p>Explanation text</p>
+        <p>A share code is usually valid for 30 days and is made up of 9 different numbers and letters. For example, A1234567G</p>
 
         {{ input({
           "label": {

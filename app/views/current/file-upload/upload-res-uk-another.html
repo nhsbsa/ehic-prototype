@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Evidence uploaded
+  Proof of residency evidence uploaded
 {% endblock %}
 
 {% block beforeContent %}
@@ -31,7 +31,7 @@
 
         {% call fieldset({
           legend: {
-            text: "Evidence uploaded",
+            text: "Proof of residency evidence uploaded",
             classes: "nhsuk-fieldset__legend--l",
             isPageHeading: true
           }
@@ -60,7 +60,9 @@
         </div>
       </dl>
 
-        <h3>Do you need to add more evidence of your UK residency?</h3>
+        <h3>Do you need to add more evidence of your residency in the UK?</h3>
+
+        <p>You must upload 2 documents as proof of residency in the UK.</p>
 
         <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras neque purus, ullamcorper et iaculis ut, egestas ornare leo.</p> -->
 
@@ -89,7 +91,7 @@
       </form>
 
      {{ backLink({
-        "href": "upload-res-uk-file-type",
+        "href": "upload-res-uk",
         "text": "Change my previous answer"
       }) }}
       
