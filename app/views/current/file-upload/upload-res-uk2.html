@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Upload your evidence of UK residency
+  What evidence are you uploading for {{ data['upload-firstname'] }}’s proof of residency?
 {% endblock %}
 
 {% block beforeContent %}
@@ -57,15 +57,15 @@
 
          {% endcall %}
 
-         <p>You must upload 2 documents as proof of residency in the UK. You can add a second document after you select continue.</p>
+         <p>You must <strong>upload 2 documents</strong> as proof of residency in the UK. You can add a second document after you select continue.</p>
 
          {{ radios({
-          "idPrefix": "file-type-4",
-          "name": "file-type-4",
+          "idPrefix": "file-type-3",
+          "name": "file-type-3",
           "items": [
             {
               "value": "Utility bill",
-              "text": "utility bill"
+              "text": "Utility bill"
             },
             {
               "value": "Council Tax bill",
@@ -73,11 +73,11 @@
             },
             {
               "value": "Tenancy information",
-              "text": "tenancy information"
+              "text": "Tenancy information"
             },
             {
               "value": "Benefit letter",
-              "text": "benefit letter"
+              "text": "Benefit letter"
             },
             {
               "value": "HMRC letter",
@@ -89,15 +89,15 @@
             },
              {
               "value": "Bank statement",
-              "text": "bank statement"
+              "text": "Bank statement"
             },
              {
               "value": "Mortgage letter",
-              "text": "mortgage letter"
+              "text": "Mortgage letter"
             },
             {
               "value": "Other",
-              "text": "other"
+              "text": "Other"
             }
           ]
         }) }}

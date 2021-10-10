@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  What kind of evidence would you like to provide?
+  What type of evidence are you providing?
 {% endblock %}
 
 {% block beforeContent %}
@@ -31,7 +31,7 @@
 
         {% call fieldset({
           legend: {
-            text: "What kind of evidence would you like to provide?",
+            text: "What type of evidence are you providing?",
             classes: "nhsuk-fieldset__legend--l",
             isPageHeading: true
           }
@@ -45,14 +45,14 @@
               "value": "sharecode",
               "text": "EU settled status share code",
               "hint": {
-                "text": "A share code is usually valid for 30 days and is made up of 9 different numbers and letters. For example, A1234567G"
+                "text": "You can get your EU settled status share code from the gov.uk website if your right to reside in the UK is based on you having EU settled status"
               }
             },
             {
               "value": "document",
-              "text": "Documents",
+              "text": "Document",
               "hint": {
-                "text": "The documents we accept are listed in the email we have sent you "
+                "text": "The documents we can consider are listed in the email we have sent you"
               }
             }
           ]

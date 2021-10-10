@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Proof of residency evidence uploaded
+  Proof of residency in the UK evidence uploaded
 {% endblock %}
 
 {% block beforeContent %}
@@ -31,11 +31,15 @@
 
         {% call fieldset({
           legend: {
-            text: "Proof of residency evidence uploaded",
+            text: "Proof of residency in the UK evidence uploaded",
             classes: "nhsuk-fieldset__legend--l",
             isPageHeading: true
           }
         }) %}
+
+        <p>We need 2 of the documents we asked for in the email we sent you as proof of residency in the UK. If you cannot provide 2 of the documents listed, upload all alternative evidence that you have available.</p>
+
+        <p>You’ll get a chance tell us why you couldn’t provide the documents we asked for.</p>
         
         <br>
 
