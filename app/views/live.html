@@ -18,18 +18,18 @@
    }
 
    .nhsuk-tag--green {
-    background-color: #cce5d8;
-    border: 1px solid #004c23;
-    color: #004c23;
-    margin-left: 10px;
-}
+       background-color: #cce5d8;
+       border: 1px solid #004c23;
+       color: #004c23;
+       margin-left: 10px;
+   }
 
    .nhsuk-tag--grey {
-    background-color: #dbe0e3;
-    border: 1px solid #354550;
-    color: #354550;
-    margin-left: 10px;
-}
+       background-color: #dbe0e3;
+       border: 1px solid #354550;
+       color: #354550;
+       margin-left: 10px;
+   }
    
 </style>
 
@@ -78,6 +78,11 @@
                {{ actionLink({
                "text": "File upload",
                "href": "current/file-upload/start"
+               }) }}
+
+               {{ actionLink({
+               "text": "Get a replacement (customer not found)",
+               "href": "current/start-not-found"
                }) }}
 
                <hr>
