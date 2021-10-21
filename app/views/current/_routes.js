@@ -35,6 +35,20 @@ router.post('/newAppNotFound', function (req, res) {
   }
 })
 
+// What do you want to do? - new-application-muliple-records.html
+router.post('/newAppMultRecords', function (req, res) {
+  var newAppMultRecords = req.session.data['new-application-multiple-records']
+  if (newAppMultRecords == "new") {
+    res.redirect('')
+  }
+  else if (newAppMultRecords == "replacement") {
+    res.redirect('replacement/multiple-records/next-steps')
+  }
+  else {
+    res.redirect('new-application-multiple-records')
+  }
+})
+
 
 // Has anything changed since you last applied? - coc.html
 router.post('/changeCircs', function (req, res) {
