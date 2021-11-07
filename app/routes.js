@@ -95,6 +95,11 @@ router.use('/sprint36', require('./views/sprint36/_routes'));
 router.use('/sprint36/apply', require('./views/sprint36/apply/_routes'));
 router.use('/sprint36/replacement', require('./views/sprint36/replacement/_routes'));
 router.use('/sprint36/file-upload', require('./views/sprint36/file-upload/_routes'));
+
+router.use('/sprint37', require('./views/sprint37/_routes'));
+router.use('/sprint37/apply', require('./views/sprint37/apply/_routes'));
+router.use('/sprint37/replacement', require('./views/sprint37/replacement/_routes'));
+router.use('/sprint37/file-upload', require('./views/sprint37/file-upload/_routes'));
 //
 
 
