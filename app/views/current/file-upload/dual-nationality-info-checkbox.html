@@ -6,6 +6,13 @@
 
 {% block beforeContent %}
 
+<style>
+  .autocomplete__wrapper {
+    background-color: white;
+    width: 66.66%; 
+  }
+</style>
+
   <!-- Phase banner -->
   <div class="app-phase-banner">
     <div class="nhsuk-width-container app-phase-banner__container">
@@ -37,13 +44,6 @@
         }) %}
 
       <form>
-
-        <select id="location-picker">
-          <option value="fr">France</option>
-          <option value="de">Germany</option>
-          <option value="gb">United Kingdom</option>
-        </select>
-<br><br>
         <div class="nhsuk-form-group">
           <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
@@ -83,11 +83,47 @@
                     <label class="nhsuk-label" for="country">
                       Country
                     </label>
-                    <input class="nhsuk-input nhsuk-u-width-two-thirds" id="country" name="country" type="text">
+                    <!-- <input class="nhsuk-input nhsuk-u-width-two-thirds" id="country" name="country" type="text"> -->
+                    <select id="location-picker">
+                      <option value=""></option>
+                      <option value="at">Austria</option>
+                      <option value="be">Belgium</option>
+                      <option value="bg">Bulgaria</option>
+                      <option value="hr">Croatia</option>
+                      <option value="cy">Cyprus</option>
+                      <option value="cz">Czechia</option>
+                      <option value="dk">Denmark</option>
+                      <option value="ee">Estonia</option>
+                      <option value="fi">Finland</option>
+                      <option value="fr">France</option>
+                      <option value="de">Germany</option>
+                      <option value="gr">Greece</option>
+                      <option value="hu">Hungary</option>
+                      <option value="is">Iceland</option>
+                      <option value="ie">Ireland</option>
+                      <option value="it">Italy</option>
+                      <option value="lv">Latvia</option>
+                      <option value="li">Liechtenstein</option>
+                      <option value="lt">Lithuania</option>
+                      <option value="lu">Luxemburg</option>
+                      <option value="mt">Malta</option>
+                      <option value="nl">Netherlands</option>
+                      <option value="no">Norway</option>
+                      <option value="pl">Poland</option>
+                      <option value="pt">Portugal</option>
+                      <option value="ro">Romania</option>
+                      <option value="sk">Slovakia</option>
+                      <option value="si">Slovenia</option>
+                      <option value="es">Spain</option>
+                      <option value="se">Sweden</option>
+                      <option value="">Switzerland</option>
+                    </select>
                   </div>
 
-                  <label for="my-autocomplete">Country</label>
-                    <div id="my-autocomplete-container">
+
+
+                  <!-- <label for="my-autocomplete">Country</label>
+                    <div id="my-autocomplete-container"> -->
 
                     </div>
 
