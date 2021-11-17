@@ -28,8 +28,6 @@
     <div class="nhsuk-grid-column-three-quarters">
       <form action="cya" method="post">
 
-
-
         {% call fieldset({
           legend: {
             text: "",
@@ -39,6 +37,13 @@
         }) %}
 
       <form>
+
+        <select id="location-picker">
+          <option value="fr">France</option>
+          <option value="de">Germany</option>
+          <option value="gb">United Kingdom</option>
+        </select>
+<br><br>
         <div class="nhsuk-form-group">
           <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
@@ -80,6 +85,11 @@
                     </label>
                     <input class="nhsuk-input nhsuk-u-width-two-thirds" id="country" name="country" type="text">
                   </div>
+
+                  <label for="my-autocomplete">Country</label>
+                    <div id="my-autocomplete-container">
+
+                    </div>
 
                 </div>
               </div>
