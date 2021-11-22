@@ -33,13 +33,13 @@ router.use('/current/file-upload', require('./views/current/file-upload/_routes'
 // ----------------------------
 
 // Basic journeys
-router.use('/sprint1', require('./views/sprint1/_routes'));
-router.use('/sprint2', require('./views/sprint2/_routes'));
-router.use('/sprint3', require('./views/sprint3/_routes'));
-router.use('/sprint4', require('./views/sprint4/_routes'));
-router.use('/sprint5', require('./views/sprint5/_routes'));
-router.use('/sprint6', require('./views/sprint6/_routes'));
-router.use('/sprint7', require('./views/sprint7/_routes'));
+router.use('/sprint-001', require('./views/sprint-001/_routes'));
+router.use('/sprint-002', require('./views/sprint-002/_routes'));
+router.use('/sprint-003', require('./views/sprint-003/_routes'));
+router.use('/sprint-004', require('./views/sprint-004/_routes'));
+router.use('/sprint-005', require('./views/sprint-005/_routes'));
+router.use('/sprint-006', require('./views/sprint-006/_routes'));
+router.use('/sprint-007', require('./views/sprint-007/_routes'));
 
 // Pre-registration and post-january application journeys
 router.use('/sprint8/prereg', require('./views/sprint8/prereg/_routes'));
@@ -100,6 +100,11 @@ router.use('/sprint37', require('./views/sprint37/_routes'));
 router.use('/sprint37/apply', require('./views/sprint37/apply/_routes'));
 router.use('/sprint37/replacement', require('./views/sprint37/replacement/_routes'));
 router.use('/sprint37/file-upload', require('./views/sprint37/file-upload/_routes'));
+
+router.use('/sprint-038', require('./views/sprint-038/_routes'));
+router.use('/sprint-038/apply', require('./views/sprint-038/apply/_routes'));
+router.use('/sprint-038/replacement', require('./views/sprint-038/replacement/_routes'));
+router.use('/sprint-038/file-upload', require('./views/sprint-038/file-upload/_routes'));
 //
 
 
