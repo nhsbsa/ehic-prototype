@@ -67,10 +67,10 @@ router.use('/sprint-015/prereg', require('./views/sprint-015/prereg/_routes'));
 router.use('/sprint-015/postjan', require('./views/sprint-015/postjan/_routes'));
 
 // One application journeys
-router.use('/sprint19-20/apply', require('./views/sprint19-20/apply/_routes'));
-router.use('/sprint21/apply', require('./views/sprint21/apply/_routes'));
-router.use('/sprint22/apply', require('./views/sprint22/apply/_routes'));
-router.use('/sprint23-24/apply', require('./views/sprint23-24/apply/_routes'));
+router.use('/sprint-019/apply', require('./views/sprint-019/apply/_routes'));
+router.use('/sprint-021/apply', require('./views/sprint-021/apply/_routes'));
+router.use('/sprint-022/apply', require('./views/sprint-022/apply/_routes'));
+router.use('/sprint-023/apply', require('./views/sprint-023/apply/_routes'));
 router.use('/sprint26/apply', require('./views/sprint26/apply/_routes'));
 router.use('/sprint27/apply', require('./views/sprint27/apply/_routes'));
 router.use('/sprint28/apply', require('./views/sprint28/apply/_routes'));
