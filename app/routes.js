@@ -42,23 +42,23 @@ router.use('/sprint-006', require('./views/sprint-006/_routes'));
 router.use('/sprint-007', require('./views/sprint-007/_routes'));
 
 // Pre-registration and post-january application journeys
-router.use('/sprint8/prereg', require('./views/sprint8/prereg/_routes'));
-router.use('/sprint8/postjan', require('./views/sprint8/postjan/_routes'));
+router.use('/sprint-008/prereg', require('./views/sprint-008/prereg/_routes'));
+router.use('/sprint-008/postjan', require('./views/sprint-008/postjan/_routes'));
 
-router.use('/sprint9/prereg', require('./views/sprint9/prereg/_routes'));
-router.use('/sprint9/postjan', require('./views/sprint9/postjan/_routes'));
+router.use('/sprint-009/prereg', require('./views/sprint-009/prereg/_routes'));
+router.use('/sprint-009/postjan', require('./views/sprint-009/postjan/_routes'));
 
-router.use('/sprint10/prereg', require('./views/sprint10/prereg/_routes'));
-router.use('/sprint10/postjan', require('./views/sprint10/postjan/_routes'));
+router.use('/sprint-010/prereg', require('./views/sprint-010/prereg/_routes'));
+router.use('/sprint-010/postjan', require('./views/sprint-010/postjan/_routes'));
 
-router.use('/sprint11/prereg', require('./views/sprint11/prereg/_routes'));
-router.use('/sprint11/postjan', require('./views/sprint11/postjan/_routes'));
+router.use('/sprint-011/prereg', require('./views/sprint-011/prereg/_routes'));
+router.use('/sprint-011/postjan', require('./views/sprint-011/postjan/_routes'));
 
-router.use('/sprint12/prereg', require('./views/sprint12/prereg/_routes'));
-router.use('/sprint12/postjan', require('./views/sprint12/postjan/_routes'));
+router.use('/sprint-012/prereg', require('./views/sprint-012/prereg/_routes'));
+router.use('/sprint-012/postjan', require('./views/sprint-012/postjan/_routes'));
 
-router.use('/sprint13/prereg', require('./views/sprint13/prereg/_routes'));
-router.use('/sprint13/postjan', require('./views/sprint13/postjan/_routes'));
+router.use('/sprint-013/prereg', require('./views/sprint-013/prereg/_routes'));
+router.use('/sprint-013/postjan', require('./views/sprint-013/postjan/_routes'));
 
 router.use('/sprint14/prereg', require('./views/sprint14/prereg/_routes'));
 router.use('/sprint14/postjan', require('./views/sprint14/postjan/_routes'));
