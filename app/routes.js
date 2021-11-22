@@ -60,11 +60,11 @@ router.use('/sprint-012/postjan', require('./views/sprint-012/postjan/_routes'))
 router.use('/sprint-013/prereg', require('./views/sprint-013/prereg/_routes'));
 router.use('/sprint-013/postjan', require('./views/sprint-013/postjan/_routes'));
 
-router.use('/sprint14/prereg', require('./views/sprint14/prereg/_routes'));
-router.use('/sprint14/postjan', require('./views/sprint14/postjan/_routes'));
+router.use('/sprint-014/prereg', require('./views/sprint-014/prereg/_routes'));
+router.use('/sprint-014/postjan', require('./views/sprint-014/postjan/_routes'));
 
-router.use('/sprint15/prereg', require('./views/sprint15/prereg/_routes'));
-router.use('/sprint15/postjan', require('./views/sprint15/postjan/_routes'));
+router.use('/sprint-015/prereg', require('./views/sprint-015/prereg/_routes'));
+router.use('/sprint-015/postjan', require('./views/sprint-015/postjan/_routes'));
 
 // One application journeys
 router.use('/sprint19-20/apply', require('./views/sprint19-20/apply/_routes'));
@@ -96,10 +96,10 @@ router.use('/sprint36/apply', require('./views/sprint36/apply/_routes'));
 router.use('/sprint36/replacement', require('./views/sprint36/replacement/_routes'));
 router.use('/sprint36/file-upload', require('./views/sprint36/file-upload/_routes'));
 
-router.use('/sprint37', require('./views/sprint37/_routes'));
-router.use('/sprint37/apply', require('./views/sprint37/apply/_routes'));
-router.use('/sprint37/replacement', require('./views/sprint37/replacement/_routes'));
-router.use('/sprint37/file-upload', require('./views/sprint37/file-upload/_routes'));
+router.use('/sprint-037', require('./views/sprint-037/_routes'));
+router.use('/sprint-037/apply', require('./views/sprint-037/apply/_routes'));
+router.use('/sprint-037/replacement', require('./views/sprint-037/replacement/_routes'));
+router.use('/sprint-037/file-upload', require('./views/sprint-037/file-upload/_routes'));
 
 router.use('/sprint-038', require('./views/sprint-038/_routes'));
 router.use('/sprint-038/apply', require('./views/sprint-038/apply/_routes'));
