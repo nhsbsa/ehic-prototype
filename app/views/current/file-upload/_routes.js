@@ -20,6 +20,20 @@ router.post('/ukAddress', function (req, res) {
   }
 })
 
+// Do you have the evidence requested for [Name]? - evidence.html
+router.post('/evidenceYN', function (req, res) {
+  var evidenceYN = req.session.data['evidence-yn']
+  if (evidenceYN == "yes") {
+    res.redirect('provide-rtr-evid')
+  }
+  else if (evidenceYN == "no") {
+    res.redirect('additional-info')
+  }
+  else {
+    res.redirect('evidence')
+  }
+})
+
 // Do you need to provide evidence of your right to reside in the UK? - provide-rtr-evid.html
 router.post('/provideRTR', function (req, res) {
   var provideRTR = req.session.data['provide-RTR']
@@ -70,7 +84,6 @@ router.post('/provideUkRes', function (req, res) {
     res.redirect('upload-res-uk')
   }
   else if (provideUkRes == "no") {
-    // res.redirect('additional-info')
     res.redirect('provide-student')
   }
   else {
@@ -87,7 +100,7 @@ router.post('/provideStudent', function (req, res) {
     res.redirect('upload-student')
   }
   else if (provideStudent == "no") {
-    res.redirect('additional-info')
+    res.redirect('cya')
   }
   else {
     res.redirect('provide-student')
@@ -135,7 +148,7 @@ router.post('/addEvidStudent', function (req, res) {
     res.redirect('upload-student2')
   }
   else if (addEvidStudent == "No") {
-    res.redirect('additional-info')
+    res.redirect('cya')
   }
   else {
     res.redirect('upload-student-another')
