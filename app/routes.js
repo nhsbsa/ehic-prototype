@@ -86,15 +86,15 @@ router.use('/sprint-034/apply', require('./views/sprint-034/apply/_routes'));
 router.use('/sprint-034/replacement', require('./views/sprint-034/replacement/_routes'));
 router.use('/sprint-034/file-upload', require('./views/sprint-034/file-upload/_routes'));
 
-router.use('/sprint35', require('./views/sprint35/_routes'));
-router.use('/sprint35/apply', require('./views/sprint35/apply/_routes'));
-router.use('/sprint35/replacement', require('./views/sprint35/replacement/_routes'));
-router.use('/sprint35/file-upload', require('./views/sprint35/file-upload/_routes'));
+router.use('/sprint-035', require('./views/sprint-035/_routes'));
+router.use('/sprint-035/apply', require('./views/sprint-035/apply/_routes'));
+router.use('/sprint-035/replacement', require('./views/sprint-035/replacement/_routes'));
+router.use('/sprint-035/file-upload', require('./views/sprint-035/file-upload/_routes'));
 
-router.use('/sprint36', require('./views/sprint36/_routes'));
-router.use('/sprint36/apply', require('./views/sprint36/apply/_routes'));
-router.use('/sprint36/replacement', require('./views/sprint36/replacement/_routes'));
-router.use('/sprint36/file-upload', require('./views/sprint36/file-upload/_routes'));
+router.use('/sprint-036', require('./views/sprint-036/_routes'));
+router.use('/sprint-036/apply', require('./views/sprint-036/apply/_routes'));
+router.use('/sprint-036/replacement', require('./views/sprint-036/replacement/_routes'));
+router.use('/sprint-036/file-upload', require('./views/sprint-036/file-upload/_routes'));
 
 router.use('/sprint-037', require('./views/sprint-037/_routes'));
 router.use('/sprint-037/apply', require('./views/sprint-037/apply/_routes'));
