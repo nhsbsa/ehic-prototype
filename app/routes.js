@@ -76,15 +76,15 @@ router.use('/sprint-027/apply', require('./views/sprint-027/apply/_routes'));
 router.use('/sprint-028/apply', require('./views/sprint-028/apply/_routes'));
 
 // Separated application and 'get replacement' journeys
-router.use('/sprint33', require('./views/sprint33/_routes'));
-router.use('/sprint33/apply', require('./views/sprint33/apply/_routes'));
-router.use('/sprint33/replacement', require('./views/sprint33/replacement/_routes'));
+router.use('/sprint-033', require('./views/sprint-033/_routes'));
+router.use('/sprint-033/apply', require('./views/sprint-033/apply/_routes'));
+router.use('/sprint-033/replacement', require('./views/sprint-033/replacement/_routes'));
 
 // Separated application, 'get replacement' and file upload journeys
-router.use('/sprint34', require('./views/sprint34/_routes'));
-router.use('/sprint34/apply', require('./views/sprint34/apply/_routes'));
-router.use('/sprint34/replacement', require('./views/sprint34/replacement/_routes'));
-router.use('/sprint34/file-upload', require('./views/sprint34/file-upload/_routes'));
+router.use('/sprint-034', require('./views/sprint-034/_routes'));
+router.use('/sprint-034/apply', require('./views/sprint-034/apply/_routes'));
+router.use('/sprint-034/replacement', require('./views/sprint-034/replacement/_routes'));
+router.use('/sprint-034/file-upload', require('./views/sprint-034/file-upload/_routes'));
 
 router.use('/sprint35', require('./views/sprint35/_routes'));
 router.use('/sprint35/apply', require('./views/sprint35/apply/_routes'));
