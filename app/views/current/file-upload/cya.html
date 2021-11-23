@@ -24,10 +24,10 @@
    <div class="nhsuk-grid-column-three-quarters">
       <form action="app-complete" method="post">
          <h1 class="nhsuk-heading-l">
-            Check your details are correct
+            Check the applicant's details are correct
          </h1>
          <h2 class="nhsuk-heading-m">
-            Your details
+            Applicant's details
          </h2>
 
          <dl class="nhsuk-summary-list">
@@ -98,7 +98,7 @@
    {% if data['provide-RTR'] == "yes" %}
 
          <h2 class="nhsuk-heading-m">
-            Evidence of your right to reside in the UK
+            Evidence of the applicant's right to reside in the UK
          </h2>
 
          <dl class="nhsuk-summary-list">
@@ -161,7 +161,7 @@
    {% if data['provide-dual'] == "yes" %}
 
          <h2 class="nhsuk-heading-m">
-            Evidence of your dual nationality
+            Evidence of the applicant's dual nationality
          </h2>
 
          <dl class="nhsuk-summary-list">
@@ -187,7 +187,7 @@
    {% if data['provide-uk-res'] == "yes" %}
 
          <h2 class="nhsuk-heading-m">
-            Evidence of your UK residency
+            Evidence of the applicant's UK residency
          </h2>
 
          <dl class="nhsuk-summary-list">
@@ -229,7 +229,7 @@
    {% if data['provide-student'] == "yes" %}
 
          <h2 class="nhsuk-heading-m">
-            Evidence of your studies abroad
+            Evidence of the applicant's studies abroad
          </h2>
 
          <dl class="nhsuk-summary-list">
@@ -291,8 +291,8 @@
 
          </dl>
 
-         <h2>Before you submit your evidence</h2>
-         <p>By submitting your evidence, you are confirming that the information you’ve given us is correct. If you knowingly provide incorrect information, you could be prosecuted or face civil proceedings.</p>
+         <h2>Before you submit the applicant's evidence</h2>
+         <p>By submitting the applicant's evidence, you are confirming that the information you’ve given us is correct. If you knowingly provide incorrect information, you could be prosecuted or face civil proceedings.</p>
 
          <p>You can <a href="https://www.nhsbsa.nhs.uk/our-policies/privacy" target="_blank">find out more about how we use your information on our website</a>.</p>
 
@@ -300,6 +300,7 @@
          "text": "Agree and send"
          }) }}
       </form>
+      
       <!-- {{ backLink({
          "href": "add-another-yn",
          "text": "Change my previous answer"
