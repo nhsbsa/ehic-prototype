@@ -71,9 +71,9 @@ router.use('/sprint-019/apply', require('./views/sprint-019/apply/_routes'));
 router.use('/sprint-021/apply', require('./views/sprint-021/apply/_routes'));
 router.use('/sprint-022/apply', require('./views/sprint-022/apply/_routes'));
 router.use('/sprint-023/apply', require('./views/sprint-023/apply/_routes'));
-router.use('/sprint26/apply', require('./views/sprint26/apply/_routes'));
-router.use('/sprint27/apply', require('./views/sprint27/apply/_routes'));
-router.use('/sprint28/apply', require('./views/sprint28/apply/_routes'));
+router.use('/sprint-026/apply', require('./views/sprint-026/apply/_routes'));
+router.use('/sprint-027/apply', require('./views/sprint-027/apply/_routes'));
+router.use('/sprint-028/apply', require('./views/sprint-028/apply/_routes'));
 
 // Separated application and 'get replacement' journeys
 router.use('/sprint33', require('./views/sprint33/_routes'));
