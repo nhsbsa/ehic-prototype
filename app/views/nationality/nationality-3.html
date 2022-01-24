@@ -19,7 +19,23 @@
     top: 38px;
     left: 10px;
   }
+
+  .nhsuk-form-group.nationality {
+    width: 70%;
+    float: left;
+  }
+
+
   
+  @media screen and (max-width: 1000px) {
+    .nhsuk-form-group.nationality {
+      width: 100%;
+    }
+    .remove-link {
+      float: none;
+      position: inherit;
+    }
+  }
 
 </style>
 
@@ -63,7 +79,7 @@
 
             <p>If you are a dual or multiple national, add all of your natioanlities.</p>
 
-              <div class="nhsuk-form-group" style="width: 70%;">
+              <div class="nhsuk-form-group nationality">
                 <label class="nhsuk-label" for="country-1">
                   Country of nationality
                 </label>
@@ -73,7 +89,7 @@
                 </select>
               </div>
 
-              <div class="nhsuk-form-group" style="width: 70%;  float: left;">
+              <div class="nhsuk-form-group nationality">
                 <label class="nhsuk-label" for="country-2">
                   Country of nationality
                 </label>
@@ -91,7 +107,7 @@
                   </a>
                 </p>
 
-              <div class="nhsuk-form-group" style="width: 70%; float: left;">
+              <div class="nhsuk-form-group nationality">
                 <label class="nhsuk-label" for="country-3">
                   Country of nationality
                 </label>
