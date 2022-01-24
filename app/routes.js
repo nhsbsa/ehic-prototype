@@ -118,6 +118,10 @@ router.use('/sprint-038/file-upload', require('./views/sprint-038/file-upload/_r
 router.use('/tasklist/prereg', require('./views/tasklist/prereg/_routes'));
 router.use('/tasklist/postjan', require('./views/tasklist/postjan/_routes'));
 
+// nationality //
+router.use('/nationality', require('./views/nationality/_routes'));
+
+
 
 
 module.exports = router;
