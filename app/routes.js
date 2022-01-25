@@ -105,6 +105,11 @@ router.use('/sprint-038', require('./views/sprint-038/_routes'));
 router.use('/sprint-038/apply', require('./views/sprint-038/apply/_routes'));
 router.use('/sprint-038/replacement', require('./views/sprint-038/replacement/_routes'));
 router.use('/sprint-038/file-upload', require('./views/sprint-038/file-upload/_routes'));
+
+router.use('/sprint-039', require('./views/sprint-039/_routes'));
+router.use('/sprint-039/apply', require('./views/sprint-039/apply/_routes'));
+router.use('/sprint-039/replacement', require('./views/sprint-039/replacement/_routes'));
+router.use('/sprint-039/file-upload', require('./views/sprint-039/file-upload/_routes'));
 //
 
 

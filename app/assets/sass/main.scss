@@ -11,6 +11,15 @@
 // Add your custom CSS/Sass styles below... 
 ///////////////////////////////////////////
 
+a {
+  display: block;
+  width: fit-content;
+}
+
+#location-picker {
+  background-color: white;
+}
+
 .callout {
     padding: 32px;
     background-color: #fff;
