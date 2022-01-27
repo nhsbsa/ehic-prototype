@@ -6,32 +6,63 @@ const axios = require('axios');
 // Add your routes here - above the module.exports line
 
 
-// Were you resident in the UK for 1 January 2021? - resident-before-jan.html
-router.post('/residentBeforeJan', function (req, res) {
-  var residentBeforeJan = req.session.data['resident-before-jan']
-  if (residentBeforeJan == "Yes") {
-    res.redirect('nationality')
+// What do you want to do? - new-application.html
+router.post('/newApplication', function (req, res) {
+  var newApplication = req.session.data['new-application']
+  if (newApplication == "new") {
+    res.redirect('apply/where-do-you-live')
   }
-  else if (residentBeforeJan == "No") {
-    res.redirect('nationality')
-    // res.redirect('ineligible-2')
+  else if (newApplication == "replacement") {
+    res.redirect('replacement/next-steps')
   }
   else {
-    res.redirect('resident-before-jan')
+    res.redirect('new-application')
   }
 })
 
-// Have you ever held UK citizenship? - uk-citizenship.html
-router.post('/ukCitizenship', function (req, res) {
-  var ukCitizenship = req.session.data['uk-citizenship']
-  if (ukCitizenship == "Yes") {
-    res.redirect('national-other-eu')
+
+// What do you want to do? - new-application-not-found.html
+router.post('/newAppNotFound', function (req, res) {
+  var newAppNotFound = req.session.data['new-application-not-found']
+  if (newAppNotFound == "new") {
+    res.redirect('')
   }
-  else if (ukCitizenship == "No") {
-    res.redirect('birth-country')
+  else if (newAppNotFound == "replacement") {
+    res.redirect('replacement/not-found/next-steps')
   }
   else {
-    res.redirect('uk-citizenship')
+    res.redirect('new-application-not-found')
+  }
+})
+
+// What do you want to do? - new-application-muliple-records.html
+router.post('/newAppMultRecords', function (req, res) {
+  var newAppMultRecords = req.session.data['new-application-multiple-records']
+  if (newAppMultRecords == "new") {
+    res.redirect('')
+  }
+  else if (newAppMultRecords == "replacement") {
+    res.redirect('replacement/multiple-records/next-steps')
+  }
+  else {
+    res.redirect('new-application-multiple-records')
+  }
+})
+
+
+// Has anything changed since you last applied? - coc.html
+router.post('/changeCircs', function (req, res) {
+  var changeCircs = req.session.data['change-circs']
+  if (changeCircs == "new") {
+    // res.redirect('apply/where-do-you-live')
+    res.redirect('contact-us')
+  }
+  else if (changeCircs == "replacement") {
+    // res.redirect('replacement/applicant-type')
+    res.redirect('replacement/main-who-for')
+  }
+  else {
+    res.redirect('coc')
   }
 })
 
