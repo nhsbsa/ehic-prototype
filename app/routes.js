@@ -28,6 +28,10 @@ router.use('/current/file-upload', require('./views/current/file-upload/_routes'
 // router.use('/current/prereg', require('./views/current/prereg/_routes'));
 // router.use('/current/postjan', require('./views/current/postjan/_routes'));
 
+router.use('/nationality', require('./views/nationality/_routes'));
+router.use('/nationality/apply', require('./views/nationality/apply/_routes'));
+
+
 
 // Start folder specific routes
 // ----------------------------
