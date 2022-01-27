@@ -58,6 +58,50 @@
 
     <script src="/nhsuk-frontend/nhsuk.min.js" defer></script>
 
+    <script type="text/javascript">
+      function addInputEU(){
+        var newFieldEU = document.createElement('div');
+        newFieldEU.innerHTML = "<br><div class='autocomplete__wrapper'><label class='nhsuk-label' for='nationality-7'>Country name</label><select id='eu-location-picker-8' name='myInputsEU[]' type='text'><option value=''></option><option value='at'>Austria</option><option value='be'>Belgium</option><option value='bg'>Bulgaria</option><option value=hr>Croatia</option><option value='cy'>Cyprus</option><option value=cz>Czechia (Czech Republic)</option><option value='dk'>Denmark</option><option value='ee'>Estonia</option><option value='fi'>Finland</option><option value='fr'>France</option><option value='de'>Germany</option><option value='gr'>Greece</option><option value='hu'>Hungary</option><option value='is'>Iceland</option><option value='ie'>Ireland</option><option value='it'>Italy</option><option value='lv'>Latvia</option><option value='li'>Liechtenstein</option><option value='lt'>Lithuania</option><option value='lu'>Luxemburg</option><option value='mt'>Malta</option><option value='nl'>Netherlands</option><option value='no'>Norway</option><option value='pl'>Poland</option><option value='pt'>Portugal</option><option value='ro'>Romania</option><option value='sk'>Slovakia</option><option value='si'>Slovenia</option><option value='es'>Spain</option><option value='se'>Sweden</option><option value='cf'>Switzerland</option></select></div><a href='#' type='button' value='-' onClick='return removeInputEU(this);'>- Remove nationality</a>";
+        document.getElementById('appendableEU').appendChild(newFieldEU);
+
+        accessibleAutocomplete.enhanceSelectElement({
+          selectElement: document.querySelector('#eu-location-picker-8')
+        })
+
+        return false;
+      }
+
+      function removeInputEU(btn){
+          btn.parentNode.remove();
+          return false;
+      }
+
+      function addInputEFTA(){
+        var newFieldEFTA = document.createElement('div');
+        //newFieldEFTA.innerHTML = "<br><label class='nhsuk-label' for='nationality-8'>Country name</label><select id='efta-location-picker-9' name='myInputsEFTA[]' type='text'><option value=''></option><option value='is'>Iceland</option><option value='li'>Liechtenstein</option><option value='no'>Norway</option><option value='cf'>Switzerland</option></select><a href='#' type='button' value='-' onClick='return removeInputEFTA(this);'>- Remove nationality</a>";
+        // <input class='nhsuk-input nhsuk-u-width-two-thirds' type='text' name='myInputsEFTA[]'> 
+        document.getElementById('appendableEFTA').appendChild(newFieldEFTA);
+        return false;
+      }
+
+      function removeInputEFTA(btn){
+          btn.parentNode.remove();
+          return false;
+      }
+
+      function addInputOther(){
+        var newFieldOther = document.createElement('div');
+        newFieldOther.innerHTML = "<br><label class='nhsuk-label' for='nationality-9'>Country name</label><input class='nhsuk-input' type='text' name='myInputsOther[]'> <a href='#' type='button' value='-' onClick='return removeInputOther(this);'>- Remove nationality</a>";
+        document.getElementById('appendableOther').appendChild(newFieldOther);
+        return false;
+      }
+
+      function removeInputOther(btn){
+          btn.parentNode.remove();
+          return false;
+      }
+    </script>
+
     {% block headIcons %}
     <link rel="shortcut icon" href="/nhsuk-frontend/assets/favicons/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png">
@@ -74,7 +118,10 @@
 
   <body class="{{ bodyClasses }}">
 
-    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    <script>
+      document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
+    </script>
+
     {% block bodyStart %}{% endblock %}
 
       {% block skipLink %}

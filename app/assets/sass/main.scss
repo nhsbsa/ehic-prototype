@@ -11,6 +11,15 @@
 // Add your custom CSS/Sass styles below... 
 ///////////////////////////////////////////
 
+a {
+  display: block;
+  width: fit-content;
+}
+
+#location-picker, #location-picker-2, #location-picker-3, #location-picker-4, #location-picker-5, #location-picker-6, #location-picker-7, #eu-location-picker-8, #efta-location-picker-9, #other-location-picker-10 {
+  background-color: white;
+}
+
 .callout {
     padding: 32px;
     background-color: #fff;
