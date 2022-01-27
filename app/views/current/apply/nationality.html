@@ -381,7 +381,7 @@
 
         <!-- Version 1: Paste & Modify here -->
 
-        <div class="nhsuk-form-group">
+        <!-- <div class="nhsuk-form-group">
 
           <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
@@ -417,7 +417,7 @@
                     Country of nationality
                   </label>
                   <!-- <input list="location-picker"> -->
-                  <select id="location-picker" class="nhsuk-input nhsuk-u-width-two-thirds" name="nationality-2" type="text">
+                  <!-- <select id="location-picker" class="nhsuk-input nhsuk-u-width-two-thirds" name="nationality-2" type="text">
                     <option value=""></option>
                     <option value="Austria"></option>
                     <option value="Belgium"></option>
@@ -1249,7 +1249,7 @@
             </div>
           </fieldset>
         
-        </div>
+        </div> --> 
 
         <!--  -->
 <!-- 
@@ -1337,28 +1337,31 @@
                 <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
 
                   <div class="nhsuk-checkboxes__item">
-                    <input class="nhsuk-checkboxes__input" id="nationality-7" name="nationality" type="checkbox" value="eu" aria-controls="conditional-nationality-7" aria-expanded="false">
-                    <label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-7">
+                    <input class="nhsuk-checkboxes__input" id="eu-nationality" name="nationality" type="checkbox" value="eu" aria-describedby="nationality-3-item-hint" aria-controls="conditional-nationality-3" aria-expanded="false">
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="eu-nationality">
                       Citizen of an EU country
                     </label>
+                    <div class="nhsuk-hint nhsuk-checkboxes__hint" id="nationality-3-item-hint">
+                      including Norway, Iceland, Liechtenstein and Switzerland
+                    </div>
                   </div>
           
-                  <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-nationality-7">
+                  <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-nationality-3">
           
                     <div class="nhsuk-form-group" id="appendableEU">
                       
-                        <label class="nhsuk-label" for="nationality-7">
+                        <label class="nhsuk-label" for="eu-nationality">
                           Country name
                         </label>
                         <!-- <input list="location-picker" class="nhsuk-input nhsuk-u-width-two-thirds" id="nationality-7" name="myInputsEU[]" type="text"> -->
-                        <select id="location-picker-5" class="nationality-7" name="myInputsEU[]" type="text">
+                        <select id="eu-location-picker" class="eu-nationality" name="myInputsEU[]" type="text">
                           <option value=""></option>
                           <option value="at">Austria</option>
                           <option value="be">Belgium</option>
                           <option value="bg">Bulgaria</option>
                           <option value="hr">Croatia</option>
                           <option value="cy">Cyprus</option>
-                          <option value="cz">Czechia (Czech Republic)</option>
+                          <option value="cz">Czech Republic</option>
                           <option value="dk">Denmark</option>
                           <option value="ee">Estonia</option>
                           <option value="fi">Finland</option>
@@ -1385,7 +1388,7 @@
                           <option value="se">Sweden</option>
                           <option value="cf">Switzerland</option>
                         </select>
-                        <a href="#" type="button" value="+" onClick="return addInputEU()">+ Add another country</a>
+                        <a href="#" type="button" value="+" onClick="return addInputEU(this)">+ Add another country</a>
 
                     </div>
                   </div>
@@ -1395,69 +1398,20 @@
                 <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
 
                   <div class="nhsuk-checkboxes__item">
-                    <input class="nhsuk-checkboxes__input" id="nationality-8" name="nationality" type="checkbox" value="efta" aria-controls="conditional-nationality-8" aria-expanded="false">
-                    <label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-8">
-                      National of Norway, Iceland, Liechtenstein or Switzerland
-                    </label>
-                  </div>
-          
-                  <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-nationality-8">
-          
-                    <div class="nhsuk-form-group" id="appendableEFTA">
-
-                      <label class="nhsuk-label" for="nationality-8">
-                        Country name
-                      </label>
-                      <!-- <input class="nhsuk-input nhsuk-u-width-two-thirds" id="nationality-8" name="myInputsEFTA[]" type="text"> -->
-                      <select id="location-picker-6" class="nationality-8" name="myInputsEFTA[]" type="text">
-                        <option value=""></option>
-                        <option value="is">Iceland</option>
-                        <option value="li">Liechtenstein</option>
-                        <option value="no">Norway</option>
-                        <option value="cf">Switzerland</option>
-                      </select>
-                      <a href='#' type="button" value="+" onClick="return addInputEFTA()">+ Add another country</a>
-
-                      <!-- WORK IN PROGRESS -->
-
-                      <label class="nhsuk-label" for="nationality-8">
-                        Country name
-                      </label>
-                      <input select="efta-location-picker-9" class="nhsuk-input nhsuk-u-width-two-thirds" id="nationality-8" name="myInputsEFTA[]" type="text">
-                      <select id="efta-location-picker-9" name="myInputsEFTA[]" type="text">
-                        <option value=""></option>
-                        <option value="is">Iceland</option>
-                        <option value="li">Liechtenstein</option>
-                        <option value="no">Norway</option>
-                        <option value="cf">Switzerland</option>
-                      </select>
-                      <a href='#' type="button" value="+" onClick="return addInputEFTA()">+ Add another country</a>
-
-                      <!-- END -->
-                      
-                    </div>
-                  </div>
-
-                </div>
-
-                <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
-
-                  <div class="nhsuk-checkboxes__item">
-                    <input class="nhsuk-checkboxes__input" id="nationality-9" name="nationality" type="checkbox" value="other" aria-controls="conditional-nationality-9" aria-expanded="false">
-                    <label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-9">
+                    <input class="nhsuk-checkboxes__input" id="other-nationality" name="nationality" type="checkbox" value="other" aria-controls="conditional-nationality-4" aria-expanded="false">
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="other-nationality">
                       Other
                     </label>
                   </div>
           
-                  <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-nationality-9">
+                  <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-nationality-4">
           
                     <div class="nhsuk-form-group" id="appendableOther">
 
-                      <label class="nhsuk-label" for="nationality-9">
+                      <label class="nhsuk-label" for="other-nationality">
                         Country name
                       </label>
-                      <!-- <input class="nhsuk-input nhsuk-u-width-two-thirds" id="nationality-9" name="myInputsOther[]" type="text"> -->
-                      <select id="location-picker-7" class="nationality-9" name="myInputsOther[]" type="text">
+                      <select id="other-location-picker" class="other-nationality" name="myInputsOther[]" type="text">
                         <option value=""></option>
                         <option value="af">Afghanistan</option>
                         <option value="al">Albania</option>
@@ -1472,14 +1426,12 @@
                         <option value="am">Armenia</option>
                         <option value="aw">Aruba</option>
                         <option value="au">Australia</option>
-                        <option value="at">Austria</option>
                         <option value="az">Azerbaijan</option>
                         <option value="bs">Bahamas </option>
                         <option value="bh">Bahrain</option>
                         <option value="bd">Bangladesh</option>
                         <option value="bb">Barbados</option>
                         <option value="by">Belarus</option>
-                        <option value="be">Belgium</option>
                         <option value="bz">Belize</option>
                         <option value="bj">Benin</option>
                         <option value="bm">Bermuda</option>
@@ -1492,7 +1444,6 @@
                         <option value="br">Brazil</option>
                         <option value="io">British Indian Ocean Territory </option>
                         <option value="bn">Brunei Darussalam</option>
-                        <option value="bg">Bulgaria</option>
                         <option value="bf">Burkina Faso</option>
                         <option value="bi">Burundi</option>
                         <option value="cv">Cabo Verde</option>
@@ -1512,13 +1463,9 @@
                         <option value="cg">Congo</option>
                         <option value="ck">Cook Islands </option>
                         <option value="cr">Costa Rica </option>
-                        <option value="hr">Croatia</option>
                         <option value="cu">Cuba</option>
                         <option value="cw">Curaçao</option>
-                        <option value="cy">Cyprus</option>
-                        <option value="cz">Czechia</option>
                         <option value="ci">Côte d'Ivoire</option>
-                        <option value="dk">Denmark</option>
                         <option value="dj">Djibouti</option>
                         <option value="dm">Dominica</option>
                         <option value="do">Dominican Republic </option>
@@ -1527,24 +1474,19 @@
                         <option value="sv">El Salvador</option>
                         <option value="gq">Equatorial Guinea</option>
                         <option value="er">Eritrea</option>
-                        <option value="ee">Estonia</option>
                         <option value="sz">Eswatini</option>
                         <option value="et">Ethiopia</option>
                         <option value="fk">Falkland Islands </option>
                         <option value="fo">Faroe Islands</option>
                         <option value="fj">Fiji</option>
-                        <option value="fi">Finland</option>
-                        <option value="fr">France</option>
                         <option value="gf">French Guiana</option>
                         <option value="pf">French Polynesia</option>
                         <option value="tf">French Southern Territories</option>
                         <option value="ga">Gabon</option>
                         <option value="gm">Gambia</option>
                         <option value="ge">Georgia</option>
-                        <option value="de">Germany</option>
                         <option value="gh">Ghana</option>
                         <option value="gi">Gibraltar</option>
-                        <option value="gr">Greece</option>
                         <option value="gl">Greenland</option>
                         <option value="gd">Grenada</option>
                         <option value="gp">Guadeloupe</option>
@@ -1557,15 +1499,11 @@
                         <option value="hm">Heard Island and McDonald Islands</option>
                         <option value="hn">Honduras</option>
                         <option value="hk">Hong Kong</option>
-                        <option value="hu">Hungary</option>
-                        <option value="is">Iceland</option>
                         <option value="in">India</option>
                         <option value="id">Indonesia</option>
                         <option value="ir">Iran</option>
                         <option value="iq">Iraq</option>
-                        <option value="ie">Ireland</option>
                         <option value="il">Israel</option>
-                        <option value="it">Italy</option>
                         <option value="jm">Jamaica</option>
                         <option value="jp">Japan</option>
                         <option value="jo">Jordan</option>
@@ -1577,14 +1515,10 @@
                         <option value="kw">Kuwait</option>
                         <option value="kg">Kyrgyzstan</option>
                         <option value="la">Lao People's Democratic Republic (the)</option>
-                        <option value="lv">Latvia</option>
                         <option value="lb">Lebanon</option>
                         <option value="ls">Lesotho</option>
                         <option value="lr">Liberia</option>
                         <option value="ly">Libya</option>
-                        <option value="li">Liechtenstein</option>
-                        <option value="lt">Lithuania</option>
-                        <option value="lu">Luxemburg</option>
                         <option value="mo">Macao</option>
                         <option value="mg">Madagascar</option>
                         <option value="mw">Malawi</option>
@@ -1610,7 +1544,6 @@
                         <option value="na">Namibia</option>
                         <option value="nr">Nauru</option>
                         <option value="np">Nepal</option>
-                        <option value="nl">Netherlands</option>
                         <option value="nc">New Caledonia</option>
                         <option value="nz">New Zealand</option>
                         <option value="ni">Nicaragua</option>
@@ -1619,7 +1552,6 @@
                         <option value="nu">Niue</option>
                         <option value="nf">Norfolk Island</option>
                         <option value="mp">Northern Mariana Islands</option>
-                        <option value="no">Norway</option>
                         <option value="om">Oman</option>
                         <option value="pk">Pakistan</option>
                         <option value="pw">Palau</option>
@@ -1630,12 +1562,9 @@
                         <option value="pe">Peru</option>
                         <option value="ph">Philippines</option>
                         <option value="pn">Pitcairn</option>
-                        <option value="pl">Poland</option>
-                        <option value="pt">Portugal</option>
                         <option value="pr">Puerto Rico</option>
                         <option value="qa">Qatar</option>
                         <option value="mk">Republic of North Macedonia</option>
-                        <option value="ro">Romania</option>
                         <option value="ru">Russian Federation</option>
                         <option value="rw">Rwanda</option>
                         <option value="re">Réunion</option>
@@ -1656,20 +1585,15 @@
                         <option value="sl">Sierra Leone</option>
                         <option value="sg">Singapore</option>
                         <option value="sx">Sint Maarten (Dutch part)</option>
-                        <option value="sk">Slovakia</option>
-                        <option value="si">Slovenia</option>
                         <option value="sb">Solomon Islands</option>
                         <option value="so">Somalia</option>
                         <option value="za">South Africa</option>
                         <option value="gs">South Georgia and the South Sandwich Islands</option>
                         <option value="ss">South Sudan</option>
-                        <option value="es">Spain</option>
                         <option value="lk">Sri Lanka</option>
                         <option value="sd">Sudan</option>
                         <option value="sr">Suriname</option>
                         <option value="sj">Svalbard and Jan Mayen</option>
-                        <option value="se">Sweden</option>
-                        <option value="cf">Switzerland</option>
                         <option value="sy">Syrian Arab Republic</option>
                         <option value="tw">Taiwan</option>
                         <option value="tj">Tajikistan</option>
@@ -1688,7 +1612,6 @@
                         <option value="ug">Uganda</option>
                         <option value="ua">Ukraine</option>
                         <option value="ae">United Arab Emirates</option>
-                        <option value="gb">United Kingdom</option>
                         <option value="um">United States Minor Outlying Islands</option>
                         <option value="us">United States of America</option>
                         <option value="uy">Uruguay</option>
@@ -1706,7 +1629,7 @@
                         <option value="zw">Zimbabwe</option>
                         <option value="ax">Åland Islands</option>
                       </select>
-                      <a href='#' type="button" value="+" onClick="return addInputOther()">+ Add another country</a>
+                      <a href='#' type="button" value="+" onClick="return addInputOther(this)">+ Add another country</a>
 
                     </div>
                   </div>
@@ -1726,8 +1649,6 @@
         {{ button({
           "text": "Continue"
         }) }}
-
-
 
       </form>
 
