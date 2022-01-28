@@ -15,10 +15,6 @@ a {
   width: fit-content;
 }
 
-.autocomplete__wrapper {
-  background-color: #fff;
-}
-
 .callout {
     padding: 32px;
     background-color: #fff;
@@ -47,6 +43,7 @@ a {
 
  .autocomplete__wrapper {
   position: relative;
+  background-color: #fff;
 }
 .autocomplete__hint,
 .autocomplete__input {
@@ -66,9 +63,16 @@ a {
 .autocomplete__hint {
   color: #b1b4b6;
   position: absolute;
+  z-index: -1;
 }
 .autocomplete__input--default {
   padding: 5px;
+}
+.autocomplete__input:focus {
+  border: 3px solid #fd0;
+  box-shadow: inset 0 0 0 2px #212b32;
+  outline: 4px solid transparent;
+  outline-offset: 3px;
 }
 .autocomplete__input--focused {
   outline: 3px solid #fd0;
