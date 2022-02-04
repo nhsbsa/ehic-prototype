@@ -96,22 +96,45 @@ router.post('/currentEhic', function (req, res) {
 })
 
 // What is your nationality? - nationality.html
+
+//Version 1: Simple Radial Options
+
+// router.post('/nationality', function (req, res) {
+//   var nationality = req.session.data['nationality']
+//   if (nationality == "UK") {
+//     res.redirect('national-other-eu-uk')
+//     // res.redirect('national-other-eu')
+//     // res.redirect('studying-uk-citizen')
+//   }
+//   else if (nationality == "dual") {
+//     res.redirect('birth-country-dual')
+//   }
+//   else if (nationality == "EU, EEA or Swiss") {
+//     res.redirect('uk-citizenship')
+//   }
+//   else if (nationality == "Other") {
+//     res.redirect('studying-eu-citizen')
+//     // res.redirect('ineligible-3')
+//   }
+//   else {
+//     res.redirect('nationality')
+//   }
+// })
+
+//Version 2: Nationality Checkboxes
+
 router.post('/nationality', function (req, res) {
+
   var nationality = req.session.data['nationality']
-  if (nationality == "UK") {
-    res.redirect('national-other-eu-uk')
-    // res.redirect('national-other-eu')
-    // res.redirect('studying-uk-citizen')
+
+  if ((nationality == "UK" && nationality == "Irish" && nationality == "Other") || (nationality == "UK" && nationality == "Other") || (nationality == "Irish" && nationality == "Other") || (nationality == "UK" && nationality == "Irish") || nationality == "UK" || nationality == "Irish" || nationality == "Other") {
+    res.redirect('eu-studying')
   }
-  else if (nationality == "dual") {
-    res.redirect('birth-country-dual')
-  }
-  else if (nationality == "EU, EEA or Swiss") {
+  else if ((nationality == "EU, EEA or Swiss" && nationality == "Other") || nationality == "EU, EEA or Swiss" || nationality == "Other") {
     res.redirect('uk-citizenship')
   }
-  else if (nationality == "Other") {
-    res.redirect('studying-eu-citizen')
-    // res.redirect('ineligible-3')
+  else if ((nationality == "UK" && nationality == "Irish" && nationality == "EU, EEA or Swiss") || (nationality == "UK" && nationality == "EU, EEA or Swiss") || (nationality == "Irish" && nationality == "EU, EEA or Swiss")) {
+    res.redirect('birth-country-uk')
   }
   else {
     res.redirect('nationality')
@@ -1150,7 +1173,7 @@ router.post('/application-pw/pwFormType', function (req, res) {
 router.post('/euStudying', function (req, res) {
   var euStudent = req.session.data['eu-studying']
   if (euStudent == "Yes") {
-    res.redirect('application-student-in-eu/evidence-student')
+    res.redirect('../apply/living-eu/application-student-in-eu/evidence-student')
   }
   else {
     res.redirect('eu-working')
