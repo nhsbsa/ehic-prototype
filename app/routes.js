@@ -24,13 +24,15 @@ router.use('/current/apply', require('./views/current/apply/_routes'));
 router.use('/current/replacement', require('./views/current/replacement/_routes'));
 router.use('/current/file-upload', require('./views/current/file-upload/_routes'));
 
-// router.use('/current_v2/apply', require('./views/current_v2/apply/_routes'));
-// router.use('/current/prereg', require('./views/current/prereg/_routes'));
-// router.use('/current/postjan', require('./views/current/postjan/_routes'));
+//v2
+
+router.use('/current-01', require('./views/current-01/_routes'));
+router.use('/current-01/apply', require('./views/current-01/apply/_routes'));
+router.use('/current-01/replacement', require('./views/current-01/replacement/_routes'));
+router.use('/current-01/file-upload', require('./views/current-01/file-upload/_routes'));
 
 router.use('/nationality', require('./views/nationality/_routes'));
 router.use('/nationality/apply', require('./views/nationality/apply/_routes'));
-
 
 
 // Start folder specific routes
@@ -114,6 +116,11 @@ router.use('/sprint-039', require('./views/sprint-039/_routes'));
 router.use('/sprint-039/apply', require('./views/sprint-039/apply/_routes'));
 router.use('/sprint-039/replacement', require('./views/sprint-039/replacement/_routes'));
 router.use('/sprint-039/file-upload', require('./views/sprint-039/file-upload/_routes'));
+
+router.use('/sprint-040', require('./views/sprint-040/_routes'));
+router.use('/sprint-040/apply', require('./views/sprint-040/apply/_routes'));
+router.use('/sprint-040/replacement', require('./views/sprint-040/replacement/_routes'));
+router.use('/sprint-040/file-upload', require('./views/sprint-040/file-upload/_routes'));
 //
 
 

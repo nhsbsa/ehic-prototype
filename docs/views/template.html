@@ -121,6 +121,105 @@
         return false;
       }
 
+      //For Living EU Form
+
+      function addInputLivingEU(el){
+        var newFieldLivingEU = document.createElement('div');
+
+        // Count current amount of inputs in section
+        var inputCountLivingEU = el.closest('div').getElementsByTagName('select').length;
+        console.log(inputCountLivingEU);
+
+        // Create ID for new select we're going to add
+        var newSelectIDLivingEU = `${el.previousElementSibling.className}-${inputCountLivingEU}`;
+
+        newFieldLivingEU.innerHTML = `<br><label class='nhsuk-label' for='${newSelectIDLivingEU}'>Country name</label><select id='${newSelectIDLivingEU}' name='myInputsLivingEU[]' type='text'><option value=''></option></select></div><a href='#' type='button' value='-' onClick='return removeInputLivingEU(this);'>- Remove nationality</a>`;
+        document.getElementById('appendableLivingEU').appendChild(newFieldLivingEU);
+
+        // Use ID of new select to initilise autcomplete for our new select
+        accessibleAutocomplete.enhanceSelectElement({
+          selectElement: document.querySelector(`#${newSelectIDLivingEU}`),
+          source: euCountries
+        })
+
+        return false;
+      }
+
+      function removeInputLivingEU(btn){
+        btn.parentNode.remove();
+        return false;
+      }
+
+      /// Dual
+
+      // Better to define an array of countries to pull into the select rather than redefining in HTML each time
+      // accessibleAutocomplete using 'source' can be used to pass the below array as an example
+
+      var dualCountries = [
+        "Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czechia (Czech Republic)",
+        "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary",
+        "Iceland", "Ireland", "Italy", "Latvia", "Liechtenstein", "Lithuania", "Luxemburg",
+        "Malta", "Netherlands", "Norway", "Poland", "Portugal",
+        "Romania", "Slovakia", "Slovenia",
+        "Spain", "Sweden", "Switzerland"
+      ]
+
+      function addInputDual(el){
+        var newFieldDual = document.createElement('div');
+
+        // Count current amount of inputs in section
+        var inputCountDual = el.closest('div').getElementsByTagName('select').length;
+        console.log(inputCountDual);
+
+        // Create ID for new select we're going to add
+        var newSelectIDDual = `${el.previousElementSibling.className}-${inputCountDual}`;
+
+        newFieldDual.innerHTML = `<br><label class='nhsuk-label' for='${newSelectIDDual}'>Country name</label><select id='${newSelectIDDual}' name='myInputsDual[]' type='text'><option value=''></option></select></div><a href='#' type='button' value='-' onClick='return removeInputDual(this);'>- Remove nationality</a>`;
+        document.getElementById('appendableDual').appendChild(newFieldDual);
+
+        // Use ID of new select to initilise autcomplete for our new select
+        accessibleAutocomplete.enhanceSelectElement({
+          selectElement: document.querySelector(`#${newSelectIDDual}`),
+          source: dualCountries
+        })
+
+        return false;
+      }
+
+      function removeInputDual(btn){
+        btn.parentNode.remove();
+        return false;
+      }
+
+      //For Living EU Form
+
+      function addInputLivingDual(el){
+        var newFieldLivingDual = document.createElement('div');
+
+        // Count current amount of inputs in section
+        var inputCountLivingDual = el.closest('div').getElementsByTagName('select').length;
+        console.log(inputCountLivingDual);
+
+        // Create ID for new select we're going to add
+        var newSelectIDLivingDual = `${el.previousElementSibling.className}-${inputCountLivingDual}`;
+
+        newFieldLivingDual.innerHTML = `<br><label class='nhsuk-label' for='${newSelectIDLivingDual}'>Country name</label><select id='${newSelectIDLivingDual}' name='myInputsLivingDual[]' type='text'><option value=''></option></select></div><a href='#' type='button' value='-' onClick='return removeInputLivingDual(this);'>- Remove nationality</a>`;
+        document.getElementById('appendableLivingDual').appendChild(newFieldLivingDual);
+
+        // Use ID of new select to initilise autcomplete for our new select
+        accessibleAutocomplete.enhanceSelectElement({
+          selectElement: document.querySelector(`#${newSelectIDLivingDual}`),
+          source: dualCountries
+        })
+
+        return false;
+      }
+
+      function removeInputLivingDual(btn){
+        btn.parentNode.remove();
+        return false;
+      }
+
       /// Other
 
       var worldCountries = [
@@ -198,6 +297,36 @@
       }
 
       function removeInputOther(btn){
+        btn.parentNode.remove();
+        return false;
+      }
+
+      //For Living EU Form
+
+      function addInputLivingOther(el){
+        var newFieldLivingOther = document.createElement('div');
+
+        // Count current amount of inputs in section
+        var inputCountLivingOther = el.closest('div').getElementsByTagName('select').length;
+        console.log(inputCountLivingOther);
+
+        // Create ID for new select we're going to add
+        var newSelectLivingID = `${el.previousElementSibling.className}-${inputCountLivingOther}`;
+
+        newFieldLivingOther.innerHTML = `<br><label class='nhsuk-label' for='${newSelectLivingID}'>Country name</label><select id='${newSelectLivingID}' name='myInputsLivingOther[]' type='text'><option value=''></option></select></div><a href='#' type='button' value='-' onClick='return removeInputLivingOther(this);'>- Remove nationality</a>`;
+        document.getElementById('appendableLivingOther').appendChild(newFieldLivingOther);
+
+        // Use ID of new select to initilise autcomplete for our new select
+        accessibleAutocomplete.enhanceSelectElement({
+          selectElement: document.querySelector(`#${newSelectLivingID}`),
+          source: worldCountries
+        })
+
+        return false;
+
+      }
+
+      function removeInputLivingOther(btn){
         btn.parentNode.remove();
         return false;
       }
