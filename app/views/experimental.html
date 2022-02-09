@@ -1,14 +1,15 @@
-{% extends 'layout.html' %}
-{% block pageTitle %}
+{% extends 'layout.html' %} 
 
-   Get healthcare cover for travelling abroad
+{% block pageTitle %} 
+  Get healthcare cover for travelling abroad 
+{% endblock %} 
 
-{% endblock %}
-{% block beforeContent %}
-{% endblock %}
+{% block beforeContent %} 
+{% endblock %} 
+
 {% block content %}
 
-<style type="text/css">
+  <style type="text/css">
 
    p.current {
       float: right; 
@@ -16,83 +17,103 @@
       padding: 10px 0;
       /*font-weight: bold;*/
    }
+
+   .nhsuk-details__text {
+      width: 66.6%;
+   }
    
-</style>
-
-<div class="nhsuk-grid-row">
-   <div class="nhsuk-grid-column-full">
-      <h1>
-         Overseas Healthcare Services
-         <span class="nhsuk-caption-xl nhsuk-caption--bottom">Get healthcare cover for travelling abroad</span>
-      </h1>
+  </style>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <h1>Overseas Healthcare Services <span class="nhsuk-caption-xl nhsuk-caption--bottom">Get healthcare cover for travelling abroad</span></h1>
       <h3>Experimental work</h3>
-
       <hr>
-
       <div class="nhsuk-expander-group">
-         <details class="nhsuk-details nhsuk-expander" open>
-            <summary class="nhsuk-details__summary">
-               <span class="nhsuk-details__summary-text">
-               Nationality capture
-               </span>
-            </summary>
-            <div class="nhsuk-details__text">
-               <h3>Capturing more specific nationality</h3>
-               <ul>
-                  <li><a href="/nationality/resident-before-jan">Version 1 - typeahead input and add additional nationalities</a></li>
-               </ul>
-            </div>
-         </details>
+        <details class="nhsuk-details nhsuk-expander">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">NHS.UK landing page - round 2</span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <h4 class="heading-xs">NHS.UK landing page</h4>
+            <h5>Design overhaul</h5>
+            <ul>
+              <li>
+                <a href="/nhs-landing/contents-list/overview">Contents list</a>
+              </li><!-- <li><a href="/nhs-landing/separate-pages">Separate pages</a></li> -->
+            </ul>
+          </div>
+        </details>
       </div>
-
       <div class="nhsuk-expander-group">
-         <details class="nhsuk-details nhsuk-expander">
-            <summary class="nhsuk-details__summary">
-               <span class="nhsuk-details__summary-text">
-               NHS.UK landing page
-               </span>
-            </summary>
-            <div class="nhsuk-details__text">
-               <h3>NHS.UK landing page</h3>
-               <h5>Content rewrite for GHIC go live</h5>
-               <ul>
-                  <li><a href="/nhs-landing/landing-v2">Version 2</a></li>
-                  <li><a href="/nhs-landing/landing-v1">Version 1</a></li>
-               </ul>
-               <!-- <br>
+        <details class="nhsuk-details nhsuk-expander" open>
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">Nationality capture</span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <h4 class="heading-xs">Capturing more specific nationality</h4>
+            <ul>
+              <li>
+                <a href="/nationality/start">type-ahead input with ability to add additional nationalities</a>
+              </li>
+            </ul>
+          </div>
+        </details>
+      </div>
+      <div class="nhsuk-expander-group">
+        <details class="nhsuk-details nhsuk-expander">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">NHS.UK landing page</span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <h4 class="heading-xs">NHS.UK landing page</h4>
+            <h5>Content rewrite for GHIC go live</h5>
+            <ul>
+              <li>
+                <a href="/nhs-landing/landing-v2">Version 2</a>
+              </li>
+              <li>
+                <a href="/nhs-landing/landing-v1">Version 1</a>
+              </li>
+            </ul>
+            <h3>Notes</h3>
+            <p>NHS Digital advised that they are unable to replicate a lot of the design/layout ideas we've had due to the contrainsts of their Content Management System</p><!-- <br>
                <h5>Content rewrite to include getting a replacement card</h5>
                <ul>
                   <li><a href="/nhs-landing/">Version 1</a></li>
                </ul> -->
-            </div>
-         </details>
+            <p><a href="https://www.nhs.uk/using-the-nhs/healthcare-abroad/apply-for-a-free-uk-global-health-insurance-card-ghic/"
+               target="_blank">NHS Digital hub page for EHIC and GHIC</a></p>
+          </div>
+        </details>
       </div>
-
       <div class="nhsuk-expander-group">
-         <details class="nhsuk-details nhsuk-expander">
-            <summary class="nhsuk-details__summary">
-               <span class="nhsuk-details__summary-text">
-               Tasklist
-               </span>
-            </summary>
-            <div class="nhsuk-details__text">
-               <h3>Tasklist application format</h3>
-               <ul>
-                  <li><a href="/tasklist/prereg/tasklist-all">EU nationals living in the UK </a>
-                  </li>
-                  <li><a href="/tasklist/prereg/application/tasklist-uk-0">UK nationals</a></li>
-                  <li><a href="/tasklist/prereg/tasklist-s1">S1 holders</a> </li>
-                  <li><a href="/tasklist/prereg/tasklist-pw">Posted workers</a></li>
-                  <li><a href="/tasklist/prereg/tasklist-student">Students</a></li>
-               </ul>
-               {{ actionLink({
-               "text": "Get healthcare cover for travelling abroad",
-               "href": "/tasklist/prereg/start"
-               }) }}
-            </div>
-         </details>
+        <details class="nhsuk-details nhsuk-expander">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">Tasklist</span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <h4 class="heading-xs">Tasklist application format</h4>
+            <ul>
+              <li>
+                <a href="/tasklist/prereg/tasklist-all">EU nationals living in the UK</a>
+              </li>
+              <li>
+                <a href="/tasklist/prereg/application/tasklist-uk-0">UK nationals</a>
+              </li>
+              <li>
+                <a href="/tasklist/prereg/tasklist-s1">S1 holders</a>
+              </li>
+              <li>
+                <a href="/tasklist/prereg/tasklist-pw">Posted workers</a>
+              </li>
+              <li>
+                <a href="/tasklist/prereg/tasklist-student">Students</a>
+              </li>
+            </ul>{{ actionLink({ "text": "Get healthcare cover for travelling abroad", "href": "/tasklist/prereg/start" }) }}
+          </div>
+        </details>
       </div>
+    </div>
+  </div>
 
-   </div>
-</div>
-{% endblock %}
+  {% endblock %}

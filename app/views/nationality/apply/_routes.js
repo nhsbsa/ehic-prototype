@@ -63,6 +63,22 @@ const axios = require('axios');
 // })
 
 
+// Were you resident in the UK for 1 January 2021? - resident-before-jan.html
+router.post('/residentBeforeJan', function (req, res) {
+  var residentBeforeJan = req.session.data['resident-before-jan']
+  if (residentBeforeJan == "Yes") {
+    res.redirect('nationality')
+  }
+  else if (residentBeforeJan == "No") {
+    res.redirect('nationality')
+    // res.redirect('ineligible-2')
+  }
+  else {
+    res.redirect('resident-before-jan')
+  }
+})
+
+
 // Do you currently have a valid EHIC? current-ehic.html
 router.post('/planTravel', function (req, res) {
   var planTravel = req.session.data['plan-travel']
@@ -260,20 +276,6 @@ router.post('/living-eu/nationalOtherEuUk', function (req, res) {
   }
 })
 
-// Were you resident in the UK for 1 January 2021? - resident-before-jan.html
-router.post('/residentBeforeJan', function (req, res) {
-  var residentBeforeJan = req.session.data['resident-before-jan']
-  if (residentBeforeJan == "Yes") {
-    res.redirect('nationality')
-  }
-  else if (residentBeforeJan == "No") {
-    res.redirect('nationality')
-    // res.redirect('ineligible-2')
-  }
-  else {
-    res.redirect('resident-before-jan')
-  }
-})
 
 
 
