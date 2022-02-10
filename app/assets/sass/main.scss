@@ -60,6 +60,10 @@ a {
   width: 90%;
 }
 
+.nhsuk-details__text ul {
+  padding-left: 48px;
+}
+
 .callout {
     padding: 32px;
     background-color: #fff;
@@ -77,10 +81,6 @@ a {
     background-color: #004D97;
     color: white;
   }
-
- .callout p, li {
- 	font-size: 20px;
- }
 
 //  *************************************
 //  Autocomplete styles
@@ -214,5 +214,6 @@ a {
       line-height: 1.31579;
   }
 }
+
 
 //  *************************************
