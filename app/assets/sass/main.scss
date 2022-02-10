@@ -15,6 +15,51 @@ a {
   width: fit-content;
 }
 
+#expander__wrapper {
+  background-color: #fff;
+  padding: 24px;
+  position: relative;
+}
+
+#expander__wrapper .nhsuk-details__summary {
+  padding: 0 24px 0 24px;
+}
+
+#expander__wrapper p {
+  padding: 24px 24px 0 24px;
+}
+
+#expander__wrapper hr {
+  margin: 20px 24px 20px 24px;
+}
+
+.wrapping-link {
+  padding: 24px 0 0 24px;
+}
+
+#expander__wrapper__2 {
+  background-color: #fff;
+  padding: 24px;
+  position: relative;
+}
+
+#expander__wrapper__2 .nhsuk-details__summary {
+  padding: 0 24px 0 24px;
+}
+
+#expander__wrapper__2 p {
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+#expander__wrapper__2 hr {
+  margin: 20px 24px 20px 24px;
+}
+
+.nhsuk-warning-callout .width-reducer {
+  width: 90%;
+}
+
 .callout {
     padding: 32px;
     background-color: #fff;
