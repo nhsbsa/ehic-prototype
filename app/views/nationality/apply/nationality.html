@@ -6,6 +6,126 @@
 
 {% block beforeContent %}
 
+<style>
+
+    a.removeLink {
+      font-size: 18px;
+      float: right;
+      display: inline-block;
+      position: relative;
+      bottom: 35px;
+    }
+
+    .autocomplete__wrapper {
+      width: 70%;
+    }
+
+    @media(max-width:1020px) {
+
+       a.removeLink {
+        float: none;
+        position: relative;
+        bottom: 0;
+        top: 10px;
+       }
+
+       .autocomplete__wrapper {
+          width: 100%;
+        }
+
+        .nhsuk-button.nhsuk-button--secondary {
+          margin-top: 20px;
+        }
+
+     }
+
+</style>
+
+<script>
+
+var worldCountries = [
+        "Afghanistan", "Aland Islands", "Albania", "Algeria", "American Samoa", "Andorra",
+        "Angola", "Anguilla", "Antarctica", "Antigua and Barbuda", "Argentina", "Armenia", "Aruba",
+        "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados",
+        "Belarus", "Belgium", "Belize", "Benin", "Bermuda",
+        "Bhutan", "Bolivia (Plurinational State of)", "Bonaire, Sint Eustatius and Saba",
+        "Bosnia and Herzegovina", "Botswana", "Bouvet Island", "Brazil",
+        "British Indian Ocean Territory", "Brunei Darussalam", "Bulgaria",
+        "Burkina Faso", "Burundi", "Cabo Verde", "Cambodia", "Cameroon", "Canada",
+        "Cayman Islands", "Central African Republic", "Chad", "Chile", "China",
+        "Christmas Island", "Cocos (Keeling) Islands", "Colombia", "Comoros", "Congo",
+        "Congo (Democratic Republic of the)", "Cook Islands", "Costa Rica", "Cote d'Ivoire", "Croatia",
+        "Cuba", "Curacao", "Cyprus", "Czechia (Czech Republic)", "Denmark", "Djibouti",
+        "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea",
+        "Eritrea", "Estonia", "Ethiopia", "Falkland Islands (Malvinas)", "Faroe Islands",
+        "Fiji", "Finland", "France", "French Guiana", "French Polynesia",
+        "French Southern Territories", "Gabon", "Gambia", "Georgia", "Germany", "Ghana",
+        "Gibraltar", "Greece", "Greenland", "Grenada", "Guadeloupe", "Guam", "Guatemala",
+        "Guernsey", "Guinea", "Guinea-Bissau", "Guyana", "Haiti",
+        "Heard Island and McDonald Islands", "Holy See", "Honduras", "Hong Kong", "Hungary", "Iceland",
+        "India", "Indonesia", "Iran (Islamic Republic of)", "Iraq", "Ireland",
+        "Isle of Man", "Israel", "Italy", "Jamaica", "Japan", "Jersey", "Jordan", "Kazakhstan",
+        "Kenya", "Kiribati", "Korea (Democratic People's Republic of)",
+        "Korea (Republic of)", "Kuwait", "Kyrgyzstan", "Lao People's Democratic Republic", "Latvia",
+        "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxemburg", "Macao", 
+        "Macedonia (the former Yugoslav Republic of)",
+        "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Marshall Islands", "Malta", 
+        "Martinique", "Mauritania", "Mauritius", "Mayotte", "Mexico",
+        "Micronesia (Federated States of)", "Moldova (Republic of)", "Monaco", "Mongolia",
+        "Montenegro", "Montserrat", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauru",
+        "Nepal", "Netherlands", "New Caledonia", "New Zealand", "Nicaragua", "Niger", "Nigeria",
+        "Niue", "Norfolk Island", "Northern Mariana Islands", "Norway", "Oman", "Pakistan",
+        "Palau", "Palestine, State of", "Panama", "Papua New Guinea", "Paraguay", "Peru",
+        "Philippines", "Pitcairn", "Poland", "Portugal", "Puerto Rico", "Qatar", "Reunion", "Romania", "Russian Federation", "Rwanda", "Saint Barthelemy",
+        "Saint Helena, Ascension and Tristan da Cunha", "Saint Kitts and Nevis", "Saint Lucia",
+        "Saint Martin (French part)", "Saint Pierre and Miquelon",
+        "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe",
+        "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore",
+        "Sint Maarten (Dutch part)", "Slovakia", "Slovenia", "Spain", "Solomon Islands", "Somalia", "South Africa",
+        "South Georgia and the South Sandwich Islands", "South Sudan",
+        "Sri Lanka", "Sudan", "Suriname", "Svalbard and Jan Mayen", "Swaziland", "Sweden", "Switzerland",
+        "Syrian Arab Republic", "Taiwan, Province of China[a]", "Tajikistan",
+        "Tanzania, United Republic of", "Thailand", "Timor-Leste", "Togo", "Tokelau", "Tonga",
+        "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Turks and Caicos Islands",
+        "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates",
+        "United States of America", "United States Minor Outlying Islands",
+        "Uruguay", "Uzbekistan", "Vanuatu", "Venezuela (Bolivarian Republic of)", "Viet Nam",
+        "Virgin Islands (British)", "Virgin Islands (U.S.)", "Wallis and Futuna",
+        "Western Sahara", "Yemen", "Zambia", "Zimbabwe"
+      ]
+
+function addInputEU(el){
+  var newFieldEU = document.createElement('div');
+
+  // Count current amount of inputs in section
+  var inputCountEU = document.getElementById('appendableEU').getElementsByTagName('select').length;
+  console.log(inputCountEU);
+
+  let tag = document.getElementById('appendableEU').getElementsByTagName('select')[0].className;
+
+  // Create ID for new select we're going to add
+  var newSelectIDEU = `${tag}-${inputCountEU}`;
+
+  newFieldEU.innerHTML = `<br><label class='nhsuk-label' for='${newSelectIDEU}'>Country of nationality</label><select id='${newSelectIDEU}' name='myInputsEU[]' type='text'><option value=''></option></select></div><a href='#' class='removeLink' type='button' value='-' onClick='return removeInputEU(this);'>Remove this nationality</a>`;
+  document.getElementById('appendableEU').appendChild(newFieldEU);
+
+  // Use ID of new select to initilise autcomplete for our new select
+  accessibleAutocomplete.enhanceSelectElement({
+    selectElement: document.querySelector(`#${newSelectIDEU}`),
+    source: worldCountries
+  })
+
+  return false;
+}
+
+function removeInputEU(btn){
+  btn.parentNode.remove();
+  return false;
+}
+</script>
+
+
+
   <!-- Phase banner -->
   <div class="app-phase-banner">
     <div class="nhsuk-width-container app-phase-banner__container">
@@ -46,7 +166,7 @@
 
             <p>If you are a dual or multiple national, add all of your nationalities.</p>
 
-                  <div class="nhsuk-form-group" style="width: 70%;">
+                  <div class="nhsuk-form-group"" id="appendableEU">
                     <label class="nhsuk-label" for="location-picker-1">
                       Country of nationality
                     </label>
@@ -300,21 +420,14 @@
                       <option value="zw">Zimbabwe</option>
                       <option value="ax">Åland Islands</option>
                     </select>
+
                   </div>
 
                 <div>
-                  <a href="nationality-2" class="nhsuk-button nhsuk-button--secondary" type="submit">
+                  <a href="#" class="nhsuk-button nhsuk-button--secondary" type="submit" onClick="return addInputEU(this)">
                     Add another nationality
                   </a>
                 </div>
-
-                <!-- <div>
-                  <p>
-                    <a href="nationality-2">
-                      + Add another nationality?
-                    </a>
-                  </p>
-                </div> -->
 
             </fieldset>
           </div>

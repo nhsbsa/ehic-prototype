@@ -1,15 +1,15 @@
-{% extends 'layout.html' %} 
+{% extends 'layout.html' %}
+{% block pageTitle %}
 
-{% block pageTitle %} 
-  Get healthcare cover for travelling abroad 
-{% endblock %} 
+   Get healthcare cover for travelling abroad
 
-{% block beforeContent %} 
-{% endblock %} 
-
+{% endblock %}
+{% block beforeContent %}
+{% endblock %}
 {% block content %}
 
-  <style type="text/css">
+<style type="text/css">
+
 
    p.current {
       float: right; 
@@ -29,7 +29,8 @@
       <h3>Experimental work</h3>
       <hr>
       <div class="nhsuk-expander-group">
-        <details class="nhsuk-details nhsuk-expander">
+        <details class="nhsuk-details nhsuk-expander"
+                 open="">
           <summary class="nhsuk-details__summary">
             <span class="nhsuk-details__summary-text">NHS.UK landing page - round 2</span>
           </summary>
@@ -45,7 +46,7 @@
         </details>
       </div>
       <div class="nhsuk-expander-group">
-        <details class="nhsuk-details nhsuk-expander" open>
+        <details class="nhsuk-details nhsuk-expander">
           <summary class="nhsuk-details__summary">
             <span class="nhsuk-details__summary-text">Nationality capture</span>
           </summary>
@@ -53,7 +54,7 @@
             <h4 class="heading-xs">Capturing more specific nationality</h4>
             <ul>
               <li>
-                <a href="/nationality/start">type-ahead input with ability to add additional nationalities</a>
+                <a href="/nationality/start">Version 1 - typeahead input and add additional nationalities</a>
               </li>
             </ul>
           </div>
@@ -114,6 +115,6 @@
         </details>
       </div>
     </div>
-  </div>
-
-  {% endblock %}
+  </div>{% endblock %}
+</body>
+</html>
