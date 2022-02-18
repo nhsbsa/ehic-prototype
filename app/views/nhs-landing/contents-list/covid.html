@@ -1,7 +1,7 @@
 {% extends 'layout-nhs-uk.html' %}
 
 {% block pageTitle %}
-  Overview
+  Your card and Coronavirus (COVID-19)
 {% endblock %}
 
 {% block beforeContent %}
@@ -83,18 +83,17 @@
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-      <h1>Applying for healthcare cover abroad (GHIC and EHIC) </h1>
+      <!-- <h1>Applying for healthcare cover abroad (GHIC and EHIC) </h1> -->
 
-      <!-- <h1>Overview
+      <h1>Your card and Coronavirus (COVID-19)
         <span class="nhsuk-caption-xl nhsuk-caption--bottom">Applying for healthcare cover abroad (GHIC and EHIC)</span>
-      </h1> -->
+      </h1>
 
       {{ contentsList({
         items: [
           {
             href: "overview",
-            text: "Overview",
-            current: "true"
+            text: "Overview"
           },
           {
             href: "students",
@@ -107,7 +106,8 @@
           ,
           {
             href: "covid",
-            text: "Your card and Coronavirus (COVID-19)"
+            text: "Your card and Coronavirus (COVID-19)",
+            current: "true"
           }
           ,
           {
@@ -140,64 +140,14 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <p>There are 2 types of cover available.</p>
-      <p>You can apply for either:</p>
-      <ul>
-        <li>UK Global Health Insurance Card (GHIC)</li>
-        <li>UK European Health Insurance Card (EHIC)</li>
-      </ul>
 
-      <p><a href="https://www.gov.uk/government/publications/withdrawal-agreement-explainer-for-part-2-citizens-rights" target="_blank">Find out more about the Withdrawal Agreement on GOV.UK</a></p>
 
-      <p>For most people, the UK Global Health Insurance Card (UK GHIC) replaces the existing European Health Insurance Card (EHIC) for new applications.</p>
 
-      <!-- TRY A BUTTON? -->
 
-      {{ actionLink({
-        "text": "Apply for a new UK EHIC or UK GHIC",
-        "href": "../../current/start"
-      }) }}
 
-      <p>A UK GHIC and new UK EHIC are free of charge. Beware of unofficial websites, they may charge you a fee to apply.</p>
 
-      <h2 class="heading-medium">If you have an existing EHIC</h2>
 
-      <p>If you have an existing EHIC, it will remain valid until the expiry date on the card.</p>
 
-      <p>You can apply for a new card up to 6 months before your current card expires.</p>
-
-      <div class="nhsuk-inset-text">
-        <p>It’s currently taking longer than usual to process new UK EHIC and GHIC applications due to high demand. We’re working to resolve this and will process all applications as soon as possible.</p>
-        <p>If you need emergency treatment while you’re visiting another country and haven’t received your card, you can apply for a Provisional Replacement Certificate (PRC).</p>
-      </div>
-
-      <h2 class="heading-medium">How to use your card</h2>
-
-      <p>You can use your card to access medically necessary state-provided healthcare when you're visiting an EU country or Switzerland.</p>
-
-      <p>Medically necessary healthcare means healthcare that cannot reasonably wait until you come back to the UK. Whether treatment is necessary is decided by the healthcare provider in the country you're visiting.</p>
-
-      <p>Medically necessary healthcare includes things like:</p>
-
-      <ul>
-        <li>emergency treatment and visits to A&E</li>
-        <li>treatment for a long-term or pre-existing medical condition</li>
-        <li>routine medical care for pre-existing conditions that need monitoring</li>
-        <li>routine maternity care, as long as you're not <a href="https://www.nhs.uk/using-the-nhs/healthcare-abroad/going-abroad-for-treatment/giving-birth-outside-the-uk/">going abroad to give birth</a></li>
-        <li>oxygen therapy and kidney dialysis</li>
-      </ul>
-
-      <p>You'll need to pre-arrange some treatments with the relevant healthcare provider in the country you're visiting – for example, kidney dialysis or chemotherapy.</p>
-
-      <p>
-        <a href="https://www.gov.uk/government/collections/healthcare-in-the-eu-norway-iceland-liechtenstein-and-switzerland">Check the Foreign Office country guides on GOV.UK for information on how to access treatment in the country you’re visiting</a>
-      </p>
-
-      <p>Not all state healthcare is free within the EU and Switzerland and so you may have to pay for services that you would get for free on the NHS.</p>
-
-      <div class="nhsuk-inset-text">
-        <p>Your EHIC or GHIC is not a substitute for travel insurance. It may not cover all health costs and never covers repatriation costs. Make sure you have travel insurance as well as your card.</p>
-      </div>
 
 
 
