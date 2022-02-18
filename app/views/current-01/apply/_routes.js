@@ -128,7 +128,7 @@ router.post('/nationality', function (req, res) {
   var nationality = req.session.data['nationality']
 
   if (nationality == 'UK' || nationality == 'Irish') {
-    res.redirect('eu-studying')
+    res.redirect('studying-uk-citizen')
   }
   else if (nationality == 'EU, EEA or Swiss') {
     res.redirect('uk-citizenship')
@@ -137,7 +137,7 @@ router.post('/nationality', function (req, res) {
     res.redirect('birth-country-dual')
   }
   else if (nationality == 'Other') {
-      res.redirect('studying-eu-citizen')
+      res.redirect('uk-citizenship')
   }
   else {
     res.redirect('nationality')
@@ -150,7 +150,7 @@ router.post('/living-eu/nationality', function (req, res) {
   var nationality = req.session.data['nationality']
 
   if (nationality == 'UK' || nationality == 'Irish') {
-    res.redirect('national-other-eu-uk')
+    res.redirect('studying-uk-citizen')
   }
   else if (nationality == 'EU, EEA or Swiss') {
     res.redirect('uk-citizenship')
@@ -159,7 +159,7 @@ router.post('/living-eu/nationality', function (req, res) {
     res.redirect('birth-country-dual')
   }
   else if (nationality == 'Other') {
-      res.redirect('studying-eu-citizen')
+      res.redirect('uk-citizenship')
   }
   else {
     res.redirect('nationality')

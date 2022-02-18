@@ -111,25 +111,25 @@ router.post('/nationality', function (req, res) {
   console.log(nationality);
 
   if (arraysContainSame(nationality, ['UK', 'Irish','Other']) == true){
-    res.redirect('eu-studying')
+    res.redirect('studying-uk-citizen')
   }
   else if (arraysContainSame(nationality, ['UK', 'Other']) == true) {
-    res.redirect('eu-studying')
+    res.redirect('studying-uk-citizen')
   }
   else if (arraysContainSame(nationality, ['UK', 'Irish']) == true) {
-    res.redirect('eu-studying')
+    res.redirect('studying-uk-citizen')
   }
   else if (arraysContainSame(nationality, ['Irish', 'Other']) == true) {
-    res.redirect('eu-studying')
+    res.redirect('birth-country-uk')
   }
   else if (arraysContainSame(nationality, ['UK', 'Other']) == true) {
-    res.redirect('eu-studying')
+    res.redirect('studying-uk-citizen')
   }
   else if (nationality == 'UK') {
-    res.redirect('eu-studying')
+    res.redirect('studying-uk-citizen')
   }
   else if (nationality == 'Irish') {
-    res.redirect('eu-studying')
+    res.redirect('birth-country-uk')
   }
   else if (arraysContainSame(nationality, ['EU, EEA or Swiss', 'Other']) == true) {
     res.redirect('uk-citizenship')
@@ -161,25 +161,25 @@ router.post('/living-eu/nationality', function (req, res) {
   var nationality = req.session.data['nationality']
 
   if (arraysContainSame(nationality, ['UK', 'Irish','Other']) == true){
-    res.redirect('../eu-studying')
+    res.redirect('../studying-uk-citizen')
   }
   else if (arraysContainSame(nationality, ['UK', 'Other']) == true) {
-    res.redirect('../eu-studying')
+    res.redirect('../studying-uk-citizen')
   }
   else if (arraysContainSame(nationality, ['UK', 'Irish']) == true) {
-    res.redirect('../eu-studying')
+    res.redirect('../uk-citizenship')
   }
   else if (arraysContainSame(nationality, ['Irish', 'Other']) == true) {
-    res.redirect('../eu-studying')
+    res.redirect('../uk-citizenship')
   }
   else if (arraysContainSame(nationality, ['UK', 'Other']) == true) {
-    res.redirect('../eu-studying')
+    res.redirect('../studying-uk-citizen')
   }
   else if (nationality == 'UK') {
-    res.redirect('../eu-studying')
+    res.redirect('../studying-uk-citizen')
   }
   else if (nationality == 'Irish') {
-    res.redirect('../eu-studying')
+    res.redirect('../birth-country-uk')
   }
   else if (arraysContainSame(nationality, ['EU, EEA or Swiss', 'Other']) == true) {
     res.redirect('uk-citizenship')
