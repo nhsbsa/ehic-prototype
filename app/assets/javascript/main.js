@@ -1,10 +1,6 @@
 // ES6 or Vanilla JavaScript
 
 accessibleAutocomplete.enhanceSelectElement({
-  selectElement: document.querySelector('#all-location-picker')
-})
-
-accessibleAutocomplete.enhanceSelectElement({
   selectElement: document.querySelector('#eu-location-picker')
 })
 
