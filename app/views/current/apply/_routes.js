@@ -96,48 +96,114 @@ router.post('/currentEhic', function (req, res) {
 })
 
 // What is your nationality? - nationality.html
+
+//Version 2: Nationality Checkboxes
+
+function arraysContainSame(a, b) {
+  a = Array.isArray(a) ? a : [];
+  b = Array.isArray(b) ? b : [];
+  return a.length === b.length && a.every(el => b.includes(el));
+}
+
 router.post('/nationality', function (req, res) {
-  var nationality = req.session.data['nationality']
-  if (nationality == "UK") {
-    res.redirect('national-other-eu-uk')
-    // res.redirect('national-other-eu')
-    // res.redirect('studying-uk-citizen')
+
+  var nationality = req.session.data['nationality'];
+  console.log(nationality);
+
+  if (arraysContainSame(nationality, ['UK', 'Irish','Other']) == true){
+    res.redirect('eu-studying')
   }
-  else if (nationality == "dual") {
-    res.redirect('birth-country-dual')
+  else if (arraysContainSame(nationality, ['UK', 'Other']) == true) {
+    res.redirect('eu-studying')
   }
-  else if (nationality == "EU, EEA or Swiss") {
+  else if (arraysContainSame(nationality, ['UK', 'Irish']) == true) {
+    res.redirect('eu-studying')
+  }
+  else if (arraysContainSame(nationality, ['Irish', 'Other']) == true) {
+    res.redirect('eu-studying')
+  }
+  else if (arraysContainSame(nationality, ['UK', 'Other']) == true) {
+    res.redirect('eu-studying')
+  }
+  else if (nationality == 'UK') {
+    res.redirect('eu-studying')
+  }
+  else if (nationality == 'Irish') {
+    res.redirect('eu-studying')
+  }
+  else if (arraysContainSame(nationality, ['EU, EEA or Swiss', 'Other']) == true) {
     res.redirect('uk-citizenship')
   }
-  else if (nationality == "Other") {
-    res.redirect('studying-eu-citizen')
-    // res.redirect('ineligible-3')
+  else if (nationality == 'EU, EEA or Swiss') {
+    res.redirect('uk-citizenship')
+  }
+  else if (nationality == 'Other') {
+    res.redirect('uk-citizenship')
+  }
+  else if (arraysContainSame(nationality, ['UK', 'Irish', 'EU, EEA or Swiss']) == true) {
+    res.redirect('birth-country-uk')
+  }
+  else if (arraysContainSame(nationality, ['UK', 'EU, EEA or Swiss']) == true) {
+    res.redirect('birth-country-uk')
+  }
+  else if (arraysContainSame(nationality, ['Irish', 'EU, EEA or Swiss']) == true) {
+    res.redirect('birth-country-uk')
   }
   else {
     res.redirect('nationality')
   }
 })
 
+
 // What is your nationality? - living-eu/nationality.html
 router.post('/living-eu/nationality', function (req, res) {
+
   var nationality = req.session.data['nationality']
-  if (nationality == "UK") {
-    res.redirect('national-other-eu-uk')
+
+  if (arraysContainSame(nationality, ['UK', 'Irish','Other']) == true){
+    res.redirect('../eu-studying')
   }
-  else if (nationality == "dual") {
-    res.redirect('birth-country-dual')
+  else if (arraysContainSame(nationality, ['UK', 'Other']) == true) {
+    res.redirect('../eu-studying')
   }
-  else if (nationality == "EU, EEA or Swiss") {
+  else if (arraysContainSame(nationality, ['UK', 'Irish']) == true) {
+    res.redirect('../eu-studying')
+  }
+  else if (arraysContainSame(nationality, ['Irish', 'Other']) == true) {
+    res.redirect('../eu-studying')
+  }
+  else if (arraysContainSame(nationality, ['UK', 'Other']) == true) {
+    res.redirect('../eu-studying')
+  }
+  else if (nationality == 'UK') {
+    res.redirect('../eu-studying')
+  }
+  else if (nationality == 'Irish') {
+    res.redirect('../eu-studying')
+  }
+  else if (arraysContainSame(nationality, ['EU, EEA or Swiss', 'Other']) == true) {
     res.redirect('uk-citizenship')
   }
-  else if (nationality == "Other") {
-    res.redirect('studying-eu-citizen')
-    // res.redirect('ineligible-3')
+  else if (nationality == 'EU, EEA or Swiss') {
+    res.redirect('uk-citizenship')
+  }
+  else if (nationality == 'Other') {
+    res.redirect('uk-citizenship')
+  }
+  else if (arraysContainSame(nationality, ['UK', 'Irish', 'EU, EEA or Swiss']) == true) {
+    res.redirect('birth-country-uk')
+  }
+  else if (arraysContainSame(nationality, ['UK', 'EU, EEA or Swiss']) == true) {
+    res.redirect('birth-country-uk')
+  }
+  else if (arraysContainSame(nationality, ['Irish', 'EU, EEA or Swiss']) == true) {
+    res.redirect('birth-country-uk')
   }
   else {
     res.redirect('nationality')
   }
 })
+
 
 // What is your nationality? - nationality-in-eu.html
 router.post('/inEuNationality', function (req, res) {
@@ -1150,7 +1216,7 @@ router.post('/application-pw/pwFormType', function (req, res) {
 router.post('/euStudying', function (req, res) {
   var euStudent = req.session.data['eu-studying']
   if (euStudent == "Yes") {
-    res.redirect('application-student-in-eu/evidence-student')
+    res.redirect('../apply/living-eu/application-student-in-eu/evidence-student')
   }
   else {
     res.redirect('eu-working')

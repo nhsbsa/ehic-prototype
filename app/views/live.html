@@ -77,6 +77,40 @@
 
                <hr>
 
+               <h3>NHS EHIC/GHIC Land Page</h3>
+
+               <br>
+
+               <!-- {{ actionLink({
+                  "text": "Applying for healthcare cover abroad (NEW-1.0)",
+                  "href": "/nhs-landing/landing-version-2"
+               }) }} -->
+
+               {{ actionLink({
+                  "text": "Applying for healthcare cover abroad (NEW-1.0)",
+                  "href": "/nhs-landing/landing-version-2-1"
+               }) }}
+
+               {{ actionLink({
+                  "text": "Applying for healthcare cover abroad (NEW-2.0)",
+                  "href": "/nhs-landing/landing-version-3"
+               }) }}
+
+               {{ actionLink({
+                  "text": "Applying for healthcare cover abroad (NEW-2.1)",
+                  "href": "/nhs-landing/landing-version-3-1"
+               }) }}
+
+               {{ actionLink({
+                  "text": "Applying for healthcare cover abroad (OLD)",
+                  "href": "/nhs-landing/landing-v1"
+               }) }}
+
+               <hr>
+
+               <h3>Dual Nationality 1 (Checkboxes Version)</h3>
+
+               <br>
                <h4 class"heading-xs">Main journey</h4>
 
                {{ actionLink({
@@ -84,6 +118,23 @@
                   "href": "/current/start"
                }) }}
 
+               <hr>
+
+               <h3>Dual Nationality 2 (Radial Buttons Version)</h3>
+
+               <br>
+
+               {{ actionLink({
+                  "text": "Get healthcare cover for travelling abroad",
+                  "href": "/current-01/start"
+               }) }}
+
+               <hr>
+
+               {{ actionLink({
+                  "text": "File upload",
+                  "href": "current/file-upload/start"
+               }) }}
                <h4 class"heading-xs">Other journeys</h4>
 
                <ul>
@@ -107,6 +158,22 @@
                   </li>
                </ul>
 
+
+               <!-- {{ actionLink({
+                  "text": "File upload",
+                  "href": "current-01/file-upload/start"
+               }) }}
+
+               {{ actionLink({
+                  "text": "Get a replacement (customer not found)",
+                  "href": "current-01/start-not-found"
+               }) }}
+
+               {{ actionLink({
+                  "text": "Get a replacement (multiple records found)",
+                  "href": "current-01/start-multiple-records"
+               }) }} -->
+
                <hr>
 
                <h3>What we changed</h3>
@@ -124,7 +191,7 @@
                <h3>What we found</h3>
                <ul>
                   <li>...</li>
-                  {# <li>REPLACEMENT NOT FOUND - pople still want a contact number if the 3 options didnt apply to them</li> #}
+                  {# <li>REPLACEMENT NOT FOUND - people still want a contact number if the 3 options didnt apply to them</li> #}
                   <!-- multiple records - all userrs confused what info was required to process replacement
                   users didn;t know which number to use. Some would contact EHIC or GHIC dependaing on what card they had, some would contact OHS as the page tells them to.
                   Users prefer email -->
@@ -132,6 +199,72 @@
 
                <!-- Assisted digital user
                - (gets notes from research slides)-->
+
+               <!-- <hr>
+               <a href="/current/breakdown">Page by page breakdown</a> -->
+            </div>
+         </details>
+      </div>
+
+
+      <div class="nhsuk-expander-group">
+         <details class="nhsuk-details nhsuk-expander">
+            <summary class="nhsuk-details__summary">
+               <span class="nhsuk-details__summary-text">
+               Live (Sprint 40)
+               </span>
+            </summary>
+            <div class="nhsuk-details__text">
+               <p>Sprint commencing: 04 January 2022</p>
+
+               <h3>User journeys</h3>
+               <ul>
+                  <li>Get a replacement GHIC</li>
+                  <li>Upload evidence of right to reside in the UK, UK residency, dual nationality and student studying abroad</li>
+               </ul>
+
+               <hr>
+
+               {{ actionLink({
+               "text": "Get healthcare cover for travelling abroad",
+               "href": "/sprint-040/start"
+               }) }}
+
+               {{ actionLink({
+               "text": "File upload",
+               "href": "sprint-040/file-upload/start"
+               }) }}
+
+               {{ actionLink({
+               "text": "Get a replacement (customer not found)",
+               "href": "sprint-040/start-not-found"
+               }) }}
+
+               {{ actionLink({
+               "text": "Get a replacement (multiple records found)",
+               "href": "sprint-040/start-multiple-records"
+               }) }}
+
+               <hr>
+
+               <h3>What we changed</h3>
+               <ul>
+                  <li>Built two new versions of the EHIC/GHIC dual nationality journey to be tested.</li>
+                  <li>Added a nationality page with checkboxes and a select list with add/remove functionality enabling users to add as many nationalities as possible, and another version with radial options.</li>
+               </ul>
+
+               <h3>What we plan to test</h3>
+               <ul>
+                  <li>Are users able to complete the journey to get a replacement card?</li>
+                  <li>Is the journey clear and easy to navigate?</li>
+                  <li>Testing with dual nationals</li>
+                  <li>Testing with students</li>
+               </ul>
+
+               <h3>What we found</h3>
+               <ul>
+                  <!-- <li>the last questions 'Have anymore evvidece is confusing people because they think it refers to student evidence as that is the previous question</li> -->
+               </ul>
 
                <!-- <hr>
                <a href="/current/breakdown">Page by page breakdown</a> -->
@@ -189,8 +322,8 @@
                <ul>
                   <li>Are users able to complete the journey to get a replacement card?</li>
                   <li>Is the journey clear and easy to navigate?</li>
-                  <li>testing with dual nationals</li>
-                  <li>testing with students</li>
+                  <li>Testing with dual nationals</li>
+                  <li>Testing with students</li>
                </ul>
 
                <h3>What we found</h3>
@@ -253,8 +386,8 @@
                <ul>
                   <li>Are users able to complete the journey to get a replacement card?</li>
                   <li>Is the journey clear and easy to navigate?</li>
-                  <li>testing with dual nationals</li>
-                  <li>testing with students</li>
+                  <li>Testing with dual nationals</li>
+                  <li>TSesting with students</li>
                </ul>
 
                <h3>What we found</h3>
