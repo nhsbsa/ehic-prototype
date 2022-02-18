@@ -30,6 +30,10 @@
        color: #354550;
        margin-left: 10px;
    }
+
+   .nhsuk-details__text {
+      width: 66.6%;
+   }
    
 </style>
 
@@ -41,7 +45,7 @@
          <span class="nhsuk-caption-xl nhsuk-caption--bottom">Get healthcare cover for travelling abroad</span>
       </h1>
       <h3>Live</h3>
-      <p>February 2022 - Present</p>
+      <p>June 2021 - Present</p>
       <!-- <p>GDS Live assessment - 15 June 2021
          <strong class="nhsuk-tag nhsuk-tag--grey">
            Awaiting result
@@ -57,17 +61,18 @@
          <details class="nhsuk-details nhsuk-expander" open>
             <summary class="nhsuk-details__summary">
                <span class="nhsuk-details__summary-text">
-               Live (Sprint 41)
+               Live (Sprints 40, 41)
                </span>
                <p class="current">CURRENT SPRINT</p>
             </summary>
             <div class="nhsuk-details__text">
-               <p>Sprint commencing: 01 February 2022</p>
+               <p>Sprint commencing: 27 January 2022</p>
 
                <h3>User journeys</h3>
                <ul>
-                  <li>Get a replacement GHIC</li>
-                  <li>Upload evidence of right to reside in the UK, UK residency, dual nationality and student studying abroad</li>
+                  <li>Get a GHIC / EHIC</li>
+                  <li>Get a replacement GHIC / EHIC</li>
+                  <li>Upload evidence in support of application</li>
                </ul>
 
                <hr>
@@ -106,6 +111,7 @@
                <h3>Dual Nationality 1 (Checkboxes Version)</h3>
 
                <br>
+               <h4 class"heading-xs">Main journey</h4>
 
                {{ actionLink({
                   "text": "Get healthcare cover for travelling abroad",
@@ -129,16 +135,28 @@
                   "text": "File upload",
                   "href": "current/file-upload/start"
                }) }}
+               <h4 class"heading-xs">Other journeys</h4>
 
-               {{ actionLink({
-                  "text": "Get a replacement (customer not found)",
-                  "href": "current/start-not-found"
-               }) }}
-
-               {{ actionLink({
-                  "text": "Get a replacement (multiple records found)",
-                  "href": "current/start-multiple-records"
-               }) }}
+               <ul>
+                  <li>
+                     <a href="current/file-upload/start">File upload</a>
+                  </li>
+                  <li>
+                     <a href="current/start-not-found">Get a replacement (customer not found)</a>
+                  </li>
+                  <li>
+                     <a href="current/start-multiple-records">Get a replacement (multiple records found)</a>
+                  </li>
+                  <li>
+                     <a href="">Nationality capture, v.1</a> (link to be updated)
+                  </li>
+                  <li>
+                     <a href="">Nationality capture, v.2</a> (link to be updated)
+                  </li>
+                  <li>
+                     <a href="">Nationality capture, v.3</a> (link to be updated)
+                  </li>
+               </ul>
 
 
                <!-- {{ actionLink({
@@ -160,29 +178,27 @@
 
                <h3>What we changed</h3>
                <ul>
-                  <li>Added a new question to the start of the file upload journey which asks if the user has the evidence requested</li>
+                  <li>Restructured and simplified the way we capture the customer's nationality during eligibility check section (3 versions to test)</li>
                </ul>
 
                <h3>What we plan to test</h3>
                <ul>
-                  <li>Are users able to complete the journey to get a replacement card?</li>
-                  <li>Is the journey clear and easy to navigate?</li>
-                  <!-- <li>testing with dual nationals</li> -->
-                  <li>Testing with students</li>
+                  <li>Are the new nationality capture screen interations clear?</li>
+                  <li>Are users able to complete the eligibility check section of the user journey when applying for a new card?</li>
+                  <li>We will test the new screen designs with a mix of UK, EU, dual nationals and other country nationals</li>
                </ul>
 
                <h3>What we found</h3>
                <ul>
-                  <li>REPLACEMENT NOT FOUND - people still want a contact number if the 3 options didn't apply to them.</li>
+                  <li>...</li>
+                  {# <li>REPLACEMENT NOT FOUND - people still want a contact number if the 3 options didnt apply to them</li> #}
                   <!-- multiple records - all userrs confused what info was required to process replacement
                   users didn;t know which number to use. Some would contact EHIC or GHIC dependaing on what card they had, some would contact OHS as the page tells them to.
                   Users prefer email -->
                </ul>
 
                <!-- Assisted digital user
-               - (gets notes from research slides)
-
-               File upload journeyprobs gonna tek aaaages -->
+               - (gets notes from research slides)-->
 
                <!-- <hr>
                <a href="/current/breakdown">Page by page breakdown</a> -->
@@ -312,7 +328,6 @@
 
                <h3>What we found</h3>
                <ul>
-                  <!-- <li>the last questions 'Have anymore evvidece is confusing people because they think it refers to student evidence as that is the previous question</li> -->
                </ul>
 
                <!-- <hr>
@@ -568,13 +583,7 @@
                   <li>People are missing the file upload button</li>
                   <li>Has anything changed? screen. People don't know! They don't know when the applied, how long was left on their card etc</li>
                   <li>People want timescales</li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
+
                </ul>
 
                <!-- <hr>
