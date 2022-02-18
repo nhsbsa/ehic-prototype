@@ -31,6 +31,13 @@ router.use('/current-01/apply', require('./views/current-01/apply/_routes'));
 router.use('/current-01/replacement', require('./views/current-01/replacement/_routes'));
 router.use('/current-01/file-upload', require('./views/current-01/file-upload/_routes'));
 
+//v3
+
+router.use('/current-03', require('./views/current-03/_routes'));
+router.use('/current-03/apply', require('./views/current-03/apply/_routes'));
+router.use('/current-03/replacement', require('./views/current-03/replacement/_routes'));
+router.use('/current-03/file-upload', require('./views/current-03/file-upload/_routes'));
+
 router.use('/nationality', require('./views/nationality/_routes'));
 router.use('/nationality/apply', require('./views/nationality/apply/_routes'));
 
