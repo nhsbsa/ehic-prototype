@@ -141,9 +141,9 @@ router.post('/nationality', function (req, res) {
   else if (nationality == 'EU, EEA or Swiss') {
     res.redirect('uk-citizenship')
   }
-  else if (nationality == 'Irish') {
-    res.redirect('birth-country-uk')
-  }
+  // else if (nationality == 'Irish') {
+  //   res.redirect('birth-country-uk')
+  // }
   else if (subNationality == 'UK, Other') {
     res.redirect('studying-uk-citizen')
   }
@@ -174,9 +174,9 @@ router.post('/living-eu/nationality', function (req, res) {
   else if (nationality == 'EU, EEA or Swiss') {
     res.redirect('uk-citizenship')
   }
-  else if (nationality == 'Irish') {
-    res.redirect('birth-country-uk')
-  }
+  // else if (nationality == 'Irish') {
+  //   res.redirect('birth-country-uk')
+  // }
   else if (subNationality == 'UK, Other') {
     res.redirect('studying-uk-citizen')
   }
