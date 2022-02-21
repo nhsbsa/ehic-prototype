@@ -56,13 +56,6 @@
                     including English, Scottish, Welsh and Northern Irish
                   </div>
                 </div>
-        
-                <div class="nhsuk-checkboxes__item">
-                  <input class="nhsuk-checkboxes__input" id="nationality-2" name="nationality" type="checkbox" value="Irish">
-                  <label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-2">
-                    Irish
-                  </label>
-                </div>
 
 
                 <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
@@ -70,11 +63,8 @@
                   <div class="nhsuk-checkboxes__item">
                     <input class="nhsuk-checkboxes__input" id="eu-nationality" name="nationality" type="checkbox" value="EU, EEA or Swiss" aria-describedby="nationality-3-item-hint" aria-controls="conditional-nationality-3" aria-expanded="false">
                     <label class="nhsuk-label nhsuk-checkboxes__label" for="eu-nationality">
-                      Citizen of an EU country
+                      National of an EU country, Norway, Iceland, Liechtenstein or Switzerland
                     </label>
-                    <div class="nhsuk-hint nhsuk-checkboxes__hint" id="nationality-3-item-hint">
-                      including Norway, Iceland, Liechtenstein and Switzerland
-                    </div>
                   </div>
           
                   <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-nationality-3">
@@ -130,7 +120,7 @@
                   <div class="nhsuk-checkboxes__item">
                     <input class="nhsuk-checkboxes__input" id="other-nationality" name="nationality" type="checkbox" value="Other" aria-controls="conditional-nationality-4" aria-expanded="false">
                     <label class="nhsuk-label nhsuk-checkboxes__label" for="other-nationality">
-                      Other
+                      Other nationality not listed
                     </label>
                   </div>
           
@@ -375,8 +365,8 @@
         {{ details({
           "text": "More information about dual nationality",
           "HTML": "
-          <p>You should check <strong>Citizen of an EU country</strong> if you are registered as a national of at least one EU nation then type and select the country name(s).</p>
-          <p>If you have dual or muliple nationalities involving nationality of the UK and another country not listed, check <strong>UK citizen</strong> then <strong>Other</strong>, type and select the other country name(s).</p>
+          <p>You should check <strong>National of an EU country...</strong> if you are registered as a national of at least one EU nation then type and select the country name(s).</p>
+          <p>If you have dual or muliple nationalities involving nationality of the UK and another country not listed, check <strong>British</strong> then <strong>Other</strong>, type and select the other country name(s).</p>
           <p>If you have dual or multiple nationalities not involving the UK or any of the other countries listed, you should check <strong>Other</strong>, type and select the other country name(s).</p>
           "
         }) }}
