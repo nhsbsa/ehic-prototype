@@ -6,21 +6,21 @@ if(document.querySelector('#eu-location-picker')) {
   })
 }
 
+if(document.querySelector('#eu-uk-location-picker')) {
+  accessibleAutocomplete.enhanceSelectElement({
+    selectElement: document.querySelector('#eu-uk-location-picker')
+  })
+}
+
 if(document.querySelector('#other-location-picker')) {
   accessibleAutocomplete.enhanceSelectElement({
     selectElement: document.querySelector('#other-location-picker')
   })
 }
 
-if(document.querySelector('#dual-location-picker-1')) {
+if(document.querySelector('#other-uk-location-picker')) {
   accessibleAutocomplete.enhanceSelectElement({
-    selectElement: document.querySelector('#dual-location-picker-1')
-  })
-}
-
-if(document.querySelector('#dual-location-picker-2')) {
-  accessibleAutocomplete.enhanceSelectElement({
-    selectElement: document.querySelector('#dual-location-picker-2')
+    selectElement: document.querySelector('#other-uk-location-picker')
   })
 }
 

@@ -123,21 +123,38 @@ router.post('/currentEhic', function (req, res) {
 
 //What is your nationality? - nationality.html
 
+function arraysContainSame(a, b) {
+  a = Array.isArray(a) ? a : [];
+  b = Array.isArray(b) ? b : [];
+  return a.length === b.length && a.every(el => b.includes(el));
+}
+
 router.post('/nationality', function (req, res) {
 
-  var nationality = req.session.data['nationality']
+  var nationality = req.session.data['nationality'];
+  var subNationality = req.session.data['subNationality'];
+  // console.log(nationality);
 
-  if (nationality == 'UK' || nationality == 'Irish') {
+  if (nationality == 'UK') {
     res.redirect('studying-uk-citizen')
   }
   else if (nationality == 'EU, EEA or Swiss') {
     res.redirect('uk-citizenship')
   }
-  else if (nationality == "dual") {
-    res.redirect('birth-country-dual')
+  else if (nationality == 'Irish') {
+    res.redirect('birth-country-uk')
+  }
+  else if (subNationality == 'UK, Other') {
+    res.redirect('studying-uk-citizen')
+  }
+  else if (subNationality == 'UK, EU') {
+    res.redirect('birth-country-uk')
   }
   else if (nationality == 'Other') {
       res.redirect('uk-citizenship')
+  }
+  else if (arraysContainSame(subNationality, ['UK, Other', 'UK, EU']) == true) {
+    res.redirect('birth-country-uk')
   }
   else {
     res.redirect('nationality')
@@ -147,19 +164,30 @@ router.post('/nationality', function (req, res) {
 // What is your nationality? - living-eu/nationality.html
 router.post('/living-eu/nationality', function (req, res) {
 
-  var nationality = req.session.data['nationality']
+  var nationality = req.session.data['nationality'];
+  var subNationality = req.session.data['subNationality'];
+  // console.log(nationality);
 
-  if (nationality == 'UK' || nationality == 'Irish') {
+  if (nationality == 'UK') {
     res.redirect('studying-uk-citizen')
   }
   else if (nationality == 'EU, EEA or Swiss') {
     res.redirect('uk-citizenship')
   }
-  else if (nationality == "dual") {
-    res.redirect('birth-country-dual')
+  else if (nationality == 'Irish') {
+    res.redirect('birth-country-uk')
+  }
+  else if (subNationality == 'UK, Other') {
+    res.redirect('studying-uk-citizen')
+  }
+  else if (subNationality == 'UK, EU') {
+    res.redirect('birth-country-uk')
   }
   else if (nationality == 'Other') {
       res.redirect('uk-citizenship')
+  }
+  else if (arraysContainSame(subNationality, ['UK, Other', 'UK, EU']) == true) {
+    res.redirect('birth-country-uk')
   }
   else {
     res.redirect('nationality')

@@ -131,6 +131,12 @@ router.post('/nationality', function (req, res) {
   else if (nationality == 'Irish') {
     res.redirect('birth-country-uk')
   }
+  else if (arraysContainSame(nationality, ['UK', 'Irish', 'EU, EEA or Swiss', 'Other']) == true) {
+    res.redirect('birth-country-uk')
+  }
+  else if (arraysContainSame(nationality, ['UK', 'EU, EEA or Swiss', 'Other']) == true) {
+    res.redirect('birth-country-uk')
+  }
   else if (arraysContainSame(nationality, ['EU, EEA or Swiss', 'Other']) == true) {
     res.redirect('uk-citizenship')
   }
@@ -181,23 +187,26 @@ router.post('/living-eu/nationality', function (req, res) {
   else if (nationality == 'Irish') {
     res.redirect('../birth-country-uk')
   }
+  else if (arraysContainSame(nationality, ['UK', 'Irish', 'EU, EEA or Swiss', 'Other']) == true) {
+    res.redirect('../birth-country-uk')
+  }
   else if (arraysContainSame(nationality, ['EU, EEA or Swiss', 'Other']) == true) {
-    res.redirect('uk-citizenship')
+    res.redirect('../uk-citizenship')
   }
   else if (nationality == 'EU, EEA or Swiss') {
-    res.redirect('uk-citizenship')
+    res.redirect('../uk-citizenship')
   }
   else if (nationality == 'Other') {
-    res.redirect('uk-citizenship')
+    res.redirect('../uk-citizenship')
   }
   else if (arraysContainSame(nationality, ['UK', 'Irish', 'EU, EEA or Swiss']) == true) {
-    res.redirect('birth-country-uk')
+    res.redirect('../birth-country-uk')
   }
   else if (arraysContainSame(nationality, ['UK', 'EU, EEA or Swiss']) == true) {
-    res.redirect('birth-country-uk')
+    res.redirect('../birth-country-uk')
   }
   else if (arraysContainSame(nationality, ['Irish', 'EU, EEA or Swiss']) == true) {
-    res.redirect('birth-country-uk')
+    res.redirect('../birth-country-uk')
   }
   else {
     res.redirect('nationality')
