@@ -124,7 +124,7 @@
               <div class="nhsuk-radios__item">
                 <input class="nhsuk-radios__input" id="mixed-nationality" name="nationality" type="radio" aria-controls="conditional-nationality-uk-eu-other" aria-expanded="false">
                 <label class="nhsuk-label nhsuk-radios__label" for="mixed-nationality">
-                  UK national holding EU/EFTA or other nationalities <strong>(select all that apply)</strong>
+                  UK national with EU, EFTA or other nationalities <strong>(select all that apply)</strong>
                 </label>
               </div>
       
@@ -133,7 +133,7 @@
                   
                   <input class="nhsuk-checkboxes__input" id="eu-uk-nationality" name="subNationality" type="checkbox" value="UK, EU" aria-controls="conditional-uk-eu-national" aria-expanded="false">
                   <label class="nhsuk-label nhsuk-checkboxes__label" for="eu-uk-nationality">
-                    UK national with EU/EFTA nationality
+                    UK national with EU or EFTA nationality
                   </label>
                 </div>
 
@@ -694,6 +694,16 @@
         
         </div>
 
+        {{ details({
+          "text": "More information about dual nationality",
+          "HTML": "
+          <p>You should check <strong>A national of EU or EFTA countries</strong> if you are registered as a national of at least one EU or EFTA country including Norway, Iceland, Liechtenstein and Switzerland.</p>
+          <p>If you have dual or muliple nationalities involving nationality of the UK and another country not listed, check <strong>UK national with EU, EFTA or other nationalities</strong> then select <strong>UK national with other nationality not listed</strong>.</p>
+          <p>If you have dual or muliple nationalities involving nationality of the UK and EU or EFTA nationality, check <strong>UK national with EU, EFTA or other nationalities</strong> then select <strong>UK national with EU or EFTA nationality</strong>.</p>
+          <p>If you have dual or multiple nationalities not involving the UK or any of the other countries listed, you should check <strong>Other</strong>.</p>
+          <p>Please type and select all the country names that apply to your nationality.</p>
+          "
+        }) }}
 
         {{ button({
           "text": "Continue"
