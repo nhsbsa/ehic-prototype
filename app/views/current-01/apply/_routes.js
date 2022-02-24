@@ -95,31 +95,6 @@ router.post('/currentEhic', function (req, res) {
   }
 })
 
-// What is your nationality? - nationality.html
-
-//Version 1: Simple Radial Options
-
-// router.post('/nationality', function (req, res) {
-//   var nationality = req.session.data['nationality']
-//   if (nationality == "UK") {
-//     res.redirect('national-other-eu-uk')
-//     // res.redirect('national-other-eu')
-//     // res.redirect('studying-uk-citizen')
-//   }
-//   else if (nationality == "dual") {
-//     res.redirect('birth-country-dual')
-//   }
-//   else if (nationality == "EU, EEA or Swiss") {
-//     res.redirect('uk-citizenship')
-//   }
-//   else if (nationality == "Other") {
-//     res.redirect('studying-eu-citizen')
-//     // res.redirect('ineligible-3')
-//   }
-//   else {
-//     res.redirect('nationality')
-//   }
-// })
 
 //What is your nationality? - nationality.html
 
@@ -219,7 +194,7 @@ router.post('/inEuNationality', function (req, res) {
 router.post('/ukCitizenship', function (req, res) {
   var ukCitizenship = req.session.data['uk-citizenship']
   if (ukCitizenship == "Yes") {
-    res.redirect('national-other-eu')
+    res.redirect('birth-country')
   }
   else if (ukCitizenship == "No") {
     res.redirect('birth-country')
@@ -1219,7 +1194,7 @@ router.post('/euStudying', function (req, res) {
 router.post('/studyingUkCitizenBornESW', function (req, res) {
   var studyingUkCitizen = req.session.data['studying-uk-citizen']
   if (studyingUkCitizen == "Yes") {
-    res.redirect('ineligible-temp')
+    res.redirect('application-student/course-date')
   }
   else {
     res.redirect('application-settled/card-type')

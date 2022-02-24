@@ -1193,7 +1193,7 @@ router.post('/euStudying', function (req, res) {
 router.post('/studyingUkCitizenBornESW', function (req, res) {
   var studyingUkCitizen = req.session.data['studying-uk-citizen']
   if (studyingUkCitizen == "Yes") {
-    res.redirect('ineligible-temp')
+    res.redirect('application-student/course-date')
   }
   else {
     res.redirect('application-settled/card-type')
@@ -1422,7 +1422,7 @@ router.post('/living-eu/studyingDualEsw', function (req, res) {
 router.post('/studyingEuCitizenEuOther', function (req, res) {
   var studyingEuCitizen = req.session.data['studying-eu-citizen']
   if (studyingEuCitizen == "Yes") {
-    res.redirect('ineligible-temp')
+    res.redirect('application-student/course-date')
   }
   else if (studyingEuCitizen == "No") {
     res.redirect('application-settled/card-type')
