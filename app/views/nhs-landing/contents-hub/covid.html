@@ -1,0 +1,215 @@
+{% extends 'layout-nhs-uk.html' %}
+
+{% block pageTitle %}
+  Coronavirus
+{% endblock %}
+
+{% block beforeContent %}
+
+<style>
+  .app-global-alert {
+    background-color: #ffeb3b;
+    padding-bottom: 24px;
+    padding-top: 24px;
+}
+  .app-global-alert a:hover {
+    background-color: #005eb8;
+    box-shadow: 0 0 0 4px #005eb8;
+    color: #fff;
+}
+  td.nhsuk-table__cell:nth-child(1) {
+    /*background-color: red;*/
+    width: 75%;
+}
+  td.nhsuk-table__cell:nth-child(2),
+  td.nhsuk-table__cell:nth-child(3) {
+    text-align: center;
+   /* width: 15%;*/
+}
+  th.table-heading:nth-child(2),
+  th.table-heading:nth-child(3) {
+    text-align: center;
+}
+
+.nhsuk-breadcrumb {
+    background-color: transparent;
+  }
+  .nhsuk-header__navigation-link {
+    text-decoration: underline;
+  }
+  .autocomplete__input {
+    border-color: white;
+}
+</style>
+
+<!-- Coronavirus alert -->
+<div class="app-global-alert">
+   <div class="nhsuk-width-container">
+      <div class="nhsuk-grid-row">
+         <div class="nhsuk-grid-column-full">
+            <div class="app-global-alert__content">
+               <div class="app-global-alert__message">
+                  <h2 class="nhsuk-heading-m" style="margin: 0;">Coronavirus (COVID-19)</h2>
+                  <p style="margin: 8px 0 0 0; font-size: 19px;">
+                    <a href="#" style="">Get the latest advice about COVID-19</a>
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<!-- Breadcrumb -->
+  {{ breadcrumb({
+  items: [
+    {
+      href: "#",
+      text: "Home"
+    },
+    {
+      href: "#",
+      text: "Services"
+    },
+    {
+      href: "Healthcare abroad",
+      text: "Healthcare abroad"
+    }
+  ],
+  href: "overview-home",
+  text: "Applying for healthcare cover abroad (GHIC and EHIC)"
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1>Travelling and Coronavirus </h1>
+    </div>
+  </div>
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h2>Coverage for quarantine hotels in the EU</h2>
+
+      <p>Some EU countries require foreign visitors, including UK residents, to stay in quarantine hotels if they either:</p>
+
+      <ul>
+        <li>
+          test positive for coronavirus (COVID-19) and have no or mild symptoms
+        </li>
+        <li>
+          are close contacts of someone who has tested positive for COVID-19
+        </li>
+      </ul>
+
+      <p>The costs of quarantine hotels are not covered by an EHIC or GHIC, as the UK considers these hotels to be a public health measure, not medically necessary state-provided healthcare.</p>
+      <p>If you need medical treatment while staying at a quarantine hotel, the UK Government will fund treatment as usual for UK residents or insured individuals. Use your EHIC or GHIC card, or contact the NHS Business Services Authority to receive a Provisional Replacement Certificate if you do not have a valid card.</p>
+      <p>EHIC has only ever covered emergency and necessary healthcare costs, so it is always recommended that you take out comprehensive travel insurance, including health cover, when you travel abroad.</p>
+
+      
+
+
+      <div id="sibling-nav" class="app-related-nav beta-hub-sibling-nav nhsuk-u-padding-top-5">
+        <h2 class="app-related-nav__heading nhsuk-u-padding-bottom-3">
+          More in
+          
+            <a href="overview-home">Applying for healthcare cover abroad (GHIC and EHIC)</a>
+          
+        </h2>
+        <nav role="navigation" class="app-related-nav__nav-section">
+          <ul class="app-related-nav__list beta-hub-sibling-nav__list">
+            
+            <li class="beta-hub-sibling-nav__item">
+              <a class="app-related-nav__link" href="what-it-covers">
+                What a UK GHIC and UK EHIC covers
+              </a>
+            </li>
+
+            <li class="beta-hub-sibling-nav__item">
+              <a class="app-related-nav__link" href="where-to-use">
+              Where you can use a UK GHIC and UK EHIC
+              </a>
+            </li>
+
+            <li class="beta-hub-sibling-nav__item">
+              <a class="app-related-nav__link" href="cannot-get">
+                Who can and cannot get a UK GHIC or UK EHIC
+              </a>
+            </li>
+
+            <li class="beta-hub-sibling-nav__item">
+              <a class="app-related-nav__link" href="cannot-apply-online">
+                Who cannot apply using this online service
+              </a>
+            </li>
+
+            <li class="beta-hub-sibling-nav__item">
+              <a class="app-related-nav__link" href="students">
+                Students studying in the EU, Norway, Iceland, Liechtenstein or Switzerland
+              </a>
+            </li>
+
+            <li class="beta-hub-sibling-nav__item   beta-hub-sibling-nav--current">
+              <!-- <a class="app-related-nav__link" href="covid"> -->
+                Travelling abroad and Coronavirus
+              <!-- </a> -->
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+
+      <!-- <ul class="nhsuk-hub-key-links beta-hub-key-links">
+        <li class="nhsuk-hub-key-links__list-item beta-hub-key-links__list-item">
+          <a href="">What a UK GHIC and UK EHIC covers</a>
+        </li>
+        <li class="nhsuk-hub-key-links__list-item beta-hub-key-links__list-item">
+          <a href="">Where you can use a UK GHIC and UK EHIC</a>
+        </li>
+        <li class="nhsuk-hub-key-links__list-item beta-hub-key-links__list-item">
+          <a href="">Who can and can't get a UK GHIC or UK EHIC</a>
+        </li>
+        <li class="nhsuk-hub-key-links__list-item beta-hub-key-links__list-item">
+          <a href="">Who can't apply using this online service</a>
+        </li>
+        <li class="nhsuk-hub-key-links__list-item beta-hub-key-links__list-item">
+          <a href="">Students studying in the EU, Norway, Iceland, Liechtenstein or Switzerland</a>
+        </li>
+        <li class="nhsuk-hub-key-links__list-item beta-hub-key-links__list-item">
+          <a href="">Travelling abroad and Coronavirus</a>
+        </li>
+
+      </ul> -->
+
+      <br><br>
+
+
+      <a href="new-application" class="nhsuk-button nhsuk-u-margin-bottom-8">
+        Apply for a new UK EHIC or UK GHIC
+      </a>
+
+      {{ reviewDate({
+        "lastReview": "29 June 2021",
+        "nextReview": "29 June 2024"
+      }) }}
+
+    </div>
+
+
+    <div class="nhsuk-grid-column-one-third">
+      <div style="border-top:5px solid #005eb8; padding-top:15px;"></div>
+      <h3>Healthcare abroad</h3>
+      <p>Applying for healthcare cover abroad (GHIC and EHIC)</p>
+      <ul style="list-style-type:none; padding-left: 0;">
+          <li><a href="https://www.nhs.uk/using-the-nhs/healthcare-abroad/going-abroad-for-treatment/">Going abroad for treatment</a></li>
+          <li><a href="https://www.nhs.uk/using-the-nhs/healthcare-abroad/moving-abroad/">Moving abroad</a></li>
+      </ul>
+    </div>
+
+
+{% endblock %}

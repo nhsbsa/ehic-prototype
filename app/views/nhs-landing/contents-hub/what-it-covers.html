@@ -1,0 +1,210 @@
+{% extends 'layout-nhs-uk.html' %}
+
+{% block pageTitle %}
+  What a UK GHIC and UK EHIC covers
+{% endblock %}
+
+{% block beforeContent %}
+
+<style>
+  .app-global-alert {
+    background-color: #ffeb3b;
+    padding-bottom: 24px;
+    padding-top: 24px;
+}
+  .app-global-alert a:hover {
+    background-color: #005eb8;
+    box-shadow: 0 0 0 4px #005eb8;
+    color: #fff;
+}
+  td.nhsuk-table__cell:nth-child(1) {
+    /*background-color: red;*/
+    width: 75%;
+}
+  td.nhsuk-table__cell:nth-child(2),
+  td.nhsuk-table__cell:nth-child(3) {
+    text-align: center;
+   /* width: 15%;*/
+}
+  th.table-heading:nth-child(2),
+  th.table-heading:nth-child(3) {
+    text-align: center;
+}
+
+.nhsuk-breadcrumb {
+    background-color: transparent;
+  }
+  .nhsuk-header__navigation-link {
+    text-decoration: underline;
+  }
+  .autocomplete__input {
+    border-color: white;
+}
+</style>
+
+<!-- Coronavirus alert -->
+<div class="app-global-alert">
+   <div class="nhsuk-width-container">
+      <div class="nhsuk-grid-row">
+         <div class="nhsuk-grid-column-full">
+            <div class="app-global-alert__content">
+               <div class="app-global-alert__message">
+                  <h2 class="nhsuk-heading-m" style="margin: 0;">Coronavirus (COVID-19)</h2>
+                  <p style="margin: 8px 0 0 0; font-size: 19px;">
+                    <a href="#" style="">Get the latest advice about COVID-19</a>
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<!-- Breadcrumb -->
+  {{ breadcrumb({
+  items: [
+    {
+      href: "#",
+      text: "Home"
+    },
+    {
+      href: "#",
+      text: "Services"
+    },
+    {
+      href: "Healthcare abroad",
+      text: "Healthcare abroad"
+    }
+  ],
+  href: "overview-home",
+  text: "Applying for healthcare cover abroad (GHIC and EHIC)"
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1>What a UK GHIC and UK EHIC covers</h1>
+    </div>
+  </div>
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- <h2>How to use your card</h2> -->
+
+      <p>You can use your card to access medically necessary state-provided healthcare when you're visiting an EU country or Switzerland.</p>
+      <p>Medically necessary healthcare means healthcare that cannot reasonably wait until you come back to the UK. Whether treatment is necessary is decided by the healthcare provider in the country you're visiting.</p>
+      <p>Medically necessary healthcare includes things like:</p>
+
+      <ul>
+        <li>
+          emergency treatment and visits to A&E
+        </li>
+        <li>
+          treatment for a long-term or pre-existing medical condition
+        </li>
+        <li>
+          routine medical care for pre-existing conditions that need monitoring
+        </li>
+        <li>
+          routine maternity care, as long as you're not <a href="https://www.nhs.uk/using-the-nhs/healthcare-abroad/going-abroad-for-treatment/giving-birth-outside-the-uk/">going abroad to give birth</a>
+        </li>
+        <li>
+          oxygen therapy and kidney dialysis
+        </li>
+      </ul>
+
+      <p>You'll need to pre-arrange some treatments with the relevant healthcare provider in the country you're visiting - for example, kidney dialysis or chemotherapy.</p>
+      <p><a href="https://www.gov.uk/government/collections/healthcare-in-the-eu-norway-iceland-liechtenstein-and-switzerland">Check the Foreign Office country guides on GOV.UK for information on how to access treatment in the country you're visiting</a></p>
+      <p>Not all state healthcare is free within the EU and Switzerland and so you may have to pay for services that you would get for free on the NHS.</p>
+
+      <div class="block-inset_text">
+        <div class="nhsuk-inset-text">
+          <span class="nhsuk-u-visually-hidden">Information: </span>
+          <p>Your EHIC or GHIC is not a substitute for travel insurance. It may not cover all health costs and never covers repatriation costs. Make sure you have travel insurance as well as your card.</p>
+        </div>
+      </div>
+
+      
+
+
+      <div id="sibling-nav" class="app-related-nav beta-hub-sibling-nav nhsuk-u-padding-top-5">
+        <h2 class="app-related-nav__heading nhsuk-u-padding-bottom-3">
+          More in
+          
+            <a href="overview-home">Applying for healthcare cover abroad (GHIC and EHIC)</a>
+          
+        </h2>
+        <nav role="navigation" class="app-related-nav__nav-section">
+          <ul class="app-related-nav__list beta-hub-sibling-nav__list">
+            
+            <li class="beta-hub-sibling-nav__item   beta-hub-sibling-nav--current">
+              <!-- <a class="app-related-nav__link" href="what-it-covers"> -->
+                What a UK GHIC and UK EHIC covers
+              <!-- </a> -->
+            </li>
+
+            <li class="beta-hub-sibling-nav__item">
+              <a class="app-related-nav__link" href="where-to-use">
+              Where you can use a UK GHIC and UK EHIC
+              </a>
+            </li>
+
+            <li class="beta-hub-sibling-nav__item">
+              <a class="app-related-nav__link" href="cannot-get">
+                Who can and cannot get a UK GHIC or UK EHIC
+              </a>
+            </li>
+
+            <li class="beta-hub-sibling-nav__item">
+              <a class="app-related-nav__link" href="cannot-apply-online">
+                Who cannot apply using this online service
+              </a>
+            </li>
+
+            <li class="beta-hub-sibling-nav__item">
+              <a class="app-related-nav__link" href="students">
+                Students studying in the EU, Norway, Iceland, Liechtenstein or Switzerland
+              </a>
+            </li>
+
+            <li class="beta-hub-sibling-nav__item">
+              <a class="app-related-nav__link" href="covid">
+                Travelling abroad and Coronavirus
+              </a>
+            </li>
+            
+          </ul>
+        </nav>
+      </div>
+
+      <br><br>
+
+      <a href="../../current/start" class="nhsuk-button nhsuk-u-margin-bottom-8">
+        Apply for a new UK EHIC or UK GHIC
+      </a>
+
+      {{ reviewDate({
+        "lastReview": "29 June 2021",
+        "nextReview": "29 June 2024"
+      }) }}
+
+    </div>
+
+
+    <div class="nhsuk-grid-column-one-third">
+      <div style="border-top:5px solid #005eb8; padding-top:15px;"></div>
+      <h3>Healthcare abroad</h3>
+      <p>Applying for healthcare cover abroad (GHIC and EHIC)</p>
+      <ul style="list-style-type:none; padding-left: 0;">
+          <li><a href="https://www.nhs.uk/using-the-nhs/healthcare-abroad/going-abroad-for-treatment/">Going abroad for treatment</a></li>
+          <li><a href="https://www.nhs.uk/using-the-nhs/healthcare-abroad/moving-abroad/">Moving abroad</a></li>
+      </ul>
+    </div>
+
+
+{% endblock %}

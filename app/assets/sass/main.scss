@@ -230,4 +230,291 @@ a {
 }
 
 
+// nhsuk-hub-key-links
+
+.beta-hub-after-key-links>h2,
+.beta-hub-bottom-content>h2,
+.beta-hub-key-links__list-item,
+.nhsuk-heading-s,
+h4 {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.55556;
+  display: block;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 16px
+}
+
+@media (min-width:40.0625em) {
+  .beta-hub-after-key-links>h2,
+  .beta-hub-bottom-content>h2,
+  .beta-hub-key-links__list-item,
+  .nhsuk-heading-s,
+  h4 {
+    font-size: 22px;
+    font-size: 1.375rem;
+    line-height: 1.45455
+  }
+}
+
+@media print {
+  .beta-hub-after-key-links>h2,
+  .beta-hub-bottom-content>h2,
+  .beta-hub-key-links__list-item,
+  .nhsuk-heading-s,
+  h4 {
+    font-size: 18pt;
+    line-height: 1.15
+  }
+}
+
+@media (min-width:40.0625em) {
+  .beta-hub-after-key-links>h2,
+  .beta-hub-bottom-content>h2,
+  .beta-hub-key-links__list-item,
+  .nhsuk-heading-s,
+  h4 {
+    margin-bottom: 24px
+  }
+}
+
+.beta-hub-after-key-links>.nhsuk-body-m+h2,
+.beta-hub-after-key-links>.nhsuk-body-s+h2,
+.beta-hub-after-key-links>.nhsuk-list+h2,
+.beta-hub-after-key-links>address+h2,
+.beta-hub-after-key-links>ol+h2,
+.beta-hub-after-key-links>p+h2,
+.beta-hub-after-key-links>ul+h2,
+.beta-hub-bottom-content>.nhsuk-body-m+h2,
+.beta-hub-bottom-content>.nhsuk-body-s+h2,
+.beta-hub-bottom-content>.nhsuk-list+h2,
+.beta-hub-bottom-content>address+h2,
+.beta-hub-bottom-content>ol+h2,
+.beta-hub-bottom-content>p+h2,
+.beta-hub-bottom-content>ul+h2,
+.nhsuk-body-m+.beta-hub-key-links__list-item,
+.nhsuk-body-m+.nhsuk-heading-m,
+.nhsuk-body-m+.nhsuk-heading-s,
+.nhsuk-body-m+h3,
+.nhsuk-body-m+h4,
+.nhsuk-body-s+.beta-hub-key-links__list-item,
+.nhsuk-body-s+.nhsuk-heading-m,
+.nhsuk-body-s+.nhsuk-heading-s,
+.nhsuk-body-s+h3,
+.nhsuk-body-s+h4,
+.nhsuk-list+.beta-hub-key-links__list-item,
+.nhsuk-list+.nhsuk-heading-m,
+.nhsuk-list+.nhsuk-heading-s,
+.nhsuk-list+h3,
+.nhsuk-list+h4,
+address+.beta-hub-key-links__list-item,
+address+.nhsuk-heading-m,
+address+.nhsuk-heading-s,
+address+h3,
+address+h4,
+ol+.beta-hub-key-links__list-item,
+ol+.nhsuk-heading-m,
+ol+.nhsuk-heading-s,
+ol+h3,
+ol+h4,
+p+.beta-hub-key-links__list-item,
+p+.nhsuk-heading-m,
+p+.nhsuk-heading-s,
+p+h3,
+p+h4,
+ul+.beta-hub-key-links__list-item,
+ul+.nhsuk-heading-m,
+ul+.nhsuk-heading-s,
+ul+h3,
+ul+h4 {
+  padding-top: 4px
+}
+
+@media (min-width:40.0625em) {
+  .beta-hub-after-key-links>.nhsuk-body-m+h2,
+  .beta-hub-after-key-links>.nhsuk-body-s+h2,
+  .beta-hub-after-key-links>.nhsuk-list+h2,
+  .beta-hub-after-key-links>address+h2,
+  .beta-hub-after-key-links>ol+h2,
+  .beta-hub-after-key-links>p+h2,
+  .beta-hub-after-key-links>ul+h2,
+  .beta-hub-bottom-content>.nhsuk-body-m+h2,
+  .beta-hub-bottom-content>.nhsuk-body-s+h2,
+  .beta-hub-bottom-content>.nhsuk-list+h2,
+  .beta-hub-bottom-content>address+h2,
+  .beta-hub-bottom-content>ol+h2,
+  .beta-hub-bottom-content>p+h2,
+  .beta-hub-bottom-content>ul+h2,
+  .nhsuk-body-m+.beta-hub-key-links__list-item,
+  .nhsuk-body-m+.nhsuk-heading-m,
+  .nhsuk-body-m+.nhsuk-heading-s,
+  .nhsuk-body-m+h3,
+  .nhsuk-body-m+h4,
+  .nhsuk-body-s+.beta-hub-key-links__list-item,
+  .nhsuk-body-s+.nhsuk-heading-m,
+  .nhsuk-body-s+.nhsuk-heading-s,
+  .nhsuk-body-s+h3,
+  .nhsuk-body-s+h4,
+  .nhsuk-list+.beta-hub-key-links__list-item,
+  .nhsuk-list+.nhsuk-heading-m,
+  .nhsuk-list+.nhsuk-heading-s,
+  .nhsuk-list+h3,
+  .nhsuk-list+h4,
+  address+.beta-hub-key-links__list-item,
+  address+.nhsuk-heading-m,
+  address+.nhsuk-heading-s,
+  address+h3,
+  address+h4,
+  ol+.beta-hub-key-links__list-item,
+  ol+.nhsuk-heading-m,
+  ol+.nhsuk-heading-s,
+  ol+h3,
+  ol+h4,
+  p+.beta-hub-key-links__list-item,
+  p+.nhsuk-heading-m,
+  p+.nhsuk-heading-s,
+  p+h3,
+  p+h4,
+  ul+.beta-hub-key-links__list-item,
+  ul+.nhsuk-heading-m,
+  ul+.nhsuk-heading-s,
+  ul+h3,
+  ul+h4 {
+    padding-top: 8px
+  }
+}
+
+.beta-hub-key-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 1.125em 0
+}
+
+.beta-hub-sibling-nav {
+  border-top: 0
+}
+
+.beta-hub-sibling-nav .beta-hub-sibling-nav--current {
+  border-left: 4px solid #212b32;
+  color: #212b32;
+  margin-left: -12px;
+  padding-left: 8px
+}
+
+.beta-hub-sibling-nav .beta-hub-sibling-nav__item {
+  padding-bottom: 4px;
+  padding-top: 4px
+}
+
+.beta-hub-sibling-nav .beta-hub-sibling-nav__list {
+  padding-left: 12px
+}
+
+.app-related-nav {
+  // border-top: 2px solid #005eb8
+}
+
+@media (max-width:48.0525em) {
+  .app-related-nav {
+    margin-top: 48px
+  }
+}
+
+.app-related-nav__heading {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  padding-top: 16px
+}
+
+@media (min-width:40.0625em) {
+  .app-related-nav__heading {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.2
+  }
+}
+
+@media print {
+  .app-related-nav__heading {
+    font-size: 18pt;
+    line-height: 1.2
+  }
+}
+
+.app-related-nav__list {
+  list-style: none;
+  margin-bottom: 16px;
+  padding-left: 0
+}
+
+.app-related-nav__item {
+  font-size: 14px;
+  font-size: .875rem;
+  line-height: 1.71429
+}
+
+@media (min-width:40.0625em) {
+  .app-related-nav__item {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5
+  }
+}
+
+@media print {
+  .app-related-nav__item {
+    font-size: 14pt;
+    line-height: 1.2
+  }
+}
+
+.app-related-nav__sub-heading {
+  margin-bottom: 8px;
+  padding-top: 8px;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.2
+}
+
+@media (min-width:40.0625em) {
+  .app-related-nav__sub-heading {
+    margin-bottom: 8px
+  }
+}
+
+@media (min-width:40.0625em) {
+  .app-related-nav__sub-heading {
+    padding-top: 8px
+  }
+}
+
+@media (min-width:40.0625em) {
+  .app-related-nav__sub-heading {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.2
+  }
+}
+
+@media print {
+  .app-related-nav__sub-heading {
+    font-size: 14pt;
+    line-height: 1.2
+  }
+}
+
+.nhsuk-u-padding-bottom-3 {
+  padding-bottom: 8px!important
+}
+
+@media (min-width:40.0625em) {
+  .nhsuk-u-padding-bottom-3 {
+    padding-bottom: 16px!important
+  }
+}
+
+
 //  *************************************
