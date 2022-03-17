@@ -1,0 +1,183 @@
+{% extends 'layout-nhs-uk.html' %}
+
+{% block pageTitle %}
+  Content page example - NHS.UK prototype kit
+{% endblock %}
+
+{% block beforeContent %}
+
+<style>
+  .app-global-alert {
+    background-color: #ffeb3b;
+    padding-bottom: 24px;
+    padding-top: 24px;
+}
+  .app-global-alert a:hover {
+    background-color: #005eb8;
+    box-shadow: 0 0 0 4px #005eb8;
+    color: #fff;
+}
+  td.nhsuk-table__cell:nth-child(1) {
+    /*background-color: red;*/
+    width: 75%;
+}
+  td.nhsuk-table__cell:nth-child(2),
+  td.nhsuk-table__cell:nth-child(3) {
+    text-align: center;
+   /* width: 15%;*/
+}
+  th.table-heading:nth-child(2),
+  th.table-heading:nth-child(3) {
+    text-align: center;
+}
+</style>
+
+<!-- Coronavirus alert -->
+<div class="app-global-alert">
+   <div class="nhsuk-width-container">
+      <div class="nhsuk-grid-row">
+         <div class="nhsuk-grid-column-full">
+            <div class="app-global-alert__content">
+               <div class="app-global-alert__message">
+                  <h2 class="nhsuk-heading-m" style="margin: 0;">Coronavirus (COVID-19)</h2>
+                  <p style="margin: 8px 0 0 0; font-size: 19px;">
+                    <a href="#" style="">Get the latest advice about COVID-19</a>
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<!-- Breadcrumb -->
+  {{ breadcrumb({
+  items: [
+    {
+      href: "#",
+      text: "Home"
+    },
+    {
+      href: "#",
+      text: "Services"
+    }
+  ],
+  href: "#",
+  text: "Healthcare abroad"
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1>Applying for healthcare cover abroad (GHIC and EHIC) </h1>
+    </div>
+  </div>
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <nav class="nhsuk-contents-list" role="navigation" aria-label="Pages in this guide">
+        <h2 class="nhsuk-u-visually-hidden">Contents</h2>
+        <ol class="nhsuk-contents-list__list">
+          <li class="nhsuk-contents-list__item" aria-current="page">
+            <span class="nhsuk-contents-list__current">Apply for or replace a UK GHIC or UK EHIC</span>
+          </li>
+          <li class="nhsuk-contents-list__item">
+            <a class="nhsuk-contents-list__link" href="where-to-use">Where you can use your card</a>
+          </li>
+          <li class="nhsuk-contents-list__item">
+            <a class="nhsuk-contents-list__link" href="who-can-apply">Who can apply for a UK GHIC or new EHIC</a>
+          </li>
+          <li class="nhsuk-contents-list__item">
+            <a class="nhsuk-contents-list__link" href="who-cannot-apply">Who cannot apply using this online service</a>
+          </li>
+        </ol>
+      </nav>
+
+      <p>
+        There are 2 types of cover available.
+      </p>
+      <p>
+        You can apply for either:
+      </p>
+      <ul>
+        <li>a UK Global Health Insurance Card (GHIC)</li>
+        <li>a UK European Health Insurance Card (UK EHIC), if you have rights under the Withdrawal Agreement</li>
+      </ul>
+      <p>
+        During your application we'll let you know what you're entitled to. Both cards provide the same cover but are valid in different countries.
+      </p>
+      <p>
+        For most people, the UK Global Health Insurance Card (UK GHIC) replaces the existing European Health Insurance Card (EHIC) for new applications.
+      </p>
+
+      {{ actionLink({
+        "text": "Apply for a replacement or a new UK GHIC or UK EHIC",
+        "href": "/current/start"
+      }) }}
+
+      <div class="block-inset_text">
+        <div class="nhsuk-inset-text">
+          <span class="nhsuk-u-visually-hidden">Information: </span>
+          <p>
+            A UK GHIC and new UK EHIC are free of charge. Beware of unofficial websites, they may charge you a fee to apply.
+          </p>
+        </div>
+      </div>
+
+      <h2>If you have an existing EHIC</h2>
+
+      <p>If you have an existing EHIC, it will remain valid until the expiry date on the card.</p>
+      <p>You can apply for a new card up to 6 months before your current card expires.</p>
+
+      <div class="nhsuk-warning-callout width-reducer">
+        <h3 class="nhsuk-warning-callout__label">
+          <span role="text">
+            <span class="nhsuk-u-visually-hidden">Important: </span>
+            Important information
+          </span>
+        </h3>
+        <p>It's currently taking longer than usual to process new UK EHIC and GHIC applications due to high demand. We're working to resolve this and will process all applications as soon as possible.</p>
+        <p>Your EHIC or GHIC is not a substitute for travel insurance. It may not cover all health costs and never covers repatriation costs. Make sure you have travel insurance as well as your card.</p>
+      </div>
+
+      <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
+        <ul class="nhsuk-list nhsuk-pagination__list">
+          <li class="nhsuk-pagination-item--next">
+            <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="where-to-use">
+              <span class="nhsuk-pagination__title">Next</span>
+              <span class="nhsuk-u-visually-hidden">:</span>
+              <span class="nhsuk-pagination__page">Where you can use your card</span>
+              <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
+                <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      
+      {{ reviewDate({
+        "lastReview": "29 June 2021",
+        "nextReview": "29 June 2024"
+      }) }}
+
+    </div>
+  
+
+
+  <div class="nhsuk-grid-column-one-third">
+    <div style="border-top:5px solid #005eb8; padding-top:15px;"></div>
+    <h3>Healthcare abroad</h3>
+    <p>Applying for healthcare cover abroad (GHIC and EHIC)</p>
+    <ul style="list-style-type:none; padding-left: 0;">
+        <li><a href="https://www.nhs.uk/using-the-nhs/healthcare-abroad/going-abroad-for-treatment/">Going abroad for treatment</a></li>
+        <li><a href="https://www.nhs.uk/using-the-nhs/healthcare-abroad/moving-abroad/">Moving abroad</a></li>
+    </ul>
+  </div>
+</div>
+
+{% endblock %}
