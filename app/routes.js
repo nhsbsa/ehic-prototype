@@ -121,6 +121,11 @@ router.use('/sprint-040', require('./views/sprint-040/_routes'));
 router.use('/sprint-040/apply', require('./views/sprint-040/apply/_routes'));
 router.use('/sprint-040/replacement', require('./views/sprint-040/replacement/_routes'));
 router.use('/sprint-040/file-upload', require('./views/sprint-040/file-upload/_routes'));
+
+router.use('/sprint-041', require('./views/sprint-041/_routes'));
+router.use('/sprint-041/apply', require('./views/sprint-041/apply/_routes'));
+router.use('/sprint-041/replacement', require('./views/sprint-041/replacement/_routes'));
+router.use('/sprint-041/file-upload', require('./views/sprint-041/file-upload/_routes'));
 //
 
 
