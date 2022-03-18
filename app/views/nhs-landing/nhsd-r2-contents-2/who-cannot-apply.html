@@ -1,0 +1,309 @@
+{% extends 'layout-nhs-uk.html' %}
+
+{% block pageTitle %}
+  Content page example - NHS.UK prototype kit
+{% endblock %}
+
+{% block beforeContent %}
+
+<style>
+  .app-global-alert {
+    background-color: #ffeb3b;
+    padding-bottom: 24px;
+    padding-top: 24px;
+}
+  .app-global-alert a:hover {
+    background-color: #005eb8;
+    box-shadow: 0 0 0 4px #005eb8;
+    color: #fff;
+}
+  td.nhsuk-table__cell:nth-child(1) {
+    /*background-color: red;*/
+    width: 75%;
+}
+  td.nhsuk-table__cell:nth-child(2),
+  td.nhsuk-table__cell:nth-child(3) {
+    text-align: center;
+   /* width: 15%;*/
+}
+  th.table-heading:nth-child(2),
+  th.table-heading:nth-child(3) {
+    text-align: center;
+}
+#navigation-nav-expander .nhsuk-details .nhsuk-details__summary {
+  background-color: #005eb8;
+  box-shadow: inset 0 -4px 0 0 #004b93;
+  border-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+#navigation-nav-expander .nhsuk-details .nhsuk-details__text {
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+#navigation-nav-expander .nhsuk-expander .nhsuk-details__summary:focus {
+  background-color: #ffeb3b;
+  box-shadow: inset 0 -4px 0 0 #0b0c0c;
+}
+#navigation-nav-expander .nhsuk-contents-list__item {
+  background: none;
+  padding: 0;
+} 
+#navigation-nav-expander .nhsuk-contents-list__list-number ol {
+  list-style: auto;
+}
+#navigation-nav-expander li {
+  line-height: 2;
+  font-size: 1.18rem;
+}
+#navigation-nav-expander .nhsuk-expander .nhsuk-details__summary:focus .nhsuk-details__summary-text {
+  color: #212b32!important;
+  box-shadow: 0 -2px #ffeb3b, 0 4px rgb(255 255 255 / 0%);
+} 
+#navigation-nav-expander .nhsuk-details .nhsuk-details__summary-text {
+  color: #fff;
+  text-decoration: none;
+}
+</style>
+
+<!-- Coronavirus alert -->
+<div class="app-global-alert">
+   <div class="nhsuk-width-container">
+      <div class="nhsuk-grid-row">
+         <div class="nhsuk-grid-column-full">
+            <div class="app-global-alert__content">
+               <div class="app-global-alert__message">
+                  <h2 class="nhsuk-heading-m" style="margin: 0;">Coronavirus (COVID-19)</h2>
+                  <p style="margin: 8px 0 0 0; font-size: 19px;">
+                    <a href="#" style="">Get the latest advice about COVID-19</a>
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<!-- Breadcrumb -->
+  {{ breadcrumb({
+  items: [
+    {
+      href: "#",
+      text: "Home"
+    },
+    {
+      href: "#",
+      text: "Services"
+    },
+    {
+      href: "nhsd-r2-2",
+      text: "Healthcare abroad"
+    }
+  ],
+  href: "#",
+  text: "Who cannot apply using this online service"
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1>Applying for healthcare cover abroad (GHIC and EHIC) </h1>
+    </div>
+  </div>
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <div id="navigation-nav-expander">
+        <div class="nhsuk-expander-group">
+          <details class="nhsuk-details nhsuk-expander">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Apply for or replace a UK GHIC or UK EHIC
+              </span>
+            </summary>
+        
+            <div class="nhsuk-details__text">
+              <nav class="nhsuk-contents-list" role="navigation" aria-label="Pages in this guide">
+                <h2 class="nhsuk-u-visually-hidden">Contents</h2>
+                <ol class="nhsuk-contents-list__list">
+                  <li class="nhsuk-contents-list__item">
+                    <a class="nhsuk-contents-list__link" href="nhsd-r2-2#apply">Apply for or replace a UK GHIC or UK EHIC</a>
+                  </li>
+                  <li class="nhsuk-contents-list__item">
+                    <a class="nhsuk-contents-list__link" href="nhsd-r2-2#existing-ehic">If you have an existing EHIC</a>
+                  </li>
+                  <li class="nhsuk-contents-list__item">
+                    <a class="nhsuk-contents-list__link" href="nhsd-r2-2#where-to-use">Where you can use your card</a>
+                  </li>
+                </ol>
+              </nav>
+            </div>
+            
+          </details>
+        
+          <details class="nhsuk-details nhsuk-expander">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Who can apply for a UK GHIC or new EHIC
+              </span>
+            </summary>
+        
+            <div class="nhsuk-details__text">
+              <nav class="nhsuk-contents-list" role="navigation" aria-label="Pages in this guide">
+                <h2 class="nhsuk-u-visually-hidden">Contents</h2>
+                <ol class="nhsuk-contents-list__list">
+                  <li class="nhsuk-contents-list__item">
+                    <a class="nhsuk-contents-list__link" href="who-can-apply#eligibility">Who can apply for a UK GHIC or new EHIC</a>
+                  </li>
+                  <li class="nhsuk-contents-list__item">
+                    <a class="nhsuk-contents-list__link" href="who-can-apply#withdrawal">Who can apply for a new UK EHIC under the Withdrawal Agreement</a>
+                  </li>
+                </ol>
+                <ol class="nhsuk-contents-list__list-number">
+                  <li class="nhsuk-contents-list__item-number">
+                    <a class="nhsuk-contents-list__link" href="who-can-apply#duals">Dual nationals</a>
+                  </li>
+                  <li class="nhsuk-contents-list__item-number">
+                    <a class="nhsuk-contents-list__link" href="who-can-apply#born-in-uk">People born in the UK</a>
+                  </li>
+                  <li class="nhsuk-contents-list__item-number">
+                    <a class="nhsuk-contents-list__link" href="who-can-apply#in-ireland">Information for people who live in Ireland</a>
+                  </li>
+                  <li class="nhsuk-contents-list__item-number">
+                    <a class="nhsuk-contents-list__link" href="who-can-apply#family">Applying for family members</a>
+                  </li>
+                  <li class="nhsuk-contents-list__item-number">
+                    <a class="nhsuk-contents-list__link" href="who-can-apply#students">Students studying in the EU, Norway, Iceland, Liechtenstein, or Switzerland</a>
+                  </li>
+                </ol>
+              </nav>
+            </div>
+            
+          </details>
+        
+        </div>
+      </div>
+      
+      <br>
+
+      <section id="contact">
+        <p>Most people can apply using our online service.</p>
+        <p>You should <a href="https://www.nhsbsa.nhs.uk/contact-us/overseas-healthcare-services-contact-us">contact NHS Overseas Healthcare Services</a> if you fall into one of the following groups as you will not be able to use the online service to apply.</p>  
+      </section>
+
+      <div class="nhsuk-expander-group">
+        <details class="nhsuk-details nhsuk-expander">
+          <summary id="eu-student" class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">
+              If you're an EU or Swiss national student
+            </span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <p>If you're an EU or Swiss national ordinarily resident in the UK, but studying in the EU, Switzerland, Norway, Iceland, or Liechtenstein you may be entitled to a new UK EHIC or UK GHIC.</p>
+          </div>
+        </details>
+      
+        <details class="nhsuk-details nhsuk-expander">
+          <summary id="a1" class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">
+              If you hold a UK-issued A1
+            </span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <p>If you work in the EU, Switzerland, Norway, Iceland, or Liechtenstein and have a UK-issued A1 document you may be entitled to a new UK EHIC or UK GHIC.</p>
+          </div>
+        </details>
+      
+        <details class="nhsuk-details nhsuk-expander">
+          <summary id="aupair-nanny" class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">
+              If you're an au pair or nanny
+            </span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <p>If you're a UK or Irish national who usually lives in the UK permanently and you're going to work as an au pair or nanny in an EU country or Switzerland, you can apply for a UK GHIC.</p>
+          </div>
+        </details>
+
+        <details class="nhsuk-details nhsuk-expander">
+          <summary id="chen-carers" class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">
+              Chen and Ibrahim/Teixeira carers
+            </span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <p>If you're an adult carer of a child who is from the EU, Norway, Iceland, Liechtenstein or Switzerland, but you're not from any of these countries or from the UK or Ireland, you may be eligible to apply for a new UK EHIC for yourself and for any other children you have who are not nationals of these countries.</p>
+            <p>You cannot apply if your right to reside in the UK is derived from your caring for a British citizen (Zambrano carer).</p>
+          </div>
+        </details>
+
+        <details class="nhsuk-details nhsuk-expander">
+          <summary id="dependent-grand" class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">
+              Dependent grandparents and grandchildren
+            </span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <p>You can add a grandchild to your new UK EHIC application if they're a non-UK national, are a national of the EU, Switzerland, Norway, Iceland, or Liechtenstein and are one of the following:</p>
+
+            <ul>
+              <li>under 18, living in the UK and were born before 1 Jan 2021</li>
+              <li>older than 18 but born on or after 1 January 2000, and arrived in the UK after 31 December 2020</li>
+              <li>older than 18, born before 1 January 2000, arrived in the UK after 31 December 2020, and are dependent on you</li>
+            </ul>
+
+            <p>You can add a parent or grandparent to your new UK EHIC application if they're dependent on you or your partner. Their relationship with you must have begun before 1 Jan 2021, they must live with you and also:</p>
+
+            <ul>
+              <li>be a non-UK national,</li>
+              <li>be a national of the EU, Switzerland, Norway, Iceland, or Liechtenstein</li>
+              <li>they must have arrived in the UK after 31 December 2020</li>
+            </ul>
+
+            <p>If they're a national of any other country, they can be added if they have settled or pre-settled status under the European Union Settlement Scheme (EUSS). If they do not have settled or pre-settled status, they can be added if their relationship with you began before 1 January 2021.</p>
+          </div>
+        </details>
+
+      </div>
+
+      <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
+        <ul class="nhsuk-list nhsuk-pagination__list">
+          <li class="nhsuk-pagination-item--previous">
+            <a class="nhsuk-pagination__link nhsuk-pagination__link--prev" href="who-can-apply">
+              <span class="nhsuk-pagination__title">Previous</span>
+              <span class="nhsuk-u-visually-hidden">:</span>
+              <span class="nhsuk-pagination__page">Who can apply</span>
+              <svg class="nhsuk-icon nhsuk-icon__arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
+                <path d="M4.1 12.3l2.7 3c.2.2.5.2.7 0 .1-.1.1-.2.1-.3v-2h11c.6 0 1-.4 1-1s-.4-1-1-1h-11V9c0-.2-.1-.4-.3-.5h-.2c-.1 0-.3.1-.4.2l-2.7 3c0 .2 0 .4.1.6z"></path>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      
+      {{ reviewDate({
+        "lastReview": "29 June 2021",
+        "nextReview": "29 June 2024"
+      }) }}
+
+    
+  </div>
+
+  <div class="nhsuk-grid-column-one-third">
+    <div style="border-top:5px solid #005eb8; padding-top:15px;"></div>
+    <h3>Healthcare abroad</h3>
+    <p>Applying for healthcare cover abroad (GHIC and EHIC)</p>
+    <ul style="list-style-type:none; padding-left: 0;">
+        <li><a href="https://www.nhs.uk/using-the-nhs/healthcare-abroad/going-abroad-for-treatment/">Going abroad for treatment</a></li>
+        <li><a href="https://www.nhs.uk/using-the-nhs/healthcare-abroad/moving-abroad/">Moving abroad</a></li>
+    </ul>
+  </div>
+</div>
+{% endblock %}
