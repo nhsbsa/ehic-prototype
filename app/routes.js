@@ -34,6 +34,15 @@ router.use('/current-01/file-upload', require('./views/current-01/file-upload/_r
 router.use('/nationality', require('./views/nationality/_routes'));
 router.use('/nationality/apply', require('./views/nationality/apply/_routes'));
 
+//Round 2 Nationality Capture
+
+router.use('/current-02', require('./views/current-02/_routes'));
+router.use('/current-02/apply', require('./views/current-02/apply/_routes'));
+router.use('/current-02/replacement', require('./views/current-02/replacement/_routes'));
+router.use('/current-02/file-upload', require('./views/current-02/file-upload/_routes'));
+
+router.use('/nationality', require('./views/nationality/_routes'));
+router.use('/nationality/apply', require('./views/nationality/apply/_routes'));
 
 // Start folder specific routes
 // ----------------------------
