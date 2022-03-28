@@ -1,0 +1,147 @@
+{% extends 'layout-nhs-uk.html' %}
+
+{% block pageTitle %}
+  Provisional Replacement Certificate
+{% endblock %}
+
+{% block beforeContent %}
+
+<style>
+  .app-global-alert {
+    background-color: #ffeb3b;
+    padding-bottom: 24px;
+    padding-top: 24px;
+}
+  .app-global-alert a:hover {
+    background-color: #005eb8;
+    box-shadow: 0 0 0 4px #005eb8;
+    color: #fff;
+}
+  td.nhsuk-table__cell:nth-child(1) {
+    /*background-color: red;*/
+    width: 75%;
+}
+  td.nhsuk-table__cell:nth-child(2),
+  td.nhsuk-table__cell:nth-child(3) {
+    text-align: center;
+   /* width: 15%;*/
+}
+  th.table-heading:nth-child(2),
+  th.table-heading:nth-child(3) {
+    text-align: center;
+}
+
+.nhsuk-breadcrumb {
+    background-color: transparent;
+  }
+  .nhsuk-header__navigation-link {
+    text-decoration: underline;
+  }
+  .autocomplete__input {
+    border-color: white;
+}
+</style>
+
+<!-- Coronavirus alert -->
+<div class="app-global-alert">
+   <div class="nhsuk-width-container">
+      <div class="nhsuk-grid-row">
+         <div class="nhsuk-grid-column-full">
+            <div class="app-global-alert__content">
+               <div class="app-global-alert__message">
+                  <h2 class="nhsuk-heading-m" style="margin: 0;">Coronavirus (COVID-19)</h2>
+                  <p style="margin: 8px 0 0 0; font-size: 19px;">
+                    <a href="#" style="">Get the latest advice about COVID-19</a>
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<!-- Breadcrumb -->
+  {{ breadcrumb({
+  items: [
+    {
+      href: "#",
+      text: "Home"
+    },
+    {
+      href: "#",
+      text: "Services"
+    },
+    {
+      href: "",
+      text: "Healthcare abroad"
+    }
+  ],
+  href: "../hub-home",
+  text: "Healthcare cover for travelling abroad (GHIC and EHIC)"
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1>Provisional Replacement Certificate (PRC)</h1>
+    </div>
+  </div>
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h2>If you're abroad and do not have your card with you</h2>
+
+      <p>You can get a Provisional Replacement Certificate (PRC) to prove your entitlement to medically necessary healthcare if you travel to Europe without your existing EHIC, UK GHIC or new UK EHIC and need treatment during your visit.</p>
+
+      <p>If you need a PRC outside opening hours, you should call as soon as possible the next working day.</p>
+      <p>The PRC will give you the same cover as an existing EHIC, UK GHIC or new UK EHIC until you return home.</p>
+      <p>When calling for a PRC, you'll need to give:</p>
+
+      <ul>
+        <li>your National Insurance number</li>
+        <li>your name</li>
+        <li>your address</li>
+        <li>your date of birth</li>
+        <li>the name of the treatment facility</li>
+        <li>the email address for the specific department of the organisation providing your treatment</li>
+      </ul>
+
+      <div class="block-inset_text">
+        <div class="nhsuk-inset-text">
+          <span class="nhsuk-u-visually-hidden">Information: </span>
+          <p>You only need to get a PRC if you need medical treatment.</p>
+          <p>To apply for a PRC <a href="https://www.nhsbsa.nhs.uk/contact-us/overseas-healthcare-services-contact-us">contact NHS Overseas Healthcare Services</a>.</p>
+        </div>
+      </div>
+
+      <p>Someone else can apply for a PRC on your behalf.</p>
+
+      {{ reviewDate({
+        "lastReview": "29 June 2021",
+        "nextReview": "29 June 2024"
+      }) }}
+
+      </div>
+
+      <div class="nhsuk-grid-column-one-third">
+        <div style="border-top:5px solid #005eb8; padding-top:15px;"></div>
+        <h3>Healthcare cover for travelling abroad (GHIC and EHIC)</h3>
+        <ul style="list-style-type:none; padding-left: 0;">
+          <li><a href="">Applying for healthcare cover abroad (GHIC and EHIC)</a></li>
+          <li>Provisional Replacement Certificate (PRC)</li>
+          <li><a href="">Claiming a refund</a></li>
+        </ul>
+      </div>
+
+  </div>
+
+
+
+  
+
+{% endblock %}

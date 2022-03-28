@@ -1,0 +1,201 @@
+{% extends 'layout-nhs-uk.html' %}
+
+{% block pageTitle %}
+  Students
+{% endblock %}
+
+{% block beforeContent %}
+
+<style>
+  .app-global-alert {
+    background-color: #ffeb3b;
+    padding-bottom: 24px;
+    padding-top: 24px;
+}
+  .app-global-alert a:hover {
+    background-color: #005eb8;
+    box-shadow: 0 0 0 4px #005eb8;
+    color: #fff;
+}
+  td.nhsuk-table__cell:nth-child(1) {
+    /*background-color: red;*/
+    width: 75%;
+}
+  td.nhsuk-table__cell:nth-child(2),
+  td.nhsuk-table__cell:nth-child(3) {
+    text-align: center;
+   /* width: 15%;*/
+}
+  th.table-heading:nth-child(2),
+  th.table-heading:nth-child(3) {
+    text-align: center;
+}
+
+.nhsuk-breadcrumb {
+    background-color: transparent;
+  }
+  .nhsuk-header__navigation-link {
+    text-decoration: underline;
+  }
+  .autocomplete__input {
+    border-color: white;
+}
+</style>
+
+<!-- Coronavirus alert -->
+<div class="app-global-alert">
+   <div class="nhsuk-width-container">
+      <div class="nhsuk-grid-row">
+         <div class="nhsuk-grid-column-full">
+            <div class="app-global-alert__content">
+               <div class="app-global-alert__message">
+                  <h2 class="nhsuk-heading-m" style="margin: 0;">Coronavirus (COVID-19)</h2>
+                  <p style="margin: 8px 0 0 0; font-size: 19px;">
+                    <a href="#" style="">Get the latest advice about COVID-19</a>
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<!-- Breadcrumb -->
+  {{ breadcrumb({
+  items: [
+    {
+      href: "#",
+      text: "Home"
+    },
+    {
+      href: "#",
+      text: "Services"
+    },
+    {
+      href: "#",
+      text: "Healthcare abroad"
+    },
+    {
+      href: "../hub-home", 
+      text: "Healthcare cover for travelling abroad (GHIC and EHIC)"
+    }
+  ],
+  href: "overview-home",
+  text: "Applying for healthcare cover abroad (GHIC and EHIC)"
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1>Students studying in the EU, Norway, Iceland, Liechtenstein or Switzerland</h1>
+    </div>
+  </div>
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+      <!-- <h2>Students studying in the EU, Norway, Iceland, Liechtenstein, or Switzerland</h2> -->
+
+      <p>If you normally live in the UK and have been studying in the EU, Norway, Iceland, Liechtenstein or Switzerland since before 1 January 2021, you may be eligible for a new UK Student EHIC for use in the EU and your country of study.</p>
+      <p>You will not be able to use this card for treatment in Norway, Iceland or Liechtenstein unless one of these countries is your country of study.</p>
+      <p>If you started your course after 1 January 2021, or you're planning to study in an EU country, you'll need to apply for a Student GHIC.</p>
+      <p>You can use the Student GHIC in the EU, Switzerland and your country of study, but not yet in Norway, Iceland or Liechtenstein.</p>
+      <p>To apply you'll need a letter from your university or college showing:</p>
+
+      <ul>
+        <li>the name and address of the UK educational institution if you're travelling as part of your course</li>
+        <li>the address of where you're studying in the EU or Switzerland</li>
+        <li>details of the qualification you're studying for</li>
+        <li>the dates your study period in the EU, Norway, Iceland, Liechtenstein, or Switzerland started and is due to finish</li>
+        <li>your permanent residential address in the UK</li>
+      </ul>
+
+      <p>If the letter from your university or college does not include your permanent residential address in the UK, you will be asked to provide further evidence to confirm this.</p>
+
+      <!-- {{ actionLink({
+        "text": "Apply for a new UK Student EHIC or UK Student GHIC",
+        "href": "/current/start"
+      }) }} -->
+
+
+      <div id="sibling-nav" class="app-related-nav beta-hub-sibling-nav nhsuk-u-padding-top-5">
+        <h2 class="app-related-nav__heading nhsuk-u-padding-bottom-3">
+          More in <a href="overview-home">Applying for healthcare cover abroad (GHIC and EHIC)</a>
+        </h2>
+
+        <nav role="navigation" class="app-related-nav__nav-section">
+          <ul class="app-related-nav__list beta-hub-sibling-nav__list">
+            
+            <li class="beta-hub-sibling-nav__item">
+              <a class="app-related-nav__link" href="what-it-covers">
+                What a UK GHIC and UK EHIC covers
+              </a>
+            </li>
+
+            <li class="beta-hub-sibling-nav__item">
+              <a class="app-related-nav__link" href="where-to-use">
+              Where you can use a UK GHIC and UK EHIC
+              </a>
+            </li>
+
+            <li class="beta-hub-sibling-nav__item">
+              <a class="app-related-nav__link" href="cannot-get">
+                Who can and cannot get a UK GHIC or UK EHIC
+              </a>
+            </li>
+
+            <li class="beta-hub-sibling-nav__item">
+              <a class="app-related-nav__link" href="cannot-apply-online">
+                Who cannot apply using this online service
+              </a>
+            </li>
+
+            <li class="beta-hub-sibling-nav__item   beta-hub-sibling-nav--current">
+              <!-- <a class="app-related-nav__link" href="students"> -->
+                Students studying in the EU, Norway, Iceland, Liechtenstein or Switzerland
+              <!-- </a> -->
+            </li>
+
+            <li class="beta-hub-sibling-nav__item">
+              <a class="app-related-nav__link" href="covid">
+                Travelling abroad and Coronavirus
+              </a>
+            </li>
+
+          </ul>
+          </ul>
+
+        </nav>
+      </div>
+
+      <br><br>
+
+      <a href="new-application" class="nhsuk-button nhsuk-u-margin-bottom-8">
+        Apply for a new UK EHIC or UK GHIC
+      </a>
+
+      {{ reviewDate({
+        "lastReview": "29 June 2021",
+        "nextReview": "29 June 2024"
+      }) }}
+
+    </div>
+
+
+    <div class="nhsuk-grid-column-one-third">
+    <div style="border-top:5px solid #005eb8; padding-top:15px;"></div>
+    <h3>Healthcare cover for travelling abroad (GHIC and EHIC)</h3>
+    <ul style="list-style-type:none; padding-left: 0;">
+        <li>Applying for healthcare cover abroad (GHIC and EHIC)</li>
+        <li><a href="../prc/prc-apply-online">Provisional Replacement Certificates (PRC)</a></li>
+        <li><a href="">Claiming a refund</a></li>
+    </ul>
+  </div>
+
+
+{% endblock %}
