@@ -364,15 +364,20 @@
           </div>
         
 
-        {{ details({
-          "text": "More information about dual nationality",
-          "HTML": "
-          <p>You should check <strong>National of an EU country, Norway, Iceland, Liechtenstein or Switzerland</strong> if you are registered as a national of at least one of the stated countries.</p>
-          <p>If you have dual or muliple nationalities involving nationality of the UK and another country not listed, check <strong>English, Scottish, Welsh or Northern Irish</strong> then <strong>Other nationality not listed</strong>.</p>
-          <p>If you have dual or multiple nationalities not involving the UK or any of the other countries listed, you should check <strong>Other nationality not listed</strong>.</p>
-          <p>Please type and select all the country names that apply to your nationality.</p>
-          "
-        }) }}
+          {{ details({
+            "text": "More information about dual nationality",
+            "HTML": "
+            <p>If you are a national of at least one EU country, or any of the other European countries 
+              listed, you should select <strong>EU citizen or a national of Switzerland, Norway, Iceland, or 
+                Liechtenstein</strong> and tell us which countries.</p>
+            <p>If you are also a UK national, select <strong>United Kingdom (UK) national</strong> as well.</p>
+            <p>If you have dual or multiple nationalities involving nationality of the UK and another 
+              country not listed, select <strong>United Kingdom (UK) national</strong>, then select <strong>Any other nationality 
+              not listed</strong> and tell us which countries.</p>
+            <p>If you have dual or multiple nationalities not involving the UK, the EU or any of the other 
+              European countries listed, select <strong>Any other nationality not listed</strong> and add each country in turn.</p>
+            "
+          }) }}
 
 
         {{ button({
