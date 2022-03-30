@@ -24,25 +24,7 @@ router.use('/current/apply', require('./views/current/apply/_routes'));
 router.use('/current/replacement', require('./views/current/replacement/_routes'));
 router.use('/current/file-upload', require('./views/current/file-upload/_routes'));
 
-//v2
 
-router.use('/current-01', require('./views/current-01/_routes'));
-router.use('/current-01/apply', require('./views/current-01/apply/_routes'));
-router.use('/current-01/replacement', require('./views/current-01/replacement/_routes'));
-router.use('/current-01/file-upload', require('./views/current-01/file-upload/_routes'));
-
-router.use('/nationality', require('./views/nationality/_routes'));
-router.use('/nationality/apply', require('./views/nationality/apply/_routes'));
-
-//Round 2 Nationality Capture
-
-router.use('/current-02', require('./views/current-02/_routes'));
-router.use('/current-02/apply', require('./views/current-02/apply/_routes'));
-router.use('/current-02/replacement', require('./views/current-02/replacement/_routes'));
-router.use('/current-02/file-upload', require('./views/current-02/file-upload/_routes'));
-
-router.use('/nationality', require('./views/nationality/_routes'));
-router.use('/nationality/apply', require('./views/nationality/apply/_routes'));
 
 // Start folder specific routes
 // ----------------------------
@@ -59,25 +41,18 @@ router.use('/sprint-007', require('./views/sprint-007/_routes'));
 // Pre-registration and post-january application journeys
 router.use('/sprint-008/prereg', require('./views/sprint-008/prereg/_routes'));
 router.use('/sprint-008/postjan', require('./views/sprint-008/postjan/_routes'));
-
 router.use('/sprint-009/prereg', require('./views/sprint-009/prereg/_routes'));
 router.use('/sprint-009/postjan', require('./views/sprint-009/postjan/_routes'));
-
 router.use('/sprint-010/prereg', require('./views/sprint-010/prereg/_routes'));
 router.use('/sprint-010/postjan', require('./views/sprint-010/postjan/_routes'));
-
 router.use('/sprint-011/prereg', require('./views/sprint-011/prereg/_routes'));
 router.use('/sprint-011/postjan', require('./views/sprint-011/postjan/_routes'));
-
 router.use('/sprint-012/prereg', require('./views/sprint-012/prereg/_routes'));
 router.use('/sprint-012/postjan', require('./views/sprint-012/postjan/_routes'));
-
 router.use('/sprint-013/prereg', require('./views/sprint-013/prereg/_routes'));
 router.use('/sprint-013/postjan', require('./views/sprint-013/postjan/_routes'));
-
 router.use('/sprint-014/prereg', require('./views/sprint-014/prereg/_routes'));
 router.use('/sprint-014/postjan', require('./views/sprint-014/postjan/_routes'));
-
 router.use('/sprint-015/prereg', require('./views/sprint-015/prereg/_routes'));
 router.use('/sprint-015/postjan', require('./views/sprint-015/postjan/_routes'));
 
@@ -135,6 +110,18 @@ router.use('/sprint-041', require('./views/sprint-041/_routes'));
 router.use('/sprint-041/apply', require('./views/sprint-041/apply/_routes'));
 router.use('/sprint-041/replacement', require('./views/sprint-041/replacement/_routes'));
 router.use('/sprint-041/file-upload', require('./views/sprint-041/file-upload/_routes'));
+
+//v2
+router.use('/sprint-041-2', require('./views/sprint-041-2/_routes'));
+router.use('/sprint-041-2/apply', require('./views/sprint-041-2/apply/_routes'));
+router.use('/sprint-041-2/replacement', require('./views/sprint-041-2/replacement/_routes'));
+router.use('/sprint-041-2/file-upload', require('./views/sprint-041-2/file-upload/_routes'));
+
+// Round 2 Nationality Capture
+router.use('/sprint-042', require('./views/sprint-042/_routes'));
+router.use('/sprint-042/apply', require('./views/sprint-042/apply/_routes'));
+router.use('/sprint-042/replacement', require('./views/sprint-042/replacement/_routes'));
+router.use('/sprint-042/file-upload', require('./views/sprint-042/file-upload/_routes'));
 //
 
 
@@ -150,6 +137,7 @@ router.use('/tasklist/postjan', require('./views/tasklist/postjan/_routes'));
 
 // nationality //
 router.use('/nationality', require('./views/nationality/_routes'));
+router.use('/nationality/apply', require('./views/nationality/apply/_routes'));
 
 
 
