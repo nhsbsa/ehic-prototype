@@ -24,13 +24,11 @@
 
 <style>
   td.nhsuk-table__cell:nth-child(1) {
-    /*background-color: red;*/
     width: 75%;
   }
   td.nhsuk-table__cell:nth-child(2),
   td.nhsuk-table__cell:nth-child(3) {
     text-align: center;
-   /* width: 15%;*/
   }
   th.table-heading:nth-child(2),
   th.table-heading:nth-child(3) {
@@ -43,43 +41,91 @@
    <div class="nhsuk-grid-column-two-thirds">
       <h1>Get healthcare cover for travelling abroad</h1>
 
-      <!-- <p>Use this service to check if you are eligible and apply for cover.</p> -->
+      {% from 'warning-callout/macro.njk' import warningCallout %}
+
+      {{ warningCallout({
+        "heading": "Important",
+        "HTML": "<p>There is no deadline to apply for a UK Global Health Insurance Card or a UK European Health Insurance Card. If you have an existing European Health Insurance Card, you can continue to use it until it expires.</p>"
+      }) }}
 
       <p>Use this service to:</p>
       <ul>
          <li>check if you are eligible and apply for cover</li>
-         <li>get a replacement UK GHIC or UK EHIC</li>
-         <li>renew an expired UK GHIC or UK EHIC</li>
+         <li>replace a lost, stolen, or damaged card</li>
+         <li>re-apply if your card expires soon</li>
       </ul>
+
+      {{ details({
+        "text": " If you already have a card",
+        "HTML": "
+        <p>Your existing card will remain valid until the expiry date on the card. Once your current card expires, you'll need to apply for a new card.</p>
+         <p>You can apply for a new card if your card expires on or before [dynamic date].</p>
+        "
+      }) }}
+
+      {{ details({
+        "text": "If you’re abroad and do not have a card with you",
+        "HTML": "
+        <p>You can get a Provisional Replacement Certificate (PRC) to prove your entitlement to medically necessary healthcare if you travel without your card and need treatment during your visit. This includes if you travel and require treatment before you receive your card.</p>
+        <p>You should only apply for a PRC from the time you need treatment. PRCs cannot be issued in advance. Make sure you have the email address of the hospital, clinic, or treatment facility you are attending when you apply.</p>
+        <p>To apply for a PRC contact <a href=\"https://www.nhsbsa.nhs.uk/contact-us/overseas-healthcare-services-contact-us\" target=\"_blank\">NHS Overseas Healthcare Services</a>.</p>
+        "
+      }) }}
+
+
+      <h2>Applying for cover</h2>
+
+      <p>If you’re eligible, you’ll receive a card that can be used to get emergency treatment.</p>
+
+      <p>Depending on your circumstances, this will be either a:</p>
+      <ul>
+         <li>UK Global Health Insurance Card (GHIC)</li>
+         <li>UK European Health Insurance Card (new UK EHIC), if you have rights under the Withdrawal Agreement</li>
+      </ul>
+
+      <p>During your application we’ll let you know what you’re entitled to.</p>
 
       <div class="nhsuk-inset-text">
          <span class="nhsuk-u-visually-hidden">Information: </span>
          <p>You only need to apply if you plan to visit the EU, Norway, Iceland, Lichtenstein, or Switzerland.</p>
-       </div>
+      </div>
 
-       <h2>New applications</h2>
+      {{ details({
+        "text": " What countries are in the European Union (EU)?",
+        "HTML": "
+        <p>The EU countries are:</p>
+        <p>Austria, Belgium, Bulgaria, Croatia, Republic of Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Italy, Latvia, Lithuania, Luxembourg, Malta, Netherlands, Poland, Portugal, Romania, Slovakia, Slovenia, Spain and Sweden.</p>
+        "
+      }) }}
 
-      <p>If you’re eligible, you’ll receive a card that can be used to get emergency treatment.</p>
-      <p>Depending on your circumstances this will be either a:</p>
+      <br>
+
+      <p>Most people can apply for cover using our online service, but you may need to contact us depending on your circumstances. Find out  <a href="https://www.nhs.uk/using-the-nhs/healthcare-abroad/apply-for-a-free-uk-global-health-insurance-card-ghic" target="_blank">more information about who can apply</a>.</p>
+
+
+      <h2>What is covered</h2>
+
+      <p>Both cards give you access to state provided healthcare while staying in certain countries for things like:</p>
       <ul>
-         <li>UK Global Health Insurance Card (GHIC</li>
-         <li>UK European Health Insurance Card (EHIC)</li>
+         <li>emergency treatment</li>
+         <li>visits to A&E</li>
+         <li>routine maternity care, unless you're <a href="">going abroad to give birth</a></li>
       </ul>
-      <p>During your application we’ll let you know what you’re entitled to. Both cards provide the same level of cover but are valid in different countries.</p>
 
-      <details class="nhsuk-details nhsuk-expander">
-         <summary class="nhsuk-details__summary">
-            <span class="nhsuk-details__summary-text">
-            Where the cards are valid and what they cover</span>
-         </summary>
-         <div class="nhsuk-details__text">
-            <p>A UK GHIC or existing EHIC covers you when visiting an EU country. A UK GHIC may become valid in more countries in the future.</p>
-            <p>A new UK EHIC covers you when visiting an EU country, Norway, Iceland, Liechtenstein, or Switzerland.</p>
-         </div>
-      </details>
+      <p>Your UK EHIC or UK GHIC is not a substitute for travel insurance. It may not cover all health costs and never covers repatriation costs.</p>
+      <p>You should make sure that you have travel insurance as well as an UK EHIC or UK GHIC.</p>
+
+
+      <h2>Where you’re covered</h2>
+
+      <p>Each card provides the same cover but are valid in different countries.</p>
+
+      <p>A UK GHIC or existing EHIC covers you when visiting an EU country and Switzerland. This may become valid in more countries in the future.</p>
+
+      <p>A new UK EHIC covers you when visiting an EU country, Norway, Iceland, Liechtenstein, or Switzerland.</p>
 
       <table role="table" class="nhsuk-table-responsive">
-         <caption class="nhsuk-table__caption">healthcare cover</caption>
+         <caption class="nhsuk-table__caption">Countries in which each card is valid</caption>
          <thead role="rowgroup" class="nhsuk-table__head">
             <tr role="row">
                <th role="columnheader" class="table-heading" scope="col">
@@ -89,14 +135,14 @@
                   UK GHIC
                </th>
                <th role="columnheader" class="table-heading" scope="col">
-                  UK EHIC
+                  New UK EHIC
                </th>
             </tr>
          </thead>
          <tbody class="nhsuk-table__body">
             <tr role="row" class="nhsuk-table__row">
                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading"> </span>European Union (EU)<br> 
+                  <span class="nhsuk-table-responsive__heading"> </span>European Union (EU) and Switzerland<br> 
                </td>
                <td role="cell" class="nhsuk-table__cell">
                   <span class="nhsuk-table-responsive__heading"></span>
@@ -111,7 +157,7 @@
             </tr>
             <tr role="row" class="nhsuk-table__row">
                <td role="cell" class="nhsuk-table__cell">
-                  <span class="nhsuk-table-responsive__heading"> </span>Norway, Iceland, Liechtenstein and Switzerland
+                  <span class="nhsuk-table-responsive__heading"> </span>Norway, Iceland and Liechtenstein
                </td>
                <td role="cell" class="nhsuk-table__cell">
                   <span class="nhsuk-table-responsive__heading"></span>
@@ -146,88 +192,48 @@
          </tbody>
       </table>
 
-      {{ details({
-        "text": " What countries are in the European Union (EU)?",
-        "HTML": "
-        <p>The EU countries are:</p>
-        <p>Austria, Belgium, Bulgaria, Croatia, Republic of Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Italy, Latvia, Lithuania, Luxembourg, Malta, Netherlands, Poland, Portugal, Romania, Slovakia, Slovenia, Spain and Sweden.</p>
-        "
-      }) }}
-
-      <br>
-
-      <p>Both cards give you access to state provided healthcare while staying in an EU country for things like:</p>
-      <ul>
-         <li>emergency treatment</li>
-         <li>visits to A&E</li>
-         <li>routine maternity care, unless you're <a href="">going abroad to give birth</a></li>
-      </ul>
-
-      {% from 'warning-callout/macro.njk' import warningCallout %}
-
-      {{ warningCallout({
-        "heading": "If you already have a card",
-        "HTML": "<p>If you already have a card, you can still use it until the expiry date shown on the card. You can apply for a new card up to 6 months before your current card expires.</p>
-        <p>If you have moved to another country to live or work since receiving your current card, you may no longer be covered and we will need to check your eligibility again.</p>"
-      }) }}
-
-
-      <h2>Replace a lost or stolen card</h2>
-
-      <p>
-         Use this service to get a replacement UK EHIC or UK GHIC for yourself or anyone else on your application. If you have lost an old style EHIC you will need to make a new application to get a new UK EHIC or UK GHIC.
-      </p>
-
-      <h2>Renew an expired card</h2>
-
-      <p>
-         Use this service to renew a new UK EHIC or UK GHIC.
-      </p>
+      <details class="nhsuk-details nhsuk-expander">
+         <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">
+            Healthcare cover in Switzerland</span>
+         </summary>
+         <div class="nhsuk-details__text">
+            <p>Your card only covers you for healthcare in Switzerland if you’re:</p>
+            <ul>
+               <li>a UK national</li>
+               <li>a Swiss national</li>
+               <li>a national of an EU country</li>
+               <li>a stateless person or refugee</li>
+               <li>a family member of someone who holds one of these nationalities or statuses</li>
+            </ul>
+            <p>You may be asked for proof of nationality or status when accessing healthcare in Switzerland.</p>
+         </div>
+      </details>
 
       <h2>Before you start</h2>
 
       <p>You'll need:</p>
 
       <ul>
-        <li>Your National Insurance number</li>
-        <li>The National Insurance numbers of any other people you are applying for who are 16 years old or over</li>
+        <li>your National Insurance number</li>
+        <li>the National Insurance numbers of any other people, including your partner, you are applying for who are 16 years old or over</li>
       </ul>
 
       <div class="nhsuk-inset-text">
          <span class="nhsuk-u-visually-hidden">Information: </span>
-         <p>Depending on your circumstances we may also ask for you NHS number, if you have one.</p>
+         <p>Depending on your circumstances we may also ask for your NHS number, if you have one.</p>
       </div>
+
+      {% from 'warning-callout/macro.njk' import warningCallout %}
+
+      {{ warningCallout({
+        "heading": "Timeout warning",
+        "HTML": "<p>Your session will time out after 30 minutes of inactivity.</p>"
+      }) }}
 
       <a href="new-application" class="nhsuk-button nhsuk-u-margin-bottom-8">
         Start now
-        <!-- Check eligibility and apply -->
       </a>
-
-      <p><a href="terms">Who can apply using this service</a></p>
-
-      <br>
-
-      <details class="nhsuk-details nhsuk-expander">
-         <summary class="nhsuk-details__summary">
-            <span class="nhsuk-details__summary-text">
-            If you are abroad and do not have your card with you</span>
-         </summary>
-         <div class="nhsuk-details__text">
-            <p>You can get a Provisional Replacement Certificate (PRC) to prove your entitlement to medically necessary healthcare if you travel to the EU without your UK GHIC, UK EHIC or EHIC and need treatment during your visit. This includes if you travel and require treatment before you have received your card.</p>
-            <p>You should only apply for a PRC at the point you need treatment. PRCs cannot be issued in advance.</p>
-            <p>To apply for a PRC contact <a href="https://www.nhsbsa.nhs.uk/contact-us/overseas-healthcare-services-contact-us">NHS Overseas Healthcare Services</a>.</p>
-         </div>
-      </details>
-
-      <details class="nhsuk-details nhsuk-expander">
-         <summary class="nhsuk-details__summary">
-            <span class="nhsuk-details__summary-text">
-            Arrange travel insurance</span>
-         </summary>
-         <div class="nhsuk-details__text">
-            <p>Your UK EHIC or UK GHIC card is not a substitute for travel insurance. It may not cover all health costs and never covers repatriation costs. Make sure you have travel insurance as well as an UK EHIC or UK GHIC.</p>
-         </div>
-      </details>
 
       <details class="nhsuk-details nhsuk-expander">
          <summary class="nhsuk-details__summary">
@@ -237,7 +243,7 @@
          <div class="nhsuk-details__text">
             <p>To process your application, we may share your information (where appropriate) with:</p>
             <ul>
-               <li>Indesser and LexisNexis, third party data providers acting on our behalf who will make a UK residency check</li>
+               <li>Indesser, Equifax, and LexisNexis, third party data providers acting on our behalf who will make a UK residency check</li>
                <li>NHS Digital to validate EU Settlement Scheme status</li>
             </ul>
             <p>For more information about how we use your information please read our privacy notice.</p>

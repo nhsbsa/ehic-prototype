@@ -124,6 +124,12 @@ router.use('/sprint-042/replacement', require('./views/sprint-042/replacement/_r
 router.use('/sprint-042/file-upload', require('./views/sprint-042/file-upload/_routes'));
 //
 
+router.use('/sprint-043', require('./views/sprint-043/_routes'));
+router.use('/sprint-043/apply', require('./views/sprint-043/apply/_routes'));
+router.use('/sprint-043/replacement', require('./views/sprint-043/replacement/_routes'));
+router.use('/sprint-043/file-upload', require('./views/sprint-043/file-upload/_routes'));
+
+
 
 //pulling data through
 
