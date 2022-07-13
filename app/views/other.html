@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}
+{% block pageTitle %}
+
+   Get healthcare cover for travelling abroad
+
+{% endblock %}
+{% block beforeContent %}
+{% endblock %}
+{% block content %}
+
+<style type="text/css">
+
+   p.current {
+      float: right; 
+      color: black; 
+      padding: 10px 0;
+      /*font-weight: bold;*/
+   }
+
+   .nhsuk-details__text {
+      width: 66.6%;
+   }
+   
+  </style>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <h1>Overseas Healthcare Services <span class="nhsuk-caption-xl nhsuk-caption--bottom">Get healthcare cover for travelling abroad</span></h1>
+
+      <h3>Other work</h3>
+
+      <hr>
+
+      <div class="nhsuk-expander-group">
+        <details class="nhsuk-details nhsuk-expander">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">S1 certificate download</span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <h4 class="heading-xs">S1 certificate download</h4>
+            <p>
+               Customers who apply for an S1 certificate over the phone now have the option to download their certificate and cover letter online rather than wait for it to arrive in the mail.
+            </p>
+
+            {{ actionLink({ 
+               "text": "S1 certificate download", 
+               "href": "/s1-download/start" 
+            }) }}
+
+            <p><a href="">Link expired</a></p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>{% endblock %}
+</body>
+</html>

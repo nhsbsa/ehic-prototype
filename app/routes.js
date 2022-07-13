@@ -146,8 +146,6 @@ router.use('/nationality', require('./views/nationality/_routes'));
 router.use('/nationality/apply', require('./views/nationality/apply/_routes'));
 
 
-
-
 module.exports = router;
 
 
