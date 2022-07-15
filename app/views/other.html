@@ -31,7 +31,7 @@
       <hr>
 
       <div class="nhsuk-expander-group">
-        <details class="nhsuk-details nhsuk-expander">
+        <details class="nhsuk-details nhsuk-expander" open>
           <summary class="nhsuk-details__summary">
             <span class="nhsuk-details__summary-text">S1 certificate download</span>
           </summary>
@@ -42,8 +42,13 @@
             </p>
 
             {{ actionLink({ 
-               "text": "S1 certificate download", 
+               "text": "S1 certificate download (Main)", 
                "href": "/s1-download/start" 
+            }) }}
+
+            {{ actionLink({ 
+               "text": "S1 certificate download (Dependant)", 
+               "href": "/s1-download/dependant/start" 
             }) }}
 
             <p><a href="">Link expired</a></p>

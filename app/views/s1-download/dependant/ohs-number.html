@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
 
-  What is your OHS reference number?
+  What is their OHS reference number?
 
 {% endblock %}
 {% block beforeContent %}
@@ -32,13 +32,13 @@
 
         {% call fieldset({
           legend: {
-            text: "What is your OHS reference number?",
+            text: "What is their OHS reference number?",
             classes: "nhsuk-fieldset__legend--l",
             isPageHeading: true
           }
         }) %}
 
-        <p>You can find your OHS reference number on the email we’ve sent you with the link to this service.</p>
+        <p>You can find their OHS reference number on the email we’ve sent you with the link to this service.</p>
 
         {{ input({
           "label": {
