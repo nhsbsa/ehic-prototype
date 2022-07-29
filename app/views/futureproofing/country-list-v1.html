@@ -1,0 +1,266 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Where you can use your card
+{% endblock %}
+
+{% block beforeContent %}
+
+<!-- Phase banner -->
+  <div class="app-phase-banner">
+    <div class="nhsuk-width-container app-phase-banner__container">
+      <p class="app-phase-banner__content">
+        <strong class="nhsuk-tag app-phase-banner__tag">
+          Prototype
+        </strong>
+        <span class="app-phase-banner__text">
+        This is a prototype - your <a href="#">feedback</a> will help us improve it.
+        </span>
+      </p>
+    </div>
+  </div>
+  
+{% endblock %}
+
+<style>
+  td.nhsuk-table__cell:nth-child(1) {
+    width: 75%;
+  }
+  td.nhsuk-table__cell:nth-child(2),
+  td.nhsuk-table__cell:nth-child(3) {
+    text-align: center;
+  }
+  th.table-heading:nth-child(2),
+  th.table-heading:nth-child(3) {
+    text-align: center;
+  }
+</style>
+
+{% block content %}
+<div class="nhsuk-grid-row">
+   <div class="nhsuk-grid-column-two-thirds">
+      <!-- <h1>Get healthcare cover for travelling abroad</h1> -->
+      <h1>Which countries accept UK GHIC and UK EHIC</h1>
+   </div>
+</div>
+
+<div class="nhsuk-grid-row">
+   <div class="nhsuk-grid-column-two-thirds">
+
+      <p>Each card provides the same cover but are valid in different countries. During your application we’ll let you know what card you’re entitled to.</p>
+
+      <h3>UK Global Health Insurance Card (UK GHIC)</h3>
+
+      <p>Usually, UK nationals living in the UK will get a UK GHIC. Some other people, like students studying in one of the countries listed below can also get a UK GHIC.</p>
+
+
+      <div class="nhsuk-do-dont-list">
+        <h3 class="nhsuk-do-dont-list__label">Where you can use a UK GHIC</h3>
+
+        <div class="nhsuk-grid-row">
+         <div class="nhsuk-grid-column-full">
+            <h5>European Union (EU)</h5>
+         </div>
+        </div>
+
+        <div class="nhsuk-grid-row">
+         <div class="nhsuk-grid-column-one-third">
+            <ul>
+             <li>Austria</li>
+             <li>Belgium</li>
+             <li>Bulgaria</li>
+             <li>Croatia</li>
+             <li>Republic of Cyprus</li>
+             <li>Czech Republic</li>
+             <li>Denmark</li>
+             <li>Estonia</li>
+             <li>Finland</li>
+            </ul>
+         </div>
+         <div class="nhsuk-grid-column-one-third">
+            <ul>
+             <li>France</li>
+             <li>Germany</li>
+             <li>Greece</li>
+             <li>Hungary</li>
+             <li>Ireland</li>
+             <li>Italy</li>
+             <li>Latvia</li>
+             <li>Lithuania</li>
+             <li>Luxembourg</li>
+            </ul>
+         </div>
+         <div class="nhsuk-grid-column-one-third">
+            <ul>
+             <li>Malta</li>
+             <li>Netherlands</li>
+             <li>Poland</li>
+             <li>Portugal</li>
+             <li>Romania</li>
+             <li>Slovakia</li>
+             <li>Slovenia</li>
+             <li>Spain</li>
+             <li>Sweden</li>
+            </ul>
+         </div>
+        </div>
+
+        <br>
+
+        <div class="nhsuk-grid-row">
+         <div class="nhsuk-grid-column-full">
+            <h5>Rest of the world</h5>
+         </div>
+        </div>
+
+        <div class="nhsuk-grid-row">
+         <div class="nhsuk-grid-column-one-third">
+            <ul>
+             <!-- <li>Australia</li>
+             <li>Canada</li> -->
+             <li>Montenegro</li>
+             <!-- <li>New Zealand</li> -->
+             <li>Switzerland</li>
+             <!-- <li>United States of America (USA)</li> -->
+            </ul>
+         </div>
+        </div>
+      </div>
+        <!-- <div class="nhsuk-grid-row">
+         <div class="nhsuk-grid-column-full">
+            <h5>Rest of the world</h5>
+         </div>
+        </div>
+
+        <div class="nhsuk-grid-row">
+         <div class="nhsuk-grid-column-one-third">
+            <ul>
+             <li>Australia</li>
+             <li>New Zealand</li>
+             <li>United States of America (USA)</li>
+            </ul>
+         </div>
+
+         <div class="nhsuk-grid-column-one-third">
+            <ul>
+             <li>Canada</li>
+             <li>Switzerland</li>
+            </ul>
+         </div>
+
+         <div class="nhsuk-grid-column-one-third">
+            <ul>
+             <li>Montenegro</li>
+             <li>New Zealand</li>
+            </ul>
+         </div> -->
+
+
+      <div class="nhsuk-inset-text">
+         <span class="nhsuk-u-visually-hidden">Information: </span>
+         <p>In the future, more countries may start accepting GHICs. Check this page before you travel to see where you can use a GHIC.</p>
+      </div>
+
+      <h3>UK European Health Insurance Card</h3>
+
+      <p>You can get a UK EHIC if you are an EU national living in the UK.</p>
+
+      <div class="nhsuk-do-dont-list">
+        <h3 class="nhsuk-do-dont-list__label">Where you can use a UK EHIC</h3>
+
+        <div class="nhsuk-grid-row">
+         <div class="nhsuk-grid-column-full">
+            <h5>European Union (EU)</h5>
+         </div>
+        </div>
+
+        <div class="nhsuk-grid-row">
+         <div class="nhsuk-grid-column-one-third">
+            <ul>
+             <li>Austria</li>
+             <li>Belgium</li>
+             <li>Bulgaria</li>
+             <li>Croatia</li>
+             <li>Republic of Cyprus</li>
+             <li>Czech Republic</li>
+             <li>Denmark</li>
+             <li>Estonia</li>
+             <li>Finland</li>
+            </ul>
+         </div>
+         <div class="nhsuk-grid-column-one-third">
+            <ul>
+             <li>France</li>
+             <li>Germany</li>
+             <li>Greece</li>
+             <li>Hungary</li>
+             <li>Ireland</li>
+             <li>Italy</li>
+             <li>Latvia</li>
+             <li>Lithuania</li>
+             <li>Luxembourg</li>
+            </ul>
+         </div>
+         <div class="nhsuk-grid-column-one-third">
+            <ul>
+             <li>Malta</li>
+             <li>Netherlands</li>
+             <li>Poland</li>
+             <li>Portugal</li>
+             <li>Romania</li>
+             <li>Slovakia</li>
+             <li>Slovenia</li>
+             <li>Spain</li>
+             <li>Sweden</li>
+            </ul>
+         </div>
+        </div>
+
+        <br>
+
+        <div class="nhsuk-grid-row">
+         <div class="nhsuk-grid-column-full">
+            <h5>Rest of the world</h5>
+         </div>
+        </div>
+
+        <div class="nhsuk-grid-row">
+         <div class="nhsuk-grid-column-one-third">
+            <ul>
+             <li>Iceland</li>
+             <li>Liechtenstein</li>
+             <li>Montenegro</li>
+             <li>Norway</li>
+             <li>Switzerland</li>
+            </ul>
+         </div>
+        </div>
+      </div>
+
+      {{ warningCallout({
+        "heading": "Healthcare cover in Switzerland",
+        "HTML": "<p>Your card only covers you for healthcare in Switzerland if you’re:</p>
+                 <ul>
+                  <li>a UK national</li>
+                  <li>a Swiss national</li>
+                  <li>a national of an EU country</li>
+                  <li>a stateless person or refugee</li>
+                  <li>a family member of someone who holds one of these nationalities or statuses</li>
+               </ul>
+               <p>You may be asked for proof of nationality or status when accessing healthcare in Switzerland.</p>"
+      }) }}
+
+   </div>
+
+   <div class="nhsuk-grid-column-one-third">
+    <div style="border-top:5px solid #005eb8; padding-top:15px;"></div>
+    <h3>Get healthcare cover for travelling abroad</h3>
+
+    <ul style="list-style-type:none; padding-left: 0;">
+        <li><a href="country-list-v1">Get healthcare cover for travelling abroad</a></li>
+    </ul>
+    <p>Which countries accept UK GHIC and UK EHIC</p>
+  </div>
+
+</div>
+{% endblock %}
