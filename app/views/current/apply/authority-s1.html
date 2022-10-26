@@ -31,17 +31,12 @@
 
         {% call fieldset({
           legend: {
-            text: "Do you have healthcare cover from another country that is not the UK, such as:",
+            text: "Do you have healthcare cover from another country besides the UK, such as having an S1, E121, E106 or E109?",
             classes: "nhsuk-fieldset__legend--l",
             isPageHeading: true
           }
         }) %}
-
-        <ul>
-          <li>a European Health Insurance Card (EHIC) </li>
-          <li>an S1, E121, E106 or E109?</li>
-        </ul>
-
+        
         <p>If you have previously lived in another country, you may have been given a certificate that entitles you to healthcare cover in the UK. For example, if you're receiving a state pension or benefit from that country.</p>
 
         {{ radios({
