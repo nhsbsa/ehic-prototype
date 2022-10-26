@@ -934,126 +934,14 @@
       coll[i].addEventListener("click", function() {
         this.classList.toggle("active");
         var content = this.nextElementSibling;
-        if (content.style.maxHeight){
-          content.style.maxHeight = null;
+        if (content.style.display === "block") {
+          content.style.display = "none";
         } else {
-          content.style.maxHeight = content.scrollHeight + "px";
-        } 
+          content.style.display = "block";
+        }
       });
     }
 
-    // Read out cookies from client
-    function readCookie(name) {
-      var nameEQ = name + "=";
-      var ca = document.cookie.split(';');
-      for (var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-      }
-      return null;
-    }
-
-    var cookieControlValue = readCookie('CookieControl');
-    var cookieControlJson = JSON.parse(cookieControlValue);
-
-
-    window.dataLayer = window.dataLayer || [];
-
-    var cookieAnalytics = (cookieControlJson && cookieControlJson.optionalCookies && cookieControlJson.optionalCookies.analytics && cookieControlJson.optionalCookies.analytics === 'accepted') ? 'TRUE' : 'FALSE';
-    var cookieMarketing = (cookieControlJson && cookieControlJson.optionalCookies && cookieControlJson.optionalCookies.marketing && cookieControlJson.optionalCookies.marketing === 'accepted') ? 'TRUE' : 'FALSE';
-
-    window.dataLayer.push({
-      'analyticsConsent': cookieAnalytics,
-      'marketingConsent': cookieMarketing
-    });
-
-    var config = {
-      apiKey: '7ae2775bc0129bd88661030848a2cf545d21fef2',
-      product: 'PRO_MULTISITE',
-      necessaryCookies: ['TEXT_SIZE', 'has_js'],
-      text: {
-        title: 'Cookies on our website',
-        intro: 'We use cookies so that our website works properly. We’d also like to use cookies to collect information about how you use our website. This information helps us to improve our website and services.',
-        necessaryTitle: 'Essential cookies',
-        necessaryDescription: 'These cookies are essential for our website to function. Our website does not work properly without them.',
-        acceptRecommended: 'Accept all cookies',
-        accept: 'Accept all cookies',
-        acceptSettings: 'Accept all cookies',
-        reject: 'Only use essential cookies',
-        rejectSettings: 'Only use essential cookies',
-        closeLabel: 'Close'
-      },
-      statement: {
-        description: 'For more information about the cookies we use, visit our',
-        name: 'cookies page',
-        url: 'https://www.nhsbsa.nhs.uk/our-policies/cookies',
-        updated: '29/07/2020'
-      },
-      optionalCookies: [
-        {
-          name: 'analytics',
-          label: 'Analytics cookies',
-          description: 'We use Google Analytics to measure how you use the website so we can improve it based on user needs. This information is anonymous and does not directly identify you. ',
-          recommendedState: true,
-          cookies: ['_ga', '_gid', '_gat_UA-6646272-1'],
-          onAccept: function () {
-            /*load analytics GTM-WKVTR8*/
-            addGTM('GTM-WKVTR8');
-          },
-          onRevoke: function () {
-            /*remove analytics GTM */
-            removeGTM('GTM-WKVTR8');
-          }
-        }
-      ],
-      position: 'LEFT',
-      theme: 'DARK',
-      branding: {
-        fontColor: "#000",
-        fontSizeTitle: "1.2em",
-        fontSizeIntro: "1em",
-        fontSizeHeaders: "1em",
-        fontSize: "0.89em",
-        backgroundColor: "#eff0f1",
-        toggleText: "#fff",
-        toggleColor: "#fff",
-        toggleBackground: "#275389",
-        buttonIcon: null,
-        buttonIconWidth: "64px",
-        buttonIconHeight: "64px",
-        removeIcon: false,
-        removeAbout: true
-      },
-      initialState: 'open',
-      rejectButton: true,
-      closeStyle: 'labelled'
-    };
-
-    CookieControl.load(config);
-    function addGTM(id) {
-      var theID = id;
-      // add this code 
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || []; w[l].push({
-          'gtm.start':
-            new Date().getTime(), event: 'gtm.js'
-        }); var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', theID);
-    }
-
-    function removeGTM(id) {
-      var theID = id;
-      // add this code 
-      var allScripts = document.getElementsByTagName("script");
-      for (var i = allScripts.length; i >= 0; i--) {
-        if (allScripts[i] && allScripts[i].getAttribute('src') != null && allScripts[i].getAttribute('src').indexOf(theID) != -1) {
-          allScripts[i].parentNode.removeChild(allScripts[i])
-        }
-      }
-    }
   </script>
   <style>
     #ccc-close {
