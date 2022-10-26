@@ -1065,9 +1065,14 @@
       background-color: #000;
     }
 
-    .expander-wrap .expander.expanded:before {
-    content: '\EA14' !important;
+    .search-controller .searchBar .form-submit:before {
+      background-image: url("images/search.svg") !important;
+      content: '\EA1C';
+      padding: 1.1rem;
+      font-size: 20px;
+      line-height: 42px;
 }
+
 /* .expander-wrap .expander:before {
     content: '\EA0C' !important;
     display: inline-block;
@@ -1119,9 +1124,9 @@
 }
 
 .expander-wrap .expander:before {
-    background-image: url("images/expanded.svg");
+    background-image: url("images/expanded.svg") !important;
+    content: '\EA0C';
     display: inline-block;
-    background-color: #eeeeee;
     vertical-align: middle;
     text-align: center;
     position: absolute;
@@ -1132,9 +1137,9 @@
 }
 
 .expander-wrap .expander:after {
-    background-image: url("images/collapsed.svg");
+    background-image: url("images/collapsed.svg") !important;
+    content: '\EA0C';
     display: inline-block;
-    background-color: #eeeeee;
     vertical-align: middle;
     text-align: center;
     position: absolute;
