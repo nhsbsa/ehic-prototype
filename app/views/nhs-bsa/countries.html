@@ -523,14 +523,10 @@
                 </div>
                 <article data-history-node-id="727" role="article" about="/our-policies/cookies">
 
-
-
-
-
                   <div>
 
                     <div class="field field--name-body field--type-text-with-summary field--label-hidden field__item">
-                      <p>There are 2 types of cards available for healthcare cover when you’re travelling abroad. You can apply for either:  </p>
+                      <p>There are 2 types of cards available for healthcare cover when you're travelling abroad. You can apply for either:  </p>
 
                       <ul>
                         <li>a UK Global Health Insurance Card (GHIC) </li>
@@ -553,26 +549,29 @@
                         <tbody>
                           <tr>
                             <td>European Union (EU) countries </td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                          </tr>
+                          <tr>
                             <td>Iceland </td>
+                            <td>No</td>
+                            <td>Yes </td>
+                          </tr>
+                          <tr>
                             <td>Norway  </td>
-                            <td>Liechtenstein </td>
-                            <td>Switzerland </td>
-                          </tr>
-                          <tr>
-                            <td>Yes </td>
                             <td>No</td>
-                            <td>No</td>
-                            <td>No</td>
-                            <td>Yes (only in certain circumstances) </td>
+                            <td>Yes</td>
                           </tr>
-                          <tr>
-                            <td>Yes </td>
-                            <td>Yes</td>
-                            <td>Yes</td>
-                            <td>Yes</td>
-                            <td>Yes (only in certain circumstances) </td>
-                          </tr>
-                         
+                         <tr>
+                          <td>Liechtenstein </td>
+                          <td>No</td>
+                          <td>Yes</td>
+                         </tr>
+                         <tr>
+                          <td>Switzerland</td>
+                          <td>Yes (only in certain circumstances) </td>
+                          <td>Yes (only in certain circumstances) </td>
+                         </tr>
                          
                         </tbody>
                       </table>
@@ -580,12 +579,12 @@
 
                       <p>A UK EHIC or UK GHIC is not a substitute for travel insurance. It may not cover all health costs and never covers repatriation costs. Make sure you have travel insurance as well as a UK EHIC or UK GHIC. </p>
 
-                     <div class="expander-wrap">
-                        <div class="expander">
+                     <details class="expander-wrap">
+                        <summary class="expander">
                           <h2>Which countries are in the EU</h2>
-                        </div>
+                        </summary>
                       
-                        <div class="expander-content">
+                        <div class="nhsuk-details__text expander-content">
                           <p>The EU countries are:</p>
                            <ul>
                               <li>Austria </li>
@@ -616,23 +615,26 @@
                               <li>Sweden</li>
                            </ul>
                         </div>
-                      </div>
+                      </details>
                       
-                      <div class="expander-wrap">
-                        <div class="expander">
+                      <details class="expander-wrap">
+                        <summary class="expander">
                           <h2>Information for overseas students</h2>
-                        </div>
+                        </summary>
                       
-                        <div class="expander-content">
-                          <p>If you’re a student studying in the EU or Switzerland: </p>
+                        <div class="nhsuk-details__text expander-content">
+                          <p>If you're a student studying in the EU or Switzerland: </p>
                            <ul>
                               <li>both a UK GHIC and a new UK EHIC will cover you for necessary state-provided healthcare within the EU and Switzerland, including your country of study. You will not be able to use either card for treatment in Norway, Iceland, or Liechtenstein.  </li>
                            </ul>
-                           <p>If you’re a student studying in Norway, Iceland, or Liechtenstein: </p>
-                           <ul>a new UK EHIC will cover you for necessary state-provided healthcare in your country of study and when visiting EU countries or Switzerland </ul>
-                           <ul>a UK GHIC will cover you for necessary state-provided healthcare when visiting the EU or Switzerland. You will not be able to use your card for treatment in your country of study </ul>
-                          </div>
-                      </div>
+                           <p>If you're a student studying in Norway, Iceland, or Liechtenstein: </p>
+                           <ul>
+                            <li>a new UK EHIC will cover you for necessary state-provided healthcare in your country of study and when visiting EU countries or Switzerland</li> 
+                            <li>a UK GHIC will cover you for necessary state-provided healthcare when visiting the EU or Switzerland. You will not be able to use your card for treatment in your country of study </li>
+                          </ul>
+                           
+                        </div>
+                      </details>
                     </div>
 
                   </div>
@@ -922,6 +924,24 @@
     <![endif]-->
 
   <script>
+
+    //Collapse expanders
+
+    var coll = document.getElementsByClassName("expander");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+
     // Read out cookies from client
     function readCookie(name) {
       var nameEQ = name + "=";
@@ -1213,11 +1233,50 @@
     box-sizing: border-box;
 }
 
-    /*#ccc hr {
-      background-color: #000 !important;
-      opacity: 1 !important;
-    }
-/*
+element.style {
+    display: block;
+}
+.expander-content {
+    display: none;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    color: #555;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+body {
+    margin: 0;
+    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+    font-size: 160%;
+    line-height: 1.42857;
+    color: #555;
+    background-color: #fbfbfb;
+}
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    box-sizing: border-box;
+    font-size: 10px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
   </style>
 
 </body>
