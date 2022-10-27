@@ -1128,11 +1128,9 @@
     transform: translate(0, 0);
 }
 
-.expander-wrap .expander:before, .expander-wrap .expander:after {
-    display: inline-block;
-}
 
-.expander-wrap .expander:before {
+.expander-wrap .expander.expanded:before {
+  display: inline-block;
   background-image: url(../../images/expanded.svg) !important; 
   background-repeat: no-repeat; 
   background-position: center; 
@@ -1144,6 +1142,7 @@
 }
 
 .expander-wrap .expander.expanded:after {
+  display: inline-block;
   background-image: url(../../images/collapsed.svg) !important; 
   background-repeat: no-repeat; 
   background-position: center; 
