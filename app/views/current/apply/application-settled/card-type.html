@@ -1,25 +1,25 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  What type of cover would you like?
+What type of cover would you like?
 {% endblock %}
 
 {% block beforeContent %}
 
-  <!-- Phase banner -->
-  <div class="app-phase-banner">
-    <div class="nhsuk-width-container app-phase-banner__container">
-      <p class="app-phase-banner__content">
-        <strong class="nhsuk-tag app-phase-banner__tag">
-          Prototype
-        </strong>
-        <span class="app-phase-banner__text">
+<!-- Phase banner -->
+<div class="app-phase-banner">
+  <div class="nhsuk-width-container app-phase-banner__container">
+    <p class="app-phase-banner__content">
+      <strong class="nhsuk-tag app-phase-banner__tag">
+        Prototype
+      </strong>
+      <span class="app-phase-banner__text">
         This is a prototype - your <a href="#">feedback</a> will help us improve it.
-        </span>
-      </p>
-    </div>
+      </span>
+    </p>
   </div>
-  
+</div>
+
 {% endblock %}
 
 {% block content %}
@@ -29,196 +29,72 @@
     /*background-color: red;*/
     width: 75%;
   }
+
   td.nhsuk-table__cell:nth-child(2),
   td.nhsuk-table__cell:nth-child(3) {
     text-align: center;
-   /* width: 15%;*/
+    /* width: 15%;*/
   }
+
   th.table-heading:nth-child(2),
   th.table-heading:nth-child(3) {
     text-align: center;
   }
 </style>
 
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-three-quarters">
-      <!-- <span class="nhsuk-caption-l nhsuk-caption--bottom">Check your eligibility</span> -->
-      <!-- <form action="add-someone" method="post"> -->
-      <!-- <form action="full-name" method="post"> -->
-      <form action="chooseCover" method="post">
-
-        <h1 class="nhsuk-heading-xl">Choose the cover you wish to apply for</h1>
-
-        <p>Based on the information you have provided you may be entitled to a UK Global Health Insurance Card (GHIC) or new UK European Health Insurance Card (EHIC).</p>
-
-        <!-- <br> -->
-
-        <h2>What is the difference?</h2>
-        <p>A UK GHIC covers you when visiting an EU country and Switzerland. A UK GHIC may become valid in more countries in the future.</p>
-        <p>A new UK EHIC covers you when visiting an EU country or Switzerland, as well as Norway, Iceland or Liechtenstein.</p>
-        <p>If you plan to visit Norway, Iceland or Liechtenstein you may wish to apply for a new UK EHIC.</p>
-        <!-- <p>Depending on when you started you course, you may be entitled to a GHIC or EHIC</p> -->
-
-        <table role="table" class="nhsuk-table-responsive">
-          <caption class="nhsuk-table__caption">healthcare cover</caption>
-          <thead role="rowgroup" class="nhsuk-table__head">
-            <tr role="row">
-              <th role="columnheader" class="table-heading" scope="col">
-                Countries
-              </th>
-              <th role="columnheader" class="table-heading" scope="col">
-                UK GHIC
-              </th>
-              <th role="columnheader" class="table-heading" scope="col">
-                UK EHIC
-              </th>
-            </tr>
-          </thead>
-          <tbody class="nhsuk-table__body">
-            <tr role="row" class="nhsuk-table__row">
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading"> </span>European Union (EU) and Switzerland<br> 
-              </td>
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading"></span>
-                  <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path></svg>
-              </td>
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading"></span>
-                <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path></svg>
-              </td>
-            </tr>
-            <tr role="row" class="nhsuk-table__row">
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading"> </span>Norway, Iceland and Liechtenstein
-              </td>
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading"></span>
-                <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z"></path>
-                <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
-              </svg>
-              </td>
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading"></span>
-                <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path></svg>
-              </td>
-            </tr>
-            <tr role="row" class="nhsuk-table__row">
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading"> </span>In the future, more countries may be added 
-              </td>
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading"></span>
-                <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12"></path></svg>
-              </td>
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading"></span>
-                <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z"></path>
-                <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z"></path>
-              </svg>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        <details class="nhsuk-details nhsuk-expander">
-          <summary class="nhsuk-details__summary">
-              <span class="nhsuk-details__summary-text">Which countries are in the EU?</span>
-          </summary>
-          <div class="nhsuk-details__text">
-              <p>The EU countries are:</p>
-              <p>Austria, Belgium, Bulgaria, Croatia, Republic of Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Italy, Latvia, Lithuania, Luxembourg, Malta, Netherlands, Poland, Portugal, Romania, Slovakia, Slovenia, Spain and Sweden.</p>
-          </div>
-      </details>
-
-      <details class="nhsuk-details nhsuk-expander">
-        <summary class="nhsuk-details__summary">
-            <span class="nhsuk-details__summary-text">Information for overseas students</span>
-        </summary>
-        <div class="nhsuk-details__text">
-            <p>If you're a student studying in the EU or Switzerland:</p>
-            <ul>
-                <li>both a UK GHIC and a new UK EHIC will cover you for necessary state-provided healthcare within the EU and Switzerland, including your country of study. You will not be able to use either card for treatment in Norway, Iceland, or Liechtenstein.</li>
-            </ul>
-            <p>If you're a student studying in Norway, Iceland, or Liechtenstein:</p>
-            <ul>
-                <li>a new UK EHIC will cover you for necessary state-provided healthcare in your country of study and when visiting EU countries or Switzerland</li>
-                <li>a UK GHIC will cover you for necessary state-provided healthcare when visiting the EU or Switzerland. You will not be able to use your card for treatment in your country of study</li>
-            </ul>
-        </div>
-    </details>
-
-    <details class="nhsuk-details nhsuk-expander">
-      <summary class="nhsuk-details__summary">
-          <span class="nhsuk-details__summary-text" id="swiss_expander">Healthcare cover in Switzerland</span>
-      </summary>
-      <div class="nhsuk-details__text">
-          <p>Your card only covers you for healthcare in Switzerland if you're: </p>
-          <ul class="nhsuk-list--bullet">
-              <li>a UK national</li>
-              <li>a Swiss national</li>
-              <li>a national of an EU country</li>
-              <li>a stateless person or refugee</li>
-              <li>a family member of someone who holds one of these nationalities or statuses.</li>
-          </ul>
-          <p>You may be asked for proof of nationality or status when accessing healthcare in Switzerland.</p>
-      </div>
-  </details>
-
-        <br>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-three-quarters">
+    <!-- <span class="nhsuk-caption-l nhsuk-caption--bottom">Check your eligibility</span> -->
+    <!-- <form action="add-someone" method="post"> -->
+    <!-- <form action="full-name" method="post"> -->
+    <form action="chooseCover" method="post">
 
 
+      {% call fieldset({
+      legend: {
+      text: "Which type of cover would you like to apply for?",
+      classes: "nhsuk-fieldset__legend--l",
+      isPageHeading: true
+      }
+      }) %}
 
 
+      <p>Based on the information you have provided you may be entitled to a UK Global Health Insurance Card (GHIC) or a
+        new UK European Health Insurance Card (EHIC).</p>
+      <p>Both cards provide the same cover but the countries they are valid in can change. Check our website to see <a
+          href="https://ehic-prototype.herokuapp.com/nhs-bsa/countries" target="_blank">where you can use each card
+          (opens in a new tab)</a>, then return here to complete your application.</p>
 
 
- 
+      {{ radios({
+      "idPrefix": "choose-cover",
+      "name": "choose-cover",
+      "items": [
+      {
+      "value": "GHIC",
+      "text": "UK GHIC"
+      },
+      {
 
-
-
-        {% call fieldset({
-          legend: {
-            text: "What type of cover would you like to apply for?",
-            classes: "nhsuk-fieldset__legend--l",
-            isPageHeading: true
-          }
-        }) %}
-
-        {{ radios({
-          "idPrefix": "choose-cover",
-          "name": "choose-cover",
-          "items": [
-            {
-              "value": "GHIC",
-              "text": "UK GHIC"
-            },
-            {
-              
-              "value": "UK-EHIC",
-              "text": "New UK EHIC"
-            }
-          ]
-        }) }}
-
-        {% endcall %}
-
-        {{ button({
-          "text": "Continue"
-        }) }}
-
-      </form>
-
-     {{ backLink({
-        "href": "",
-        "text": "Change my previous answer"
+      "value": "UK-EHIC",
+      "text": "New UK EHIC"
+      }
+      ]
       }) }}
-      
-    </div>
+
+      {% endcall %}
+
+      {{ button({
+      "text": "Continue"
+      }) }}
+
+    </form>
+
+    {{ backLink({
+    "href": "",
+    "text": "Change my previous answer"
+    }) }}
+
   </div>
+</div>
 {% endblock %}
