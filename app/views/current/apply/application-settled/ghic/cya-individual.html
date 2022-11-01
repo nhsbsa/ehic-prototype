@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Check your answers
+Check your answers before sending your application - Get healthcare cover for travelling abroad - NHSBSA 
 {% endblock %}
 
 {% block beforeContent %}
@@ -27,20 +27,16 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-three-quarters">
       <form action="app-complete" method="post">
-          <h1 class="nhsuk-heading-l">
-            Check your answers before sending your application
-          </h1>
-          <h2 class="nhsuk-heading-m">
-            Your details
-          </h2>
+        <h1 class="nhsuk-heading-xl">Check your answers before sending your application</h1>
+        <h2 class="nhsuk-heading-l">Your details</h2>
           
           <dl class="nhsuk-summary-list">
             <div class="nhsuk-summary-list__row">
               <dt class="nhsuk-summary-list__key nhsuk-!-width-one-third">
-                Type of healthcare cover
+                Entitlement Type
               </dt>
               <dd class="nhsuk-summary-list__value">
-                UK Global Health Insurance Card (GHIC)
+                GHIC
               </dd>
               <dd class="nhsuk-summary-list__actions">
                 <a class="nhsuk-link" href="../card-type">
@@ -96,7 +92,7 @@
 
             <div class="nhsuk-summary-list__row">
               <dt class="nhsuk-summary-list__key">
-                NHS number
+                What is your NHS number?
               </dt>
               <dd class="nhsuk-summary-list__value">
                 {{ data['nhs-number'] }}
@@ -110,7 +106,7 @@
 
             <div class="nhsuk-summary-list__row">
               <dt class="nhsuk-summary-list__key">
-                Gender
+                How is your gender recorded on your NHS record?
               </dt>
               <dd class="nhsuk-summary-list__value">
                 {{ data['gender'] }}
@@ -125,38 +121,11 @@
 
 
 
-            <div class="nhsuk-summary-list__row">
-              <dt class="nhsuk-summary-list__key">
-                Do you plan to permanently move to another country in the next 5 years?
-              </dt>
-              <dd class="nhsuk-summary-list__value">
-                {{ data['emigrate'] }}
-              </dd>
-              <dd class="nhsuk-summary-list__actions">
-                <a class="nhsuk-link" href="emigration">
-                  Change <span class="nhsuk-u-visually-hidden">do you plan to permanently move to another country in the next 5 years</span>
-                </a>
-              </dd>
-            </div>
-            {% if (data['emigrate']) === 'Yes' %}
-              <div class="nhsuk-summary-list__row">
-                <dt class="nhsuk-summary-list__key">
-                  Move date
-                </dt>
-                <dd class="nhsuk-summary-list__value">
-                  {{ data['country-move-day'] }} / {{ data['country-move-month'] }} / {{ data['country-move-year'] }}
-                </dd>
-                <dd class="nhsuk-summary-list__actions">
-                  <a class="nhsuk-link" href="emigration-date">
-                    Change <span class="nhsuk-u-visually-hidden">move date</span>
-                  </a>
-                </dd>
-              </div>
-            {% endif %}
+
 
             <div class="nhsuk-summary-list__row">
               <dt class="nhsuk-summary-list__key">
-                National Insurance number
+                What is your National Insurance number?
               </dt>
               <dd class="nhsuk-summary-list__value">
                 {{ data['nino'] }}
@@ -194,11 +163,44 @@
                 </a>
               </dd>
             </div>
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Do you plan to permanently move to another country in the next 5 years?
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                {{ data['emigrate'] }}
+              </dd>
+              <dd class="nhsuk-summary-list__actions">
+                <a class="nhsuk-link" href="emigration">
+                  Change <span class="nhsuk-u-visually-hidden">do you plan to permanently move to another country in the next 5 years</span>
+                </a>
+              </dd>
+            </div>
+            {% if (data['emigrate']) === 'Yes' %}
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">
+                  What date do you plan to start living in another country?
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  {{ data['country-move-day'] }} / {{ data['country-move-month'] }} / {{ data['country-move-year'] }}
+                </dd>
+                <dd class="nhsuk-summary-list__actions">
+                  <a class="nhsuk-link" href="emigration-date">
+                    Change <span class="nhsuk-u-visually-hidden">move date</span>
+                  </a>
+                </dd>
+              </div>
+            {% endif %}
           </dl>
 
-        <h2>Now send your application</h2>
-        <p>By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
-
+          <h2>Submit your application</h2>
+          <p>The information that you give us in this application will be used to check your eligibility. This means we may share your information with:</p>
+          <ul class="nhsuk-list nhsuk-list--bullet">
+            <li>third party data providers acting on our behalf who will make a UK residency check</li>
+            <li>NHS Digital to validate your EU Settlement Scheme status</li>
+        </ul>
+        <p>We might also share your information with third parties to help us prevent and investigate fraud and error. You can <a href="https://www.nhsbsa.nhs.uk/our-policies/privacy/overseas-healthcare-services-privacy-notice" target="_blank">find out more about how we use your information on our website <span class="nhsuk-u-visually-hidden">(Opens in a new tab)</span></a>.</p>
+        <p>By submitting your application, you are confirming that the information you've given us is correct. If you knowingly provide incorrect information, you could be prosecuted or face civil proceedings. </p>
         {{ button({
           "text": "Accept and send"
         }) }}
