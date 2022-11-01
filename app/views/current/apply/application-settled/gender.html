@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  How is your gender recorded on your NHS record?
+How is your gender recorded on your NHS record - Get healthcare cover for travelling abroad - NHSBSA 
 {% endblock %}
 
 {% block beforeContent %}
@@ -37,22 +37,28 @@
           }
         }) %}
       
-      <p>
-        This is the gender on your NHS record. This may not be the gender you currently identify yourself as.
-      </p>
+        <div class="nhsuk-hint nhsuk-u-margin-bottom-2">This is the gender on your NHS record. This may not be the gender you currently identify yourself as.</div>
+
+      {{ details({
+        "text": "Why do we ask this question?",
+        "HTML": "
+        <p>We ask for this information, along with your NHS number and your date of birth, as a check to confirm your identity and eligibility for an EHIC. Giving us this information helps speed up your application. If you choose not to give this information, your application may need to go through a different verification process.</p>
+        "
+      }) }}
 
         {{ radios({
           "idPrefix": "add-another",
           "name": "gender",
           "items": [
+          {
+            "value": "Male",
+            "text": "Male"
+          },
             {
               "value": "Female",
               "text": "Female"
             },
-            {
-              "value": "Male",
-              "text": "Male"
-            },
+   
             {
               "value": "Prefer not to say",
               "text": "Prefer not to say"
@@ -62,12 +68,7 @@
 
         {% endcall %}
 
-        {{ details({
-          "text": "Why do we ask this question?",
-          "HTML": "
-          <p>We ask for this information, along with your NHS number and your date of birth, as a check to confirm your identity and eligibility for an EHIC. Giving us this information helps speed up your application. If you choose not to give this information, your application may need to go through a different verification process.</p>
-          "
-        }) }}
+        
 
         {{ button({
           "text": "Continue"
