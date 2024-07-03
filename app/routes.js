@@ -23,6 +23,7 @@ router.use('/current', require('./views/current/_routes'));
 router.use('/current/apply', require('./views/current/apply/_routes'));
 router.use('/current/replacement', require('./views/current/replacement/_routes'));
 router.use('/current/file-upload', require('./views/current/file-upload/_routes'));
+router.use('/current/dependants', require('./views/current/dependants/_routes'));
 
 
 

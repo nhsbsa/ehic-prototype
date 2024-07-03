@@ -1,0 +1,173 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Get healthcare cover for travelling abroad - NHSBSA 
+{% endblock %}
+
+{% block beforeContent %}
+
+<!-- Phase banner -->
+<div class="app-phase-banner">
+   <div class="nhsuk-width-container app-phase-banner__container">
+      <p class="app-phase-banner__content">
+         <strong class="nhsuk-tag app-phase-banner__tag">
+            Prototype
+         </strong>
+         <span class="app-phase-banner__text">
+            This is a prototype - your <a href="#">feedback</a> will help us improve it.
+         </span>
+      </p>
+   </div>
+</div>
+
+{% endblock %}
+
+<style>
+   td.nhsuk-table__cell:nth-child(1) {
+      width: 75%;
+   }
+
+   td.nhsuk-table__cell:nth-child(2),
+   td.nhsuk-table__cell:nth-child(3) {
+      text-align: center;
+   }
+
+   th.table-heading:nth-child(2),
+   th.table-heading:nth-child(3) {
+      text-align: center;
+   }
+</style>
+
+{% block content %}
+<div class="nhsuk-grid-row">
+   <div class="nhsuk-grid-column-two-thirds">
+      <h1>Apply for dependants of a GHIC or EHIC card holder</h1>
+
+      {% from 'warning-callout/macro.njk' import warningCallout %}
+
+      {{ warningCallout({
+      "heading": "Important",
+      "HTML": "<p>There is no deadline to apply for dependants of a UK Global Health Insurance Card or a UK European Health Insurance Card.</p>"
+      }) }}
+
+      <p>Use this service to:</p>
+      <ul>
+         <li>check if you're eligible and apply for cover</li>
+         <li>replace a lost, stolen, or damaged card</li>
+      </ul>
+
+      <p>If you're eligible, you'll receive a card that can be used to get cover for emergency treatment abroad. This will be either a:</p>
+
+      <ul>
+         <li>UK Global Health Insurance Card (GHIC)</li>
+         <li>UK European Health Insurance Card (new UK EHIC), if you have rights under the Withdrawal Agreement</li>
+      </ul>
+
+      <p>We'll let you know what you're entitled to during your application. </p>
+
+      <h2>What these cover</h2>
+
+      <p>Both cards give you access to state-provided healthcare abroad for things like: </p>
+      <ul>
+         <li>emergency treatment </li>
+         <li>visits to A&E </li>
+         <li>routine maternity care, unless you're <a href="https://www.nhs.uk/using-the-nhs/healthcare-abroad/going-abroad-for-treatment/giving-birth-outside-the-uk/" target="_blank">going abroad to give birth (opens in a new tab)</a></li>
+      </ul>
+      <p>Both cards provide the same cover but the countries they are valid in can change. Check our website to see
+         <a href="/nhs-bsa/countries" target="_blank">where you can use each card (opens in a new tab)</a>.</p>
+
+
+      <div class="nhsuk-inset-text">
+         <span class="nhsuk-u-visually-hidden">Information: </span>
+         <p>A UK EHIC or UK GHIC is not a substitute for travel insurance. It may not cover all health costs and never covers repatriation costs. You should make sure that you have travel insurance as well as a UK EHIC or UK GHIC.</p>
+      </div>
+
+      <h2>Applying for cover</h2>
+      <p>Most people can apply for cover using our online service, but you may need to contact us depending on your
+         circumstances. Find out <a href="https://www.nhs.uk/using-the-nhs/healthcare-abroad/apply-for-a-free-uk-global-health-insurance-card-ghic/" target="_blank">who can apply for cover (opens in a new tab)</a>.</p>
+
+
+      <details class="nhsuk-details">
+         <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">
+               If you already have a card
+            </span>
+         </summary>
+         <div class="nhsuk-details__text">
+            <p>Your card will remain valid until its expiry date. When your current card expires, you'll need to apply
+               for a new one.</p>
+            <p>You can apply for a new card up to 6 months before your current card expires.
+            </p>
+         </div>
+      </details>
+
+      <details class="nhsuk-details">
+         <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">
+               If you need treatment abroad and do not have your card with you
+            </span>
+         </summary>
+         <div class="nhsuk-details__text">
+            <p>If you do not have a UK GHIC or UK EHIC and need emergency treatment abroad, you can still get help with
+               paying for your treatment. </p>
+            <p>A Provisional Replacement Certificate (PRC) will entitle you to the same level of cover as a UK GHIC or
+               UK EHIC, even if you do not have your card with you. This also covers you if you applied for a UK GHIC or
+               UK EHIC and it has not arrived yet. </p>
+            <p>You can only apply for a PRC from the time you need treatment. A PRC can provide cover for treatment that
+               has already taken place, but one cannot be issued in advance. </p>
+            <p><a href="https://www.nhsbsa.nhs.uk/contact-us/overseas-healthcare-services-contact-us" target="_blank">Contact us to apply for a PRC (opens in a new tab)</a></p>
+            <p>You'll need the email address of the hospital or treatment facility that has provided treatment when you
+               apply. </p>
+
+         </div>
+      </details>
+
+      <h2>Before you start</h2>
+
+      <p>You'll need:</p>
+
+      <ul>
+         <li>your National Insurance number</li>
+         <li>the National Insurance numbers of any other people, including your partner, you're applying for who are 16
+            years old or over</li>
+      </ul>
+
+      <p>Depending on your circumstances we may also ask for your NHS number, if you have one.</p>
+
+
+      {% from 'warning-callout/macro.njk' import warningCallout %}
+
+      {{ warningCallout({
+      "heading": "Timeout warning",
+      "HTML": "<p>Your session will time out after 30 minutes of inactivity.</p>"
+      }) }}
+
+      <a href="new-application" class="nhsuk-button nhsuk-u-margin-bottom-8">
+         Start now
+      </a>
+
+      <details class="nhsuk-details">
+         <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">
+               How we use your information
+            </span>
+         </summary>
+         <div class="nhsuk-details__text">
+            <p>To process your application, we may share your information (where appropriate) with:</p>
+            <ul class="nhsuk-list--bullet">
+               <li>Indesser, Equifax, and LexisNexis, who are third party data providers acting on our behalf who will
+                  make a UK residency check </li>
+               <li>NHS Digital to validate EU Settlement Scheme status</li>
+            </ul>
+            <p>For more information about how we use your information, <a
+                  href="https://www.nhsbsa.nhs.uk/our-policies/privacy/overseas-healthcare-services-privacy-notice" target="_blank">read
+                  our privacy notice (opens in a new tab)</a>.</p>
+         </div>
+      </details>
+
+
+
+   </div>
+
+</div>
+{% endblock %}
