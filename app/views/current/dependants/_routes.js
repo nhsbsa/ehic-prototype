@@ -48,5 +48,14 @@ router.post('/ukAddress', function (req, res) {
   }
 })
 
+// Postcode for UK address for adding a dependant - postcode.html
+router.post('/postCode', function (req, res) {
+  res.redirect('nino') 
+})
+
+// Country for non-UK address for adding a dependant - full-name.html
+router.post('/country', function (req, res) {
+  res.redirect('nino') 
+})
 
 module.exports = router
