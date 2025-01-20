@@ -53,9 +53,28 @@ router.post('/postCode', function (req, res) {
   res.redirect('nino') 
 })
 
-// Country for non-UK address for adding a dependant - full-name.html
+// Country for non-UK address for adding a dependant - country.html
 router.post('/country', function (req, res) {
   res.redirect('nino') 
+})
+
+// NINO for adding a dependant - nino.html
+router.post('/nino', function (req, res) {
+  res.redirect('add-dependant') 
+})
+
+// NINO for adding a dependant - nino.html
+router.post('/addDependant', function (req, res) {
+  var nino = req.session.data['add-dependant']
+  if (nino == "yes") {
+    res.redirect('add-dependant')
+  }
+  else if (nino == "no") {
+    res.redirect('add-dependant')
+  }
+  else {
+    res.redirect('add-dependant')
+  }
 })
 
 module.exports = router
