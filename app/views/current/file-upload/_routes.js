@@ -155,4 +155,22 @@ router.post('/addEvidStudent', function (req, res) {
   }
 })
 
+
+// Do you want to add another?
+// - upload-another.html
+router.post('/addAnother', function (req, res) {
+  var addEvidRight = req.session.data['add-another']
+  if (addEvidRight == "Yes") {
+    res.redirect('upload-add-dependant')
+  }
+  else if (addEvidRight == "No") {
+    // res.redirect('upload-res-uk')
+    // res.redirect('provide-res-uk-evid')
+    res.redirect('provide-dual-nationality')
+  }
+  else {
+    res.redirect('upload-another')
+  }
+})
+
 module.exports = router
